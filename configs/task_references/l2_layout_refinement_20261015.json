@@ -1,0 +1,319 @@
+{
+  "revision": "l2-book-slope-and-twelve-glass-balls-v1",
+  "date": "2026-10-15",
+  "tasks": {
+    "L2-03": {
+      "source_video": "real_videos/L2-03/real_L2-03.mp4",
+      "source_video_sha256": "e5530e532b8901ee5dfbc18413cfe5a2a8052f342765cacd0bef9e9d253bd482",
+      "reference_image": "build/view_pose_alignment_20261015/L2-03/real_overview.png",
+      "reference_raster": [
+        1280,
+        960
+      ],
+      "cup_base_centres_real_px": {
+        "receiver_cup": [
+          695.0,
+          569.0
+        ],
+        "source_cup": [
+          974.0,
+          585.0
+        ]
+      },
+      "native_raster": [
+        1280,
+        954
+      ],
+      "cup_base_centres_target_px": {
+        "receiver_cup": [
+          695.0,
+          565.440625
+        ],
+        "source_cup": [
+          974.0,
+          581.340625
+        ]
+      },
+      "cup_poses": {
+        "receiver_cup": [
+          0.15386935418499234,
+          1.3147090928561007,
+          0.8799999952316284,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_cup": [
+          0.405587124527371,
+          1.296924245865021,
+          0.8809999823570251,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "camera_pose_used": [
+        0.1567300829641812,
+        0.606254022867113,
+        1.3955363168746642,
+        0.8706517922092198,
+        0.49090588567529375,
+        0.023331395391782347,
+        0.020796973849606142
+      ],
+      "intrinsics_used": [
+        930.8776156213771,
+        930.8776156213771,
+        642.1886416808067,
+        485.5862487876495
+      ],
+      "placement_method": "User explicitly selected cup image-position matching in the fixed shared camera. Rays through real cup base centres intersect each cup initial support plane. No camera adjustment.",
+      "annotation_uncertainty_px": 4,
+      "glass_ball_count": 12
+    },
+    "L2-02": {
+      "revision": "l2-book-straight-rim-slope-v4",
+      "reference": "real_videos/L2-02/real_L2-02.mp4 at 0, 3, 10, 20 seconds, plus user detail screenshot on 2026-10-16",
+      "source_video_sha256": "46fc15f896e36c2668e6d696de22be2b30bc444c109fb946125f3b6bce206c53",
+      "box_pose": [
+        0.10236941608572794,
+        1.129340525160016,
+        0.88,
+        0.9999110456706862,
+        0.0,
+        0.0,
+        -0.013337943835347213
+      ],
+      "upper_cover_world_pose": [
+        0.134912121,
+        1.15028451,
+        1.01002897,
+        0.999167565441015,
+        0.00017156298573364344,
+        -0.03723738590632035,
+        -0.01665904642170887
+      ],
+      "book_offsets_from_upper_m": {
+        "lower_book": [
+          -0.006,
+          0.006,
+          -0.0408
+        ],
+        "middle_book": [
+          0.034,
+          0.012,
+          -0.0204
+        ],
+        "upper_book": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "rim_clearance_m": 0.0002,
+      "fit_method": "Keep the established box and upper two books. Move only the lower book 18 mm toward the viewer from v23 to expose the real left-hand gap beneath the upper book. Keep a gently sloping straight front silhouette; the fixed underside clears and rests on the real box rim, with matching visible and collision shapes.",
+      "limitation": "The lower book remains one dynamic rigid body with a fixed shaped underside. Its straight front slope is an image-guided approximation; live page flex is not simulated.",
+      "annotation_uncertainty_px": 5,
+      "reference_raster": [
+        1280,
+        960
+      ],
+      "upper_cover_corners_real_px": [
+        [
+          590,
+          480
+        ],
+        [
+          766,
+          476
+        ],
+        [
+          545,
+          663
+        ],
+        [
+          769,
+          659
+        ]
+      ],
+      "lower_book_front_real_px": [
+        [
+          551,
+          699
+        ],
+        [
+          637,
+          711
+        ],
+        [
+          764,
+          703
+        ]
+      ],
+      "box_visible_corners_real_px": [
+        [
+          458,
+          741
+        ],
+        [
+          761,
+          749
+        ],
+        [
+          519,
+          547
+        ],
+        [
+          460,
+          813
+        ],
+        [
+          760,
+          825
+        ]
+      ],
+      "shared_camera_changed": false,
+      "lower_book_bend_profile": "straight_rising_front",
+      "lower_back_cover_half_depth_m": 0.10925,
+      "lower_book_front_slope_deg": 2.5
+    },
+    "L2-05": {
+      "revision": "l2-drawer-fixed-camera-placement-v1",
+      "source_video": "real_videos/L2-05/real_L2-05.mp4",
+      "source_video_sha256": "c73b4e57dcd4e41b64edaf2644c02647da6836833b355575851b9fbb5f61ce52",
+      "reference_image": "build/view_pose_alignment_20261015/L2-05/real_overview.png",
+      "reference_raster": [
+        1280,
+        960
+      ],
+      "native_raster": [
+        1280,
+        954
+      ],
+      "translation_world_m": [
+        -0.03571250979830039,
+        0.034451078214978205,
+        0.0
+      ],
+      "placement_method": "Translate the whole organizer, loose contents and measured support together. Fit the three visible upper drawer/tray rim landmarks in the real video under the unchanged shared camera, with no size or yaw change. The larger organizer footprint is not a calibration target.",
+      "camera_pose_used": [
+        0.1567300829641812,
+        0.606254022867113,
+        1.3955363168746642,
+        0.8706517922092198,
+        0.49090588567529375,
+        0.023331395391782347,
+        0.020796973849606142
+      ],
+      "intrinsics_used": [
+        930.8776156213771,
+        930.8776156213771,
+        642.1886416808067,
+        485.5862487876495
+      ],
+      "rim_landmarks": [
+        {
+          "mesh": "Drawer1/Visuals/SideL",
+          "vertex_index": 145,
+          "world": [
+            0.45328539411584323,
+            1.0940693068478333,
+            1.0430000320076942
+          ],
+          "target_px": [
+            1093,
+            541.590625
+          ],
+          "before_px": [
+            1174.3401190760087,
+            571.1379091290693
+          ]
+        },
+        {
+          "mesh": "Drawer1/Visuals/SideR",
+          "vertex_index": 145,
+          "world": [
+            0.3869301372559273,
+            1.0173195068002097,
+            1.0430000320076942
+          ],
+          "target_px": [
+            1031,
+            605.190625
+          ],
+          "before_px": [
+            1110.4803446641274,
+            650.8535127674911
+          ]
+        },
+        {
+          "mesh": "Body/Visuals/LeftSide",
+          "vertex_index": 145,
+          "world": [
+            0.476490829856993,
+            1.0766915077744919,
+            1.0650000020861625
+          ],
+          "target_px": [
+            1150,
+            530.659375
+          ],
+          "before_px": [
+            1237.4307408962725,
+            559.3680436696953
+          ]
+        }
+      ],
+      "fit_rms_px": 3.710694334612128,
+      "annotation_uncertainty_px": 5,
+      "shared_camera_changed": false
+    },
+    "L2-04": {
+      "revision": "l2-orange-original-horizontal-v2",
+      "reference": "User correction 2026-10-16: restore the original position and horizontal orientation in the overview.",
+      "yaw_delta_deg": 0.0,
+      "placement_method": "Keep the original full FEM hierarchy pose before the vertical-orientation adjustment; no translation, geometry, scale or camera change.",
+      "camera_pose_used": [
+        0.1567300829641812,
+        0.606254022867113,
+        1.3955363168746642,
+        0.8706517922092198,
+        0.49090588567529375,
+        0.023331395391782347,
+        0.020796973849606142
+      ],
+      "intrinsics_used": [
+        930.8776156213771,
+        930.8776156213771,
+        642.1886416808067,
+        485.5862487876495
+      ],
+      "long_axis_local_endpoints_m": [
+        [
+          -0.025,
+          0.0,
+          0.008
+        ],
+        [
+          0.025,
+          0.0,
+          0.008
+        ]
+      ],
+      "long_axis_projected_endpoints_px": [
+        [
+          662.2563101945366,
+          661.2269371774241
+        ],
+        [
+          733.3376839785798,
+          663.2347316166114
+        ]
+      ],
+      "shared_camera_changed": false
+    }
+  },
+  "visual_setup_revision": "video_visible_setup_v27_l2_horizontal_orange_neutral_marker_20261016"
+}

@@ -1,0 +1,35 @@
+General-Purpose Foundation Models for Contact-Rich Manipulation:
+A Paired Sim--Real Evaluation of GPT-6 Astra
+
+Team-owned software is distributed under Apache License 2.0 (LICENSE).
+Third-party source and assets retain their own notices and terms.
+
+Robot appearance meshes: ARXrobotics / fiveages-sim robot-descriptions-arx.
+BSD-3-Clause; full notice is retained in assets/appearance/r5/LICENSE.
+Poly Haven room textures: CC0-1.0; provenance in assets/appearance/source.lock.json.
+ARX R5a manufacturer files: upstream package declares BSD; original package and
+source metadata remain in assets/r5/. Do not treat the root software license as
+a replacement for the upstream declaration.
+Camera CAD, supplied Tuojing scenes, site photographs/renderings and material
+textures: project owner confirmed public redistribution permission on 2026-10-21.
+Per-group provenance and permission status: docs/release/asset_permissions.json.
+Historical RoboDojo metadata retains its Apache-2.0 license notice in assets/l1/;
+its downloaded object binaries are not part of the runtime asset bundle.
+
+NVIDIA Isaac Sim and cuRobo must be installed separately under their upstream
+terms. They are not bundled with this software release.
+
+Project-page fonts: DM Sans and Manrope, SIL Open Font License 1.1.
+Original license texts accompany the locally hosted fonts in site/fonts/.
+
+Project film background music: "Pop Track 03" by Lily J, from Mixkit.
+Used under the Mixkit Stock Music Free License, not Apache-2.0.
+License: https://mixkit.co/license/modal/musicFree/
+Source: https://mixkit.co/free-stock-music/tag/technology/
+The music is embedded in docs/media/promo/llm4robot-bench-film.mp4 and is not
+provided as a standalone music asset. Source details: site/media/promo/sources.json.
+
+Institution marks identify author affiliations, not institutional endorsement.
+Original trademarks and artwork remain with their respective institutions;
+they are not licensed by the project under Apache-2.0. Official asset sources
+and presentation derivatives: site/media/affiliations/sources.json.

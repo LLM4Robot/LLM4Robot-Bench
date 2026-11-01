@@ -1,0 +1,62 @@
+# Run from the repository root in the Isaac Sim environment; uses the selected model provider.
+# launch_command / launch_command_conda below are documentation, not auto-executed shell code.
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[robot]
+profile = "../robots/r5_video_20261015.toml"
+active_arms = ["left", "right"]
+observation_arms = []
+
+[simulation]
+environment = "tuojing_lab_v4"
+camera_profile = "../cameras/r5_tuojing_lab.toml"
+asset_directory = "../../build/tuojing_lab"
+headless = true
+width = 1280
+height = 720
+fps = 12
+arm_stiffness = 1500.0
+arm_damping = 80.0
+finger_stiffness = 2000.0
+finger_damping = 40.0
+self_collision = false
+solver_position_iterations = 32
+solver_velocity_iterations = 0
+
+[policy]
+model_config = "../models/gpt.toml"
+
+[runtime]
+physics_dt_s = 0.0005208333333333333 # 1920 Hz; marker/box contact regression uses this step.
+
+[completion]
+return_home = false
+
+[task]
+variant_id = "L2-01_v3"
+initial_layout = "l2_p01" # Reviewed P01 placement for the third experiment.
+scene_delivery = "video_20261015"
+prompt_protocol = "feishu_english_20261015_v1"
+reference_document = "https://my.feishu.cn/docx/QK4EdOD3hotgp4x782ycgoyyn6g"
+reference_sheet_id = "KyMjZ7"
+reference_sheet_revision = 324
+reference_sheet_row = 14
+# Guided visual execution; common information boundaries are appended by BenchTask.
+scoring_protocol = "feishu_english_20261015_v1"
+id = "L2-01"
+name = "绿盒横置马克笔双臂拔帽"
+execution_target = "simulation_and_real"
+simulation_enabled = true
+status = "implemented"
+implementation = "household"
+launch_command = "python tools/launch.py run L2-01_v3 --gui"
+launch_command_conda = "conda run --no-capture-output -n isaac51 python tools/launch.py run L2-01_v3 --gui"
+instruction = """
+Pick up the black pen with the right arm, then grasp the cap with the left arm and pull it off along the pen’s axis.
+"""
+
+# 中文布置和道具说明。
+description = """
+Complete 2026-10-15 assets: room, table, robot mounts, lighting and task props. Robot initial joints and gripper openings follow the per-task video-visible setup. All camera views use the shared L3-01 rig. Prop placements follow the delivered video reconstruction. Task left/right use the robot perspective; overview-image left/right are reversed. No older individual prop is imported. Physical parameters remain uncalibrated.
+"""

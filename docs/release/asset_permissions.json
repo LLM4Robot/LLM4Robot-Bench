@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "confirmation_date": "2026-10-21",
+  "confirmation": "Project owner confirmed permission to publicly redistribute all supplied assets and approved Apache-2.0 for team-owned code. This confirmation does not replace upstream license conditions.",
+  "runtime_lock": "assets/runtime.lock.json",
+  "asset_groups": [
+    {
+      "id": "robot_visuals",
+      "file_count": 10,
+      "path_prefixes": [
+        "assets/appearance/r5/"
+      ],
+      "evidence": [
+        "assets/appearance/r5/LICENSE",
+        "assets/appearance/source.lock.json",
+        "assets/appearance/README.md"
+      ],
+      "license": "BSD-3-Clause",
+      "source": "https://github.com/fiveages-sim/robot-descriptions-arx/tree/71b069961eafe3d71524d199d99ac24c752b348a/arx5_description",
+      "notes": "9 GLB meshes and one LICENSE. Copyright (c) 2023-2025 ARXrobotics. Explicit runtime link5 offset; source files preserved. Keep attribution and disclaimer when redistributing.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "license_text_retained"
+    },
+    {
+      "id": "room_pbr",
+      "file_count": 6,
+      "path_prefixes": [
+        "assets/appearance/textures/"
+      ],
+      "evidence": [
+        "assets/appearance/source.lock.json",
+        "assets/appearance/README.md"
+      ],
+      "license": "CC0-1.0",
+      "source": "https://polyhaven.com/license",
+      "notes": "Six texture maps: Kitchen Wood and Concrete Floor 02. Poly Haven official page states assets CC0 and redistribution allowed. Website sample renders, logos and other page content are excluded from asset license.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "upstream_license_verified"
+    },
+    {
+      "id": "manufacturer_robot",
+      "file_count": 17,
+      "path_prefixes": [
+        "assets/r5/R5a/"
+      ],
+      "evidence": [
+        "assets/r5/R5a/package.xml",
+        "assets/r5/source.lock.json",
+        "assets/r5/README.md"
+      ],
+      "license": "BSD (unspecified)",
+      "source": "https://github.com/ARXroboticsX/ARX_Model/tree/74386441845f12af4da203843b6400951d6c5530/R5/R5a",
+      "notes": "17 manufacturer files. package.xml declares BSD but exact terms/copyright are not present locally. Do not infer BSD-3-Clause from the separate visual repository.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "ambiguous_upstream_declaration"
+    },
+    {
+      "id": "camera_cad_derivatives",
+      "file_count": 9,
+      "path_prefixes": [
+        "assets/cameras/"
+      ],
+      "evidence": [
+        "assets/cameras/README.md",
+        "assets/cameras/gemini305.json",
+        "assets/cameras/gemini_pro.json",
+        "assets/cameras/r5_wrist_camera_mount.json"
+      ],
+      "license": null,
+      "source": "Official Orbbec Gemini 305 CAD plus user/supplier Gemini Pro and wrist-mount CAD",
+      "notes": "9 runtime files including metadata and derived geometry. Availability of official CAD download does not establish redistribution rights. Record supplier/owner permission for derived meshes.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "redistribution_permission_not_documented"
+    },
+    {
+      "id": "legacy_robodojo_notices",
+      "file_count": 3,
+      "path_prefixes": [
+        "assets/l1/"
+      ],
+      "evidence": [
+        "assets/l1/LICENSE-APACHE-2.0.txt",
+        "assets/l1/source.lock.json",
+        "assets/l1/README.md"
+      ],
+      "license": "Apache-2.0 (dataset, declared)",
+      "source": "https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo/tree/43dacb13d3051a9ccd421f4e7e08e4e3eb29dfab",
+      "notes": "Only 3 metadata/license files in runtime manifest; no RoboDojo downloaded object binaries are included. Source lock still lists historical six assets, including removed key and key-slot. Do not imply these are needed for current L1 tasks. Online fixed-revision README fetch failed during audit; rely on retained local evidence, not newly verified online status.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "local_upstream_declaration_retained"
+    },
+    {
+      "id": "tuojing_current_scene_bundles",
+      "file_count": 40,
+      "path_prefixes": [
+        "assets/tuojing/source/L1-01/",
+        "assets/tuojing/source/L1-03/",
+        "assets/tuojing/source/L1-07/",
+        "assets/tuojing/source/L1-08/",
+        "assets/tuojing/source/L1-09/",
+        "assets/tuojing/source/L2-01/",
+        "assets/tuojing/source/L2-03/",
+        "assets/tuojing/source/L2-04/",
+        "assets/tuojing/source/L2-06/",
+        "assets/tuojing/source/L2-07/",
+        "assets/tuojing/source/L2-08/",
+        "assets/tuojing/source/L3-03/",
+        "assets/tuojing/source/L3-05/",
+        "assets/tuojing/source/L3-11/",
+        "assets/tuojing/source/L3-14/",
+        "assets/tuojing/source/L3-15/"
+      ],
+      "evidence": [
+        "assets/tuojing/README.md",
+        "assets/tuojing/video_20261015.json",
+        "configs/task_references/combined_sources.json",
+        "configs/task_references/l2_marker_asset_20261016.json"
+      ],
+      "license": null,
+      "source": "User-supplied L1-L3_assets_20261015.zip; later scene and asset updates in source metadata",
+      "notes": "16 task source folders. Covers embedded commercial product/book-label photography, scene geometry and revised jelly. No standalone license or license-named entries found in these USDZ archives. Need creator/supplier confirmation for scene/assets and embedded images. Do not replace or sanitize visuals to solve licensing without approval because task details must be unchanged.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "redistribution_permission_not_documented"
+    },
+    {
+      "id": "laboratory_common",
+      "file_count": 179,
+      "path_prefixes": [
+        "assets/tuojing/source/common/"
+      ],
+      "evidence": [
+        "assets/tuojing/source/common/lab/README.md",
+        "assets/tuojing/source.lock.json",
+        "assets/tuojing/source/common/lab/evidence/source_index.json"
+      ],
+      "license": null,
+      "source": "User-provided laboratory delivery and reconstruction",
+      "notes": "179 files, includes runtime geometry/textures but also reference photographs, evidence, validation records and 9 source-builder/diagnostic scripts. Runtime lock is a curated reproducibility bundle, not proof each file is loaded at runtime. Retain lock now; optionally move evidence/build inputs to an additional archive after dependency audit, not by filename guess.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "redistribution_permission_not_documented"
+    },
+    {
+      "id": "task_appearance_updates",
+      "file_count": 19,
+      "path_prefixes": [
+        "assets/tuojing/appearance/"
+      ],
+      "evidence": [
+        "assets/tuojing/appearance/l1_01_yagu/provenance.json",
+        "assets/tuojing/appearance/l1_01_yagu/provenance_video_v2.json",
+        "assets/tuojing/appearance/l1_03_measured_holder/dimensions_and_provenance.json"
+      ],
+      "license": null,
+      "source": "User-provided marker video with imagegen texture reconstruction; measured holder reconstruction",
+      "notes": "19 files. Marker wrap provenance says fine print/barcode approximate and non-scannable. This does not establish rights in source footage/product imagery. Geometry/materials should not be changed as a side effect of release preparation.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "redistribution_permission_not_documented"
+    },
+    {
+      "id": "visual_r3",
+      "file_count": 28,
+      "path_prefixes": [
+        "assets/tuojing/visual_r3/"
+      ],
+      "evidence": [
+        "assets/tuojing/README.md",
+        "assets/runtime.lock.json"
+      ],
+      "license": null,
+      "source": "bowen_visual_r3_20261014 delivery",
+      "notes": "28 textures; no explicit license metadata found. Covers reference-aligned room/task appearance; include in same fixed version asset package after permission confirmation.",
+      "redistribution_status": "owner_confirmed",
+      "upstream_license_evidence": "redistribution_permission_not_documented"
+    }
+  ]
+}

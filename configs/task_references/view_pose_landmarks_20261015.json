@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "scope": "First-frame visual audit; image annotations are estimates, not hardware calibration.",
+  "annotation_frame": "1280x960 overview, before uniform aspect correction (<1 px for 750x562 crop)",
+  "world_anchor_status": "Delivered scene estimates; anchor residual mixes camera projection and background geometry error. Do not use two anchors to solve camera extrinsics.",
+  "task_arm_mapping": {
+    "robot_left": "right",
+    "robot_right": "left"
+  },
+  "tasks": {
+    "L1-01": {
+      "source_video": "real_videos/L1-01/real_L1-01.mp4",
+      "source_video_sha256": "5a3e32d423420f45b74a67176ea09a267e0159b03bfcb684b01fa1cd7b836531",
+      "source_resolution": [
+        960,
+        1196
+      ],
+      "rois": {
+        "overview": [
+          12,
+          482,
+          948,
+          1184
+        ],
+        "right_wrist": [
+          12,
+          182,
+          474,
+          442
+        ],
+        "left_wrist": [
+          486,
+          182,
+          948,
+          442
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          683.0,
+          264.0
+        ],
+        [
+          755.0,
+          264.0
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.999998927116394,
+      "visual_findings": "两侧真机夹爪均比统一 35 mm 初态张得更开；腕部和固定背景仍有投影差。"
+    },
+    "L1-02": {
+      "source_video": "real_videos/L1-02/real_L1-02.mp4",
+      "source_video_sha256": "944b9303e04ea3b269eff6d02c41ee4c4a232362d75e0a44b82c0e517ef1ce6b",
+      "source_resolution": [
+        960,
+        1196
+      ],
+      "rois": {
+        "overview": [
+          12,
+          482,
+          948,
+          1184
+        ],
+        "right_wrist": [
+          12,
+          182,
+          474,
+          442
+        ],
+        "left_wrist": [
+          486,
+          182,
+          948,
+          442
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          657.2875,
+          274.55
+        ],
+        [
+          730.1875,
+          274.55
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9608686566352844,
+      "visual_findings": "控制 ID left（真机右臂）腕视角侧转；统一零腕角无法复现。两侧开度也不同。"
+    },
+    "L1-03": {
+      "source_video": "real_videos/L1-03/real_L1-03.mp4",
+      "source_video_sha256": "056cbad469027e1d93d3b78705b71e25de550093d9f8647eac0dc92d72d90ce8",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          693.1375,
+          249.35
+        ],
+        [
+          762.4375,
+          249.35
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.8614823222160339,
+      "visual_findings": "真机两侧腕图接近水平；交付 USD 两侧 joint6 却约为 ±90°，不能直接照搬该姿态。"
+    },
+    "L1-04": {
+      "source_video": "real_videos/L1-04/real_L1-04.mp4",
+      "source_video_sha256": "d0581b614079494b1aa0f94fc80197599bc8a162dfb38c9d64cdcabd3693cfe9",
+      "source_resolution": [
+        960,
+        1196
+      ],
+      "rois": {
+        "overview": [
+          12,
+          482,
+          948,
+          1184
+        ],
+        "right_wrist": [
+          12,
+          182,
+          474,
+          442
+        ],
+        "left_wrist": [
+          486,
+          182,
+          948,
+          442
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          683.0,
+          263.0
+        ],
+        [
+          755.0,
+          263.0
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9739466905593872,
+      "visual_findings": "真机两侧夹爪接近闭合，仿真统一 35 mm 张开；右侧腕图有倾斜。"
+    },
+    "L1-05": {
+      "source_video": "real_videos/L1-05/real_L1-05.mp4",
+      "source_video_sha256": "b89a0c615b6f420613687f727fde1cc017aaa265ef16c5918696ac2976b2be34",
+      "source_resolution": [
+        640,
+        576
+      ],
+      "rois": {
+        "overview": [
+          0,
+          64,
+          640,
+          544
+        ],
+        "right_wrist": null,
+        "left_wrist": null
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          657.2875,
+          264.55
+        ],
+        [
+          730.1875,
+          264.55
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.8915092945098877,
+      "visual_findings": "仅提供全局录像，没有真机腕视角可校验；交付 USD 的 ±90° 腕姿态与全局首帧不一致。"
+    },
+    "L2-01": {
+      "source_video": "real_videos/L2-01/real_L2-01.mp4",
+      "source_video_sha256": "bfaaf4ae84ebebbda42fc2e2440dfc70e2cd43ba907199ec46ec2599ec636e9a",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          693.1375,
+          249.35
+        ],
+        [
+          762.4375,
+          249.35
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9260399341583252,
+      "visual_findings": "真机两侧腕图侧转；仿真两侧零腕角。另有笔杆初态弹飞，是独立的物体物理失败。"
+    },
+    "L2-02": {
+      "source_video": "real_videos/L2-02/real_L2-02.mp4",
+      "source_video_sha256": "46fc15f896e36c2668e6d696de22be2b30bc444c109fb946125f3b6bce206c53",
+      "source_resolution": [
+        960,
+        1196
+      ],
+      "rois": {
+        "overview": [
+          12,
+          482,
+          948,
+          1184
+        ],
+        "right_wrist": [
+          12,
+          182,
+          474,
+          442
+        ],
+        "left_wrist": [
+          486,
+          182,
+          948,
+          442
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          658.0,
+          275.0
+        ],
+        [
+          730.0,
+          275.0
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9725187420845032,
+      "visual_findings": "真机控制 ID left 夹爪接近闭合；交付 USD 腕部刚体未满足关节闭合，需合法 IK/实机日志确定初态。"
+    },
+    "L2-03": {
+      "source_video": "real_videos/L2-03/real_L2-03.mp4",
+      "source_video_sha256": "e5530e532b8901ee5dfbc18413cfe5a2a8052f342765cacd0bef9e9d253bd482",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          790,
+          253
+        ],
+        [
+          857,
+          255
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": null,
+      "visual_findings": "真机控制 ID left 夹爪接近闭合，right 部分张开；交付 USD 腕部存在关节闭合误差。"
+    },
+    "L2-04": {
+      "source_video": "real_videos/L2-04/real_L2-04.mp4",
+      "source_video_sha256": "2397234b6b15779ce99fb3bf6c100c335a3c94f2ed0ef6a8e964fd44d2e538ad",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          691.425,
+          254.9
+        ],
+        [
+          761.625,
+          254.9
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9179401397705078,
+      "visual_findings": "真机控制 ID left 接近闭合，right 张开；仿真统一开度不一致。"
+    },
+    "L2-05": {
+      "source_video": "real_videos/L2-05/real_L2-05.mp4",
+      "source_video_sha256": "c73b4e57dcd4e41b64edaf2644c02647da6836833b355575851b9fbb5f61ce52",
+      "source_resolution": [
+        960,
+        1196
+      ],
+      "rois": {
+        "overview": [
+          12,
+          482,
+          948,
+          1184
+        ],
+        "right_wrist": [
+          12,
+          182,
+          474,
+          442
+        ],
+        "left_wrist": [
+          486,
+          182,
+          948,
+          442
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          659.2875,
+          273.55
+        ],
+        [
+          732.1875,
+          273.55
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9625573754310608,
+      "visual_findings": "真机两侧夹爪接近闭合，仿真统一 35 mm 张开。"
+    },
+    "L3-01": {
+      "source_video": "real_videos/L3-01/real_L3-01.mp4",
+      "source_video_sha256": "77e1de7d2c295f46dbc92a2b7af8e72c4ffd0e0f548cc6a83487a0f1c3104326",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          664.15,
+          282.2
+        ],
+        [
+          739.75,
+          282.2
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9109607934951782,
+      "visual_findings": "真机控制 ID left 部分张开，right 较宽；仿真统一 35 mm 张开。"
+    },
+    "L3-02": {
+      "source_video": "real_videos/L3-02/real_L3-02.mp4",
+      "source_video_sha256": "dae5619c7935ca340cc243ec911ead04b175ad406e1651a513aab147542e9c03",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          695.5625,
+          249.25
+        ],
+        [
+          763.0625,
+          249.25
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9002857208251953,
+      "visual_findings": "真机两侧开度不同；视角和静态背景仍需标定。"
+    },
+    "L2-07": {
+      "source_video": "real_videos/L3-03/real_L3-03.mp4",
+      "source_video_sha256": "4c0d98953d4ac2407066ae558df834aa191544525e813c0425e5018bd236bcbc",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          664.15,
+          283.2
+        ],
+        [
+          739.75,
+          283.2
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9113110899925232,
+      "visual_findings": "真机控制 ID left 接近闭合；right 张开。该任务未采用 PR #19 外观覆盖。"
+    },
+    "L3-03": {
+      "source_video": "real_videos/L3-04/real_L3-04.mp4",
+      "source_video_sha256": "242e38844935dce1b2dc937713dbca9f5fa104e0065bc05c19a4553d2ce69ac9",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          691.425,
+          254.9
+        ],
+        [
+          761.625,
+          254.9
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9152146577835083,
+      "visual_findings": "真机两侧夹爪接近闭合，仿真统一 35 mm 张开。"
+    },
+    "L3-04": {
+      "source_video": "real_videos/L3-05/real_L3-05.mp4",
+      "source_video_sha256": "9bd7caa5230917c901fd7079de8ffe907889edf19b6132d05ed3f1401566ea03",
+      "source_resolution": [
+        1280,
+        1152
+      ],
+      "rois": {
+        "overview": [
+          265,
+          512,
+          1015,
+          1074
+        ],
+        "right_wrist": [
+          22,
+          124,
+          618,
+          462
+        ],
+        "left_wrist": [
+          662,
+          124,
+          1258,
+          462
+        ]
+      },
+      "real_overview_plug_centres_px_1280x960": [
+        [
+          691.425,
+          254.9
+        ],
+        [
+          761.625,
+          254.9
+        ]
+      ],
+      "annotation_uncertainty_px": 4,
+      "template_correlation": 0.9095079898834229,
+      "visual_findings": "真机控制 ID left 接近闭合，right 部分张开；仿真统一开度不一致。"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+name: camera-assets
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy==2.4.6
+      - usd-core==26.8
+      - cadquery==2.8.0
+      - cadquery-ocp==7.9.3.1.1

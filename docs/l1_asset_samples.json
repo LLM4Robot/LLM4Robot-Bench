@@ -1,0 +1,403 @@
+{
+  "revision": "43dacb13d3051a9ccd421f4e7e08e4e3eb29dfab",
+  "files": [
+    {
+      "path": "Rigid/test_tube/00002",
+      "metadata.json": {
+        "bytes": 3508,
+        "sha256": "6ad299e38944f77be2edee73475a80d2313ea1a2a7119c1e449f4ba1055b40d6"
+      },
+      "object.usdz": {
+        "bytes": 1108703,
+        "sha256": "e7ef90e9bf1fa1db63359c5317d6bd990dcb3475576478741fead8f6977e004e"
+      }
+    },
+    {
+      "path": "Geometry/test_tube_slot/00000",
+      "metadata.json": {
+        "bytes": 8117,
+        "sha256": "964aa50dacf43c45fff1b7da92218d089f2c618e542dcbc1f3114175acc05164"
+      },
+      "object.usdz": {
+        "bytes": 388120,
+        "sha256": "939d71ae619de1b1c40db3a6c11769e20b8c65245e123f7ffd986f5da35042f6"
+      }
+    },
+    {
+      "path": "Rigid/charger/00000",
+      "metadata.json": {
+        "bytes": 4377,
+        "sha256": "3a462763b4f0922067d5df8fcdb78b26bb566afb1af7cc831d7e27af16dbd59f"
+      },
+      "object.usdz": {
+        "bytes": 762980,
+        "sha256": "50532876b868d0cc5a0add9c35be0aa8b72f89e02e06e04a6fd021de95b1ecd0"
+      }
+    },
+    {
+      "path": "Rigid/socket/00000",
+      "metadata.json": {
+        "bytes": 6025,
+        "sha256": "7b9afc3bc8aa2d46844447a33f4cc623a80618970aaa599e074f6b0f145d14ba"
+      },
+      "object.usdz": {
+        "bytes": 423696,
+        "sha256": "3539a25ac55c7379d35ac547734fc7a6b573e14615e55fae89a11d2176e78e92"
+      }
+    },
+    {
+      "path": "Rigid/key/00000",
+      "metadata.json": {
+        "bytes": 3956,
+        "sha256": "c5a6f1a996ab3672f4b60acb60cddfb0cb302bcb7090f514b31a34543c6d0d42"
+      },
+      "object.usdz": {
+        "bytes": 11674406,
+        "sha256": "b1f712655c6e2ad36aea7cc680841aa96d7762b63d38a9d4fd4ffc6cbe0c87ea"
+      }
+    },
+    {
+      "path": "Geometry/key_slot/00000",
+      "metadata.json": {
+        "bytes": 4219,
+        "sha256": "b9e4a01b5764b1b60f8dabd36ecdc113ffa351692e75aca3b53b8ccc6195b343"
+      },
+      "object.usdz": {
+        "bytes": 3597392,
+        "sha256": "ebd8a10b73ce90a8e8b3dfb5b80e2598920a5a567d1113e67149fdf1bb023c07"
+      }
+    },
+    {
+      "path": "Geometry/cup_holder/00000",
+      "metadata.json": {
+        "bytes": 5887,
+        "sha256": "0d8361d4d4b30c9b1c23401b5f56aaa87d27ad72efd3318cfff603fbb8d14efa"
+      },
+      "object.usdz": {
+        "bytes": 1118796,
+        "sha256": "8a5aab5c880d741c34030104e3f52ebf0fd68e4680d286f973b5cb6654f1e77c"
+      }
+    }
+  ],
+  "source": "https://huggingface.co/datasets/RoboDojo-Benchmark/RoboDojo",
+  "source_prefix": "Assets/Object/RoboDojo",
+  "validation": "Offline USD schema inspection only; no R5/PhysX task validation yet.",
+  "inspection": [
+    {
+      "file": "Rigid/socket/00000/object.usdz",
+      "default_prim": "/root",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.15718984603881836,
+        0.03632880002260208,
+        0.02080427001919672
+      ],
+      "rigid_bodies": [
+        "/root/E_body_3",
+        "/root/E_button_6"
+      ],
+      "colliders": [
+        {
+          "path": "/root/E_body_3/P_3b880443a15aabc4",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_body_3/E_part01_25/P_89e168adb9a23b3c",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_button_6/P_80c68b0c268ffcdd",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.1586687078252984,
+        0.03667060473130968,
+        0.021
+      ],
+      "metadata_mass": 0.0
+    },
+    {
+      "file": "Rigid/charger/00000/object.usdz",
+      "default_prim": "/root",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.041999999433755875,
+        0.0630745094269514,
+        0.027004070580005646
+      ],
+      "rigid_bodies": [
+        "/root"
+      ],
+      "colliders": [
+        {
+          "path": "/root/E_body_562/P_9dbe0132b89ad8e0",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_body_562/E_part02_545/P_8a0ac7b7ff6ab698",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_body_562/E_part03_546/P_371b217d37787e98",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_body_562/E_part01_563/P_68f3f7542f1797e0",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        },
+        {
+          "path": "/root/E_body_562/E_part04_582/P_204036384b927f57",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI",
+            "MaterialBindingAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.041993668374983625,
+        0.06306500350970716,
+        0.026999999999999996
+      ],
+      "metadata_mass": 0.03
+    },
+    {
+      "file": "Rigid/key/00000/object.usdz",
+      "default_prim": "/Key",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.022710362449288368,
+        0.010000002570450306,
+        0.06284673791378736
+      ],
+      "rigid_bodies": [
+        "/Key"
+      ],
+      "colliders": [
+        {
+          "path": "/Key/mesh",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "MaterialBindingAPI",
+            "PhysicsMeshCollisionAPI",
+            "PhysicsCollisionAPI"
+          ]
+        },
+        {
+          "path": "/Key/Scope/Cube",
+          "type": "Mesh",
+          "approximation": "convexHull",
+          "schemas": [
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        },
+        {
+          "path": "/Key/Scope/Cube_01",
+          "type": "Cube",
+          "approximation": "None",
+          "schemas": [
+            "PhysicsCollisionAPI"
+          ]
+        },
+        {
+          "path": "/Key/Scope/Cube_02",
+          "type": "Cube",
+          "approximation": "None",
+          "schemas": [
+            "PhysicsCollisionAPI"
+          ]
+        },
+        {
+          "path": "/Key/Scope/Cylinder",
+          "type": "Mesh",
+          "approximation": "convexHull",
+          "schemas": [
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.022765745395852716,
+        0.01002438921814205,
+        0.063
+      ],
+      "metadata_mass": 0.2
+    },
+    {
+      "file": "Rigid/test_tube/00002/object.usdz",
+      "default_prim": "/root",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.03506995923817158,
+        0.11699981214046318,
+        0.035066697746515274
+      ],
+      "rigid_bodies": [
+        "/root"
+      ],
+      "colliders": [
+        {
+          "path": "/root/collision/model/centrifuge_tube_50ml_body_001",
+          "type": "Mesh",
+          "approximation": "convexDecomposition",
+          "schemas": [
+            "VisibilityAPI",
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        }
+      ],
+      "metadata_size": null,
+      "metadata_mass": 0.06
+    },
+    {
+      "file": "Geometry/key_slot/00000/object.usdz",
+      "default_prim": "/KeySlot",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.055000003427267075
+      ],
+      "rigid_bodies": [
+        "/KeySlot"
+      ],
+      "colliders": [
+        {
+          "path": "/KeySlot/collision/mesh",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "VisibilityAPI",
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.09999999525872173,
+        0.09999999525872173,
+        0.055
+      ],
+      "metadata_mass": 0.0
+    },
+    {
+      "file": "Geometry/cup_holder/00000/object.usdz",
+      "default_prim": "/World",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        0.18084058165550232,
+        0.18084067106246948,
+        0.3488858938217163
+      ],
+      "rigid_bodies": [
+        "/World"
+      ],
+      "colliders": [
+        {
+          "path": "/World/collision",
+          "type": "Mesh",
+          "approximation": "convexDecomposition",
+          "schemas": [
+            "MaterialBindingAPI",
+            "VisibilityAPI",
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.18089972714695587,
+        0.1808998165831644,
+        0.349
+      ],
+      "metadata_mass": 0.0
+    },
+    {
+      "file": "Geometry/test_tube_slot/00000/object.usdz",
+      "default_prim": "/root",
+      "meters_per_unit": 1.0,
+      "up_axis": "Z",
+      "bounds_size": [
+        20500.0,
+        9600.0009765625,
+        6000.001220703125
+      ],
+      "rigid_bodies": [
+        "/root"
+      ],
+      "colliders": [
+        {
+          "path": "/root/collision/model",
+          "type": "Mesh",
+          "approximation": "sdf",
+          "schemas": [
+            "VisibilityAPI",
+            "PhysicsCollisionAPI",
+            "PhysicsMeshCollisionAPI"
+          ]
+        }
+      ],
+      "metadata_size": [
+        0.20499995824571268,
+        0.09599998956918919,
+        0.06
+      ],
+      "metadata_mass": 0.0
+    }
+  ]
+}

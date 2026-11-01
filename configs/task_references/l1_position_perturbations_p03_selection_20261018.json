@@ -1,0 +1,238 @@
+{
+  "id": "l1_p03_visual_max_selected_20261018",
+  "profile": "l1_xy_random_p03_20261018",
+  "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+  "selection_scope": "Maximum apparent change among the five existing feasible P03 samples for each task; visually confirmed. Selected stress-test set.",
+  "metric": "Mean 2D displacement of corresponding projected 3D bounding-box corners, averaged equally across the two groups. Only corners visible in both before/after overview frames are used. Hat yaw contributes through corner motion. Ranking is not a success or difficulty estimate.",
+  "baseline": "Original real-aligned baseline, no accumulation from P01/P02",
+  "tasks": {
+    "L1-01": {
+      "variant": 3,
+      "seed": "4969682251577742920",
+      "reason": "笔向左移动接近7厘米，同时杯子前移，笔与杯子的相对间距和前后关系变化明显。",
+      "screen_displacement_px": 63.769136645623156,
+      "groups": [
+        {
+          "name": "白板笔",
+          "delta_m": [
+            -0.06802076,
+            0.01529771,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/marker"
+          ]
+        },
+        {
+          "name": "固定马克杯",
+          "delta_m": [
+            -0.01465795,
+            -0.02779769,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/Fixture"
+          ]
+        }
+      ],
+      "rotations": [],
+      "notes": [
+        "白板笔：左 6.80 cm，后 1.53 cm（距离 6.97 cm）",
+        "固定马克杯：左 1.47 cm，前 2.78 cm（距离 3.14 cm）"
+      ],
+      "default_config": "configs/tasks/l1_01_cylinder_insertion.toml",
+      "config_sha256": "f8a6300a98e22f5ed9dcf715c344fb3e7016146025626cb6fa0ce5be6f2e548c",
+      "config_export": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/configs/L1-01_selected_v03.toml",
+      "image": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/group_share/L1-01_已选第3组_与真机对齐初态对比.png",
+      "physics_evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/L1-01/v03/result.json"
+    },
+    "L1-02": {
+      "variant": 3,
+      "seed": "16302250749747146468",
+      "reason": "插头和底座前移，插排后移，原本接近平齐的摆放形成明显的前后错位。",
+      "screen_displacement_px": 52.7667624044112,
+      "groups": [
+        {
+          "name": "插头和黑色底座",
+          "delta_m": [
+            0.02693387,
+            -0.05131483,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/plug",
+            "/World/Household/plug_storage_base"
+          ]
+        },
+        {
+          "name": "桌面插排",
+          "delta_m": [
+            0.02847601,
+            0.02002393,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/Fixture"
+          ]
+        }
+      ],
+      "rotations": [],
+      "notes": [
+        "插头和黑色底座：右 2.69 cm，前 5.13 cm（距离 5.80 cm）",
+        "桌面插排：右 2.85 cm，后 2.00 cm（距离 3.48 cm）"
+      ],
+      "default_config": "configs/tasks/l1_02_plug_insertion.toml",
+      "config_sha256": "2a7c97a2ce8b87789ccb9da4d02d80df86f78044988b32355f11409d9b8d6c7a",
+      "config_export": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/configs/L1-02_selected_v03.toml",
+      "image": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/group_share/L1-02_已选第3组_与真机对齐初态对比.png",
+      "physics_evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/L1-02/v03/result.json"
+    },
+    "L1-03": {
+      "variant": 2,
+      "seed": "13189571218076250773",
+      "reason": "帽子与盒子后移约5.6厘米，帽子逆时针旋转约16度，挂架独立向左前方移动。",
+      "screen_displacement_px": 38.509963648726014,
+      "groups": [
+        {
+          "name": "帽子和蓝色盒子",
+          "delta_m": [
+            0.01752135,
+            0.05301713,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/hat",
+            "/World/Household/source_box"
+          ]
+        },
+        {
+          "name": "挂帽架",
+          "delta_m": [
+            -0.01666052,
+            -0.01273154,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/Fixture"
+          ]
+        }
+      ],
+      "rotations": [
+        {
+          "name": "帽子相对盒子旋转",
+          "path": "/World/Household/hat",
+          "yaw_deg": 16.253,
+          "pivot_path": "/World/Household/source_box",
+          "axis": "world +Z",
+          "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+        }
+      ],
+      "notes": [
+        "帽子和蓝色盒子：右 1.75 cm，后 5.30 cm（距离 5.58 cm）",
+        "挂帽架：左 1.67 cm，前 1.27 cm（距离 2.10 cm）",
+        "帽子相对盒子旋转：俯视逆时针 16.25°"
+      ],
+      "default_config": "configs/tasks/l1_03_ring_hook.toml",
+      "config_sha256": "888d65f0dbbb851210a2afe930f2e68f27274a9cf8abaea1e3956b30d1a19188",
+      "config_export": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/configs/L1-03_selected_v02.toml",
+      "image": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/group_share/L1-03_已选第2组_与真机对齐初态对比.png",
+      "physics_evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/L1-03/v02/result.json"
+    },
+    "L1-04": {
+      "variant": 1,
+      "seed": "9989741613880702887",
+      "reason": "两杯分别向外侧移动，两杯的水平间距明显扩大。",
+      "screen_displacement_px": 54.56003292035838,
+      "groups": [
+        {
+          "name": "画面右杯",
+          "delta_m": [
+            0.03163228,
+            -0.01563489,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/lower_cup"
+          ]
+        },
+        {
+          "name": "画面左杯",
+          "delta_m": [
+            -0.04841409,
+            -0.01339141,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/upper_cup"
+          ]
+        }
+      ],
+      "rotations": [],
+      "notes": [
+        "画面右杯：右 3.16 cm，前 1.56 cm（距离 3.53 cm）",
+        "画面左杯：左 4.84 cm，前 1.34 cm（距离 5.02 cm）"
+      ],
+      "default_config": "configs/tasks/l1_04_block_stack.toml",
+      "config_sha256": "76a496e1747378523e63438344cfb21bd091e8dd6f42d363b9805493fe42ac8f",
+      "config_export": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/configs/L1-04_selected_v01.toml",
+      "image": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/group_share/L1-04_已选第1组_与真机对齐初态对比.png",
+      "physics_evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/L1-04/v01/result.json"
+    },
+    "L1-05": {
+      "variant": 1,
+      "seed": "10299530311571057887",
+      "reason": "花所在杯子右移并前移，另一个杯子左移，整体间距和前后错位变化最明显。",
+      "screen_displacement_px": 77.58107968623474,
+      "groups": [
+        {
+          "name": "源杯、花和充电头",
+          "delta_m": [
+            0.03852401,
+            -0.04900945,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/source_cup",
+            "/World/Household/rose",
+            "/World/Household/source_charger",
+            "/World/Household/rose/LeafBodies/Leaf0",
+            "/World/Household/rose/LeafBodies/Leaf1"
+          ]
+        },
+        {
+          "name": "目标杯和10颗玻璃珠",
+          "delta_m": [
+            -0.04707765,
+            -0.01083934,
+            0.0
+          ],
+          "paths": [
+            "/World/Household/target_cup",
+            "/World/Household/filler_0",
+            "/World/Household/filler_1",
+            "/World/Household/filler_2",
+            "/World/Household/filler_3",
+            "/World/Household/filler_4",
+            "/World/Household/filler_5",
+            "/World/Household/filler_6",
+            "/World/Household/filler_7",
+            "/World/Household/filler_8",
+            "/World/Household/filler_9"
+          ]
+        }
+      ],
+      "rotations": [],
+      "notes": [
+        "源杯、花和充电头：右 3.85 cm，前 4.90 cm（距离 6.23 cm）",
+        "目标杯和10颗玻璃珠：左 4.71 cm，前 1.08 cm（距离 4.83 cm）"
+      ],
+      "default_config": "configs/tasks/l1_05_soft_stem_flower.toml",
+      "config_sha256": "6a6e299fc52aa54f7edaec36ec2826fea26514c9e0e0dcd4c522f4e90e2281f7",
+      "config_export": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/configs/L1-05_selected_v01.toml",
+      "image": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_selected_20261018/group_share/L1-05_已选第1组_与真机对齐初态对比.png",
+      "physics_evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/L1-05/v01/result.json"
+    }
+  },
+  "model_calls": 0,
+  "formal_experiments_started": false
+}

@@ -1,0 +1,5 @@
+# Copy to planner.local.toml (ignored). This is a machine path, never a task switch.
+# Native Linux: absolute path to the isolated cuRobo environment's Python.
+# Windows Isaac + WSL: use the Linux absolute path; the client invokes wsl.exe.
+python = "/path/to/curobo-environment/bin/python"
+# wsl_distribution = "Ubuntu" # optional, Windows only

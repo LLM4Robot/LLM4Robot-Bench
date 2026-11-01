@@ -1,0 +1,32 @@
+* text=auto
+*.py text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.ps1 text eol=lf
+*.usda text eol=lf
+*.usdc binary
+*.usd binary
+*.usdz binary
+*.stl binary
+*.STL binary
+# Vendor source hashes must remain byte-for-byte identical.
+assets/r5/R5a/** -text -whitespace
+# This upstream license is included in the immutable runtime asset inventory.
+assets/l1/LICENSE-APACHE-2.0.txt -text -whitespace
+# Pinned appearance downloads include the upstream LICENSE, not just binaries.
+assets/appearance/r5/** -text -whitespace
+assets/appearance/textures/** -text -whitespace
+# Runtime inputs and history are hash pinned; do not rewrite line endings.
+assets/tuojing/source/** -text -whitespace
+assets/tuojing/visual_r3/** -text -whitespace
+configs/task_references/video_visual_setup_history/** -text -whitespace
+
+# Hym L1 appearance inputs and provenance are hash-pinned.
+assets/tuojing/appearance/** -text
+# Preserve the verified upstream L3 source bytes in Git checkouts.
+src/robot_tasks/tasks/bench/l3_brush_handle.py -text -whitespace
+# Keep bundled font license texts exactly as supplied upstream.
+site/fonts/*OFL.txt -text -whitespace

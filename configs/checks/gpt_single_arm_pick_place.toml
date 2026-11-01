@@ -1,0 +1,72 @@
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[task]
+id = "GPT-PICK-PLACE"
+instruction = """
+Use only the {arm} R5 arm to pick up the red cube from the table and place it
+at the centre of the green target patch. Follow the shared arm-role permissions:
+an observation arm may move its wrist camera to clarify the grasp, clearance or
+target while the manipulation arm stays steady, but must not touch the cube or
+command its gripper. The cube's side length is {cube_size_m} metres.
+Determine the cube and target locations from the provided observations. Plan your own
+approach, grasp, lift, transport, release and retreat using measured TCP poses
+and execution feedback. Reobserve and correct alignment as needed. Use small
+Cartesian moves near contact; Planned motion may deviate under contact; inspect actual object motion.
+Lift the cube at least {lift_threshold_m} metres above its initial height and
+keep it securely lifted for at least {stability_s} simulation seconds before
+placing it. Opening the gripper to {open_width_m} metres provides full clearance.
+After table support, open the gripper in a separate decision to {open_width_m}
+metres, withdraw the fingers with TCP-to-cube-centre clearance greater than
+{lift_threshold_m} metres, and let the released cube remain stably on the target
+for at least {stability_s} simulation seconds. Its centre must be within
+{placement_tolerance_m} metres of the patch centre, with the cube resting on the
+table. Empty commands wait with current
+targets held. A gripper target may remain unreached when blocked by the cube;
+use the images and feedback to distinguish contact from a missed grasp.
+Do not push or drag the cube to substitute for picking it up. Request stop with
+no commands only when you observe completion. Reconsider rejected targets using
+the measured state and feedback; do not repeat an unreachable target unchanged.
+"""
+
+[robot]
+profile = "../robots/r5_sim.toml"
+active_arms = ["left"]
+observation_arms = ["right"]
+
+[simulation]
+camera_profile = "../cameras/r5_orbbec_provisional.toml"
+asset_directory = "../../build/r5"
+headless = true
+# Backend defaults to d3d12 on Windows and vulkan on Linux.
+width = 640
+height = 480
+fps = 12
+arm_stiffness = 1500.0
+arm_damping = 80.0
+finger_stiffness = 2000.0
+finger_damping = 40.0
+self_collision = false
+solver_position_iterations = 32
+solver_velocity_iterations = 0
+
+[interaction]
+cube_size_m = 0.04
+cube_mass_kg = 0.08
+friction = 0.8
+source_x_m = 0.38
+transfer_y_m = 0.15
+open_width_m = 0.070
+lift_threshold_m = 0.07
+placement_tolerance_m = 0.025
+stability_s = 1.0
+
+# Scoring thresholds; object/contact truth is never included in GPT observations.
+contact_threshold_n = 0.05
+placement_height_tolerance_m = 0.006
+placement_speed_m_s = 0.02
+placement_angular_speed_rad_s = 0.2
+gripper_open_tolerance_m = 0.003
+
+[policy]
+model_config = "../models/gpt.toml"

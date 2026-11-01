@@ -1,0 +1,41 @@
+{
+  "source_document": "https://my.feishu.cn/docx/QK4EdOD3hotgp4x782ycgoyyn6g",
+  "sheet_id": "KyMjZ7",
+  "sheet_revision": 395,
+  "sheet_row_1based": 34,
+  "source_task_label": "待编号（夹取果冻）",
+  "source_experiment_type": "真机",
+  "local_task_id": "L2-06",
+  "protocol": "feishu_jelly_20261016_v1",
+  "priority": "Latest English Prompt column; Chinese operating notes and historical result details are not additional completion requirements",
+  "source_setting_zh": "夹取果冻。果冻初始放在绿色盒面，左臂抓取、试提并抬升5—20厘米，放回原支撑后松爪撤离，确认独立稳定，再双臂回原参考；右臂仅辅助观察。",
+  "source_prompt_zh": "左臂拿起绿色盒面上的果冻杯，抬升5–20厘米，再放回原处并松开。",
+  "source_prompt_en": "Pick up the jelly from the green box with the left arm, lift it 5–20 cm, then place it back and release it.",
+  "simulation_prompt_en": "Pick up the jelly from the green box with the left arm, lift it 5–20 cm, then place it back and release it.",
+  "arm_mapping": {
+    "prompt_left": "simulation_right",
+    "prompt_right": "simulation_left",
+    "frame": "Robot perspective; overview-image left/right are reversed"
+  },
+  "success_conditions": {
+    "held_by_prompt_left_arm": true,
+    "minimum_lift_m": 0.05,
+    "maximum_lift_m": 0.2,
+    "lift_reference": "Initial settled jelly centroid; a geometric FEM proxy for object lift",
+    "return_to_original_box": true,
+    "release_required": true,
+    "final_orientation_required": false,
+    "exact_original_point_required": false,
+    "return_home_required": false,
+    "minimum_hold_s": 0.0,
+    "damage_measurement_required": false
+  },
+  "engineering_measurement_tolerances": {
+    "finger_proximity_m": 0.003,
+    "released_finger_clearance_m": 0.006,
+    "support_vertical_tolerance_m": 0.003,
+    "placement_centroid_speed_m_s": 0.05,
+    "note": "Implementation tolerances for contact/support/release proxies; not thresholds specified by the source document"
+  },
+  "source_snapshot_sha256": "a7b89d6a45e92ed0b03cf77727aa0120a85032c44b501195f31b4b583c8c4516"
+}

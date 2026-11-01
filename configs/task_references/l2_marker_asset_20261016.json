@@ -1,0 +1,10 @@
+{
+  "revision": "l2-01-yagu-marker-video-v2-20261016",
+  "task": "L2-01",
+  "asset_path": "source/L2-01/yagu_marker_video_v2.usdz",
+  "asset_sha256": "faf13a9fadf4705c39ede792c64823992d5fd021f041c0d831f49901660db0d2",
+  "asset_bytes": 1995447,
+  "source_filename": "yagu_marker_video_v2.usdz",
+  "source": "User supplied Downloads/yagu_marker_video_v2.usdz on 2026-10-16",
+  "scope": "All exterior meshes, materials and label from the supplied archive. Retain the existing detachable nib, hollow cap and passive retention mechanism; incoming exterior geometry matches the already fitted dimensions exactly."
+}

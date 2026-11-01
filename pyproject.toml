@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm4robot-bench"
+version = "0.1.0"
+description = "LLM4Robot-Bench: a hierarchical, matched sim-real benchmark for robotic manipulation"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "Pillow>=10,<12", "scipy>=1.11,<2"]
+
+[project.urls]
+Homepage = "https://llm4robot.github.io/bench/"
+Repository = "https://github.com/LLM4Robot/LLM4Robot-Bench"
+Issues = "https://github.com/LLM4Robot/LLM4Robot-Bench/issues"
+Documentation = "https://github.com/LLM4Robot/LLM4Robot-Bench/blob/main/docs/release/INSTALL.md"
+
+[project.optional-dependencies]
+# CPU geometry/asset checks; Isaac and cuRobo remain separately configured runtimes.
+test = ["usd-core>=25.5,<27", "trimesh>=4,<5", "rtree>=1,<2", "networkx>=3,<4"]
+
+[project.scripts]
+robot-tasks = "robot_tasks.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["robot_tasks*"]
+namespaces = false

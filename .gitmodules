@@ -1,0 +1,8 @@
+[submodule "assets"]
+	path = assets
+	url = https://github.com/PhysLadder-Benchmark/PhysLadder-Assets.git
+	shallow = true
+[submodule "docs/media"]
+	path = docs/media
+	url = https://github.com/PhysLadder-Benchmark/PhysLadder-Media.git
+	shallow = true

@@ -1,0 +1,60 @@
+# Run from the repository root in the Isaac Sim environment; uses the selected model provider.
+# launch_command / launch_command_conda below are documentation, not auto-executed shell code.
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[robot]
+profile = "../robots/r5_video_20261015.toml"
+active_arms = ["right"]
+observation_arms = ["left"]
+
+[simulation]
+environment = "tuojing_lab_v4"
+camera_profile = "../cameras/r5_tuojing_lab.toml"
+asset_directory = "../../build/tuojing_lab"
+headless = true
+renderer = "PathTracing" # Render the supplied transparent OmniSurface without opacity overrides.
+gpu_dynamics = true # Native volume FEM requires GPU physics, not just GPU rendering.
+width = 1280
+height = 720
+fps = 12
+arm_stiffness = 1500.0
+arm_damping = 80.0
+finger_stiffness = 2000.0
+finger_damping = 40.0
+self_collision = false
+solver_position_iterations = 32
+solver_velocity_iterations = 0
+
+[policy]
+model_config = "../models/gpt.toml"
+
+[runtime]
+physics_dt_s = 0.002777777777777778 # 360 Hz, as recommended by the supplied jelly asset.
+
+[completion]
+return_home = false
+home_tolerance_rad = 0.05
+
+[task]
+scene_delivery = "video_20261015"
+prompt_protocol = "feishu_jelly_20261016_v1"
+# Guided visual execution; common information boundaries are appended by BenchTask.
+scoring_protocol = "feishu_jelly_20261016_v1"
+id = "L2-06"
+name = "果冻抬升并放回"
+execution_target = "simulation"
+simulation_enabled = true
+status = "implemented_proxy"
+implementation = "household"
+simulation_limitations = "Gelatin FEM asset supplied by user on 2026-10-16, on the measured L2-04 box and shared camera rig. Elastic material parameters are supplied estimates. Grasp, lift and placement use geometric proxies."
+launch_command = "python tools/launch.py run L2-06 --gui"
+launch_command_conda = "conda run --no-capture-output -n isaac51 python tools/launch.py run L2-06 --gui"
+instruction = """
+Pick up the jelly from the green box with the left arm, lift it 5–20 cm, then place it back and release it.
+"""
+
+# 中文布置和道具说明。
+description = """
+Complete 2026-10-15 assets: room, table, robot mounts, lighting and task props. Robot initial joints and gripper openings follow the per-task video-visible setup. All camera views use the shared L3-01 rig. Prop placements follow the delivered video reconstruction. Task left/right use the robot perspective; overview-image left/right are reversed. No older individual prop is imported. Physical parameters remain uncalibrated.
+"""

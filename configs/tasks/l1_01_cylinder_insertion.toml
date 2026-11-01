@@ -1,0 +1,53 @@
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[robot]
+profile = "../robots/r5_video_20261015.toml"
+active_arms = ["right"]
+observation_arms = ["left"]
+
+[simulation]
+# Preserve Hym L1 motion settings; L2/L3 keep their own profiles.
+robot_gravity_compensation = false
+cartesian_completion_tolerance_m = 0.005
+environment = "tuojing_lab_v4"
+camera_profile = "../cameras/r5_tuojing_lab.toml"
+asset_directory = "../../build/tuojing_lab"
+headless = true
+width = 1280
+height = 720
+fps = 12
+arm_stiffness = 1500.0
+arm_damping = 80.0
+finger_stiffness = 2000.0
+finger_damping = 40.0
+self_collision = false
+solver_position_iterations = 32
+solver_velocity_iterations = 4
+
+[policy]
+model_config = "../models/gpt.toml"
+
+[task]
+launch_command = "python tools/launch.py run L1-01 --gui"
+scene_delivery = "video_20261015"
+initial_placement_profile = "baseline"
+prompt_protocol = "feishu_english_20261015_v1"
+reference_document = "https://my.feishu.cn/docx/QK4EdOD3hotgp4x782ycgoyyn6g"
+reference_sheet_id = "KyMjZ7"
+reference_sheet_revision = 324
+reference_sheet_row = 2
+id = "L1-01"
+name = "白板笔入固定黑色陶瓷杯"
+execution_target = "simulation_and_real"
+simulation_enabled = true
+status = "implemented"
+implementation = "household"
+simulation_limitations = "Latest complete 2026-10-15 scene. Latest prop geometry, materials and masses are retained. Robot joint homes and gripper openings use per-task video estimates. All camera mounts and lens parameters use the shared L3-01 rig; overview is fixed in world space and wrist cameras follow their own arms. Video-guided geometry and illumination remain uncalibrated; rigid flowers/cups/bristles and contact-driven wiping are explicit simulation approximations. Known per-task discrepancies are recorded in reports/reference_alignment_20261015.json."
+instruction = """
+Pick up the thick marker with the left arm and place it in the wide-mouth cup, then release it.
+"""
+
+description = """
+Complete 2026-10-15 assets: room, table, robot mounts, lighting and task props. Robot initial joints and gripper openings follow the per-task video-visible setup. All camera views use the shared L3-01 rig. Prop placements follow the delivered video reconstruction. Task left/right use the robot perspective; overview-image left/right are reversed. No older individual prop is imported. Physical parameters remain uncalibrated.
+"""

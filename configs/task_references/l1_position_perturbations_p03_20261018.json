@@ -1,0 +1,2274 @@
+{
+  "id": "l1_xy_random_p03_20261018",
+  "description": "P03: five independently sampled constrained random initial layouts per L1 task, frozen for reproducibility.",
+  "coordinate_frame": "world metres; +X is overview-image right, +Y is toward the robot bases; Z is unchanged",
+  "max_translation_m": 0.07,
+  "max_yaw_deg": 25.0,
+  "master_seed": 20261018,
+  "variant_count": 5,
+  "sampling": {
+    "translation": "uniform area on each group annulus; independent direction and radius",
+    "hat_yaw": "equal probability of each sign; magnitude uniform in [10,25] degrees",
+    "rejection": [
+      "10mm tabletop margin",
+      "5mm separation of independent group XY bounds; L1-03 uses actual separate rack segment polygons",
+      "relative translation change >=15mm",
+      "preserve cup sides",
+      "L1-04 cup front/back difference 10..50mm",
+      "whole moved props fit overview with 8px margin (rack top exempt)",
+      "position-only URDF IK <=3mm",
+      "recorded passive-physics rejections"
+    ],
+    "runtime_resampling": false,
+    "reset_policy": "reuse selected frozen variant; select 1..5 explicitly"
+  },
+  "physical_rejections": [
+    {
+      "task": "L1-03",
+      "variant": 4,
+      "seed": 10987712550009242467,
+      "candidate_sha256": "0dea13fdec467f7359b86b00ebee47a3c95b9898f8d1991408c9d08d9a9169fe",
+      "candidate": {
+        "groups": [
+          {
+            "name": "帽子和蓝色盒子",
+            "delta_m": [
+              0.03518017,
+              0.03987205,
+              0.0
+            ],
+            "paths": [
+              "/World/Household/hat",
+              "/World/Household/source_box"
+            ]
+          },
+          {
+            "name": "挂帽架",
+            "delta_m": [
+              -0.01488818,
+              0.0218212,
+              0.0
+            ],
+            "paths": [
+              "/World/Household/Fixture"
+            ]
+          }
+        ],
+        "rotations": [
+          {
+            "name": "帽子相对盒子旋转",
+            "path": "/World/Household/hat",
+            "yaw_deg": 23.4986,
+            "pivot_path": "/World/Household/source_box",
+            "axis": "world +Z",
+            "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+          }
+        ]
+      },
+      "reason": "Unexpected arm/attachment contact in initial scene: {'arm': 'left', 'link': 'link6', 'component': 'link6', 'robot_collider': '/World/Robots/R5_Left/link6/collisions/link6/node_STL_BINARY_', 'other_collider': '/World/Household/Fixture/Colliders/Leg1', 'impulse_ns': 2.952552272734406, 'separation_m': -0.0038405656814575195, 'robot_actor': '/World/Robots/R5_Left/link6', 'other_actor': '/World/Household/Fixture/Colliders/Leg1', 'force_n': 708.6125454562574}",
+      "evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/rejected_samples/L1-03_v04_r0/result.json"
+    }
+  ],
+  "tasks": {
+    "L1-01": {
+      "baseline_runtime_sha256": "f8f4bafbb34eab9dc265bbb30540311f6d8a33249ac4290be154bf9195e5e4a7",
+      "translation_ranges_m": [
+        [
+          0.03,
+          0.07
+        ],
+        [
+          0.02,
+          0.05
+        ]
+      ],
+      "variants": [
+        {
+          "variant": 1,
+          "seed": 3891427595232811397,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "白板笔",
+              "delta_m": [
+                0.013525,
+                -0.05767847,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/marker"
+              ]
+            },
+            {
+              "name": "固定马克杯",
+              "delta_m": [
+                0.00023569,
+                0.0259283,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "marker_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.32307309642794174,
+                  1.1214166001764223,
+                  1.0060000179335473
+                ],
+                "position_error_m": 5.21167310147966e-09,
+                "joint_positions_rad": [
+                  -0.175393469528878,
+                  1.6388394656027594,
+                  0.6530086626108341,
+                  0.6458751806828212,
+                  0.013360736392217132,
+                  0.0
+                ]
+              },
+              {
+                "region": "mug_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.0437925770319647,
+                  1.2039888504864642,
+                  1.0099999998137354
+                ],
+                "position_error_m": 9.663646248269619e-08,
+                "joint_positions_rad": [
+                  -0.7845184547637563,
+                  1.800015974486408,
+                  1.0148176840518701,
+                  0.30817877850436015,
+                  0.006349495094719466,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "seed": 14400011120859043430,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "白板笔",
+              "delta_m": [
+                -0.05312327,
+                0.00587906,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/marker"
+              ]
+            },
+            {
+              "name": "固定马克杯",
+              "delta_m": [
+                -0.02648446,
+                -0.01422757,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "marker_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.25642482642794173,
+                  1.1849741301764223,
+                  1.0060000179335473
+                ],
+                "position_error_m": 3.1942644708694477e-08,
+                "joint_positions_rad": [
+                  -0.2532931630161098,
+                  1.4558985341741846,
+                  0.7534177540765871,
+                  0.06991547131557468,
+                  0.29293005137596506,
+                  0.0
+                ]
+              },
+              {
+                "region": "mug_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.017072427031964706,
+                  1.1638329804864642,
+                  1.0099999998137354
+                ],
+                "position_error_m": 1.2198574182363457e-07,
+                "joint_positions_rad": [
+                  -0.6134124998226597,
+                  2.0957967250175473,
+                  1.1113834862582204,
+                  0.7920845744993564,
+                  0.5493019969639855,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "seed": 4969682251577742920,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "白板笔",
+              "delta_m": [
+                -0.06802076,
+                0.01529771,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/marker"
+              ]
+            },
+            {
+              "name": "固定马克杯",
+              "delta_m": [
+                -0.01465795,
+                -0.02779769,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "marker_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.24152733642794172,
+                  1.1943927801764223,
+                  1.0060000179335473
+                ],
+                "position_error_m": 1.7361986512787826e-07,
+                "joint_positions_rad": [
+                  -0.1536027332119003,
+                  1.6168615326794427,
+                  0.5078207838280321,
+                  0.8155487147241403,
+                  0.6784869557469152,
+                  0.0
+                ]
+              },
+              {
+                "region": "mug_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.028898937031964708,
+                  1.1502628604864642,
+                  1.0099999998137354
+                ],
+                "position_error_m": 2.511476418395694e-07,
+                "joint_positions_rad": [
+                  -0.7073535044082364,
+                  2.1549703783189234,
+                  0.9965222190950793,
+                  1.1445979950698038,
+                  0.10077400310162657,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 4,
+          "seed": 6902618207456676633,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "白板笔",
+              "delta_m": [
+                0.0067573,
+                0.06487093,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/marker"
+              ]
+            },
+            {
+              "name": "固定马克杯",
+              "delta_m": [
+                0.02628658,
+                0.02348479,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "marker_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.31630539642794175,
+                  1.2439660001764223,
+                  1.0060000179335473
+                ],
+                "position_error_m": 2.470191925807233e-07,
+                "joint_positions_rad": [
+                  -0.25771534094071924,
+                  1.0558677464449957,
+                  0.37831720019509396,
+                  0.19763745907643596,
+                  0.018622952334402493,
+                  0.0
+                ]
+              },
+              {
+                "region": "mug_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.06984346703196471,
+                  1.2015453404864642,
+                  1.0099999998137354
+                ],
+                "position_error_m": 1.640616160124029e-07,
+                "joint_positions_rad": [
+                  -0.7141071888632123,
+                  1.7498748083551727,
+                  0.9171794036206058,
+                  0.3888029119710518,
+                  0.09398748693628722,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 5,
+          "seed": 10425782213433607122,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "白板笔",
+              "delta_m": [
+                -0.04241351,
+                -0.01422837,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/marker"
+              ]
+            },
+            {
+              "name": "固定马克杯",
+              "delta_m": [
+                0.01753598,
+                0.01734903,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "marker_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.26713458642794174,
+                  1.1648667001764221,
+                  1.0060000179335473
+                ],
+                "position_error_m": 4.2249537792687825e-09,
+                "joint_positions_rad": [
+                  -0.2871483838385896,
+                  1.4937319493457097,
+                  0.7683436187194178,
+                  0.1326414614341099,
+                  0.10974203985126496,
+                  0.0
+                ]
+              },
+              {
+                "region": "mug_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.061092867031964704,
+                  1.1954095804864644,
+                  1.0099999998137354
+                ],
+                "position_error_m": 1.2889842912414593e-07,
+                "joint_positions_rad": [
+                  -0.9731547057906579,
+                  2.386548228759366,
+                  2.2655360301399488,
+                  -1.310904701860284,
+                  -0.7370488696033131,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "L1-02": {
+      "baseline_runtime_sha256": "616d8f7f1e143f8e936abb26fd1402ab5644c4a68cfab4f40f8a51befa9df485",
+      "translation_ranges_m": [
+        [
+          0.03,
+          0.07
+        ],
+        [
+          0.02,
+          0.05
+        ]
+      ],
+      "variants": [
+        {
+          "variant": 1,
+          "seed": 5436360095187061919,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "插头和黑色底座",
+              "delta_m": [
+                -0.0315477,
+                0.0006082,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/plug",
+                "/World/Household/plug_storage_base"
+              ]
+            },
+            {
+              "name": "桌面插排",
+              "delta_m": [
+                -0.02120587,
+                -0.01796684,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "plug_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.2476787364125757,
+                  1.1777790859713906,
+                  0.9575000179335474
+                ],
+                "position_error_m": 5.1479433133892645e-08,
+                "joint_positions_rad": [
+                  -0.5739559903803634,
+                  1.8548312469985069,
+                  1.277329802192563,
+                  -0.6396090975809966,
+                  -0.49287699319417894,
+                  0.0
+                ]
+              },
+              {
+                "region": "socket_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.025191928445735243,
+                  1.1698257178563303,
+                  0.9799999998137354
+                ],
+                "position_error_m": 1.0286163665982245e-06,
+                "joint_positions_rad": [
+                  -0.8586630747475669,
+                  2.1186274556455116,
+                  1.241747072714148,
+                  0.4945699682160918,
+                  -0.1053422854018806,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "seed": 16011158600728367104,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "插头和黑色底座",
+              "delta_m": [
+                0.02673504,
+                0.02883969,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/plug",
+                "/World/Household/plug_storage_base"
+              ]
+            },
+            {
+              "name": "桌面插排",
+              "delta_m": [
+                0.01662538,
+                -0.01944588,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "plug_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3059614764125757,
+                  1.2060105759713906,
+                  0.9575000179335474
+                ],
+                "position_error_m": 3.382534246578765e-07,
+                "joint_positions_rad": [
+                  -0.06580292379589249,
+                  -1.2789000168704583,
+                  -0.9417707009297188,
+                  0.027935518739159684,
+                  0.4635719657186828,
+                  0.0
+                ]
+              },
+              {
+                "region": "socket_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.012639321554264758,
+                  1.1683466778563303,
+                  0.9799999998137354
+                ],
+                "position_error_m": 2.072940050338146e-07,
+                "joint_positions_rad": [
+                  -0.7908278883669397,
+                  2.0374417753904295,
+                  1.1076768163329145,
+                  0.549298929074442,
+                  -0.03381003203030808,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "seed": 16302250749747146468,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "插头和黑色底座",
+              "delta_m": [
+                0.02693387,
+                -0.05131483,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/plug",
+                "/World/Household/plug_storage_base"
+              ]
+            },
+            {
+              "name": "桌面插排",
+              "delta_m": [
+                0.02847601,
+                0.02002393,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "plug_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.30616030641257574,
+                  1.1258560559713906,
+                  0.9575000179335474
+                ],
+                "position_error_m": 7.374072006509593e-08,
+                "joint_positions_rad": [
+                  -0.22088076163599235,
+                  1.9177883254118078,
+                  1.4196533201991797,
+                  -0.6683855826559895,
+                  -0.004386541798566396,
+                  0.0
+                ]
+              },
+              {
+                "region": "socket_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.02448995155426476,
+                  1.2078164878563302,
+                  0.9799999998137354
+                ],
+                "position_error_m": 2.8988411574142602e-08,
+                "joint_positions_rad": [
+                  -0.6959968485312495,
+                  -1.92186952296424,
+                  -1.4323079518987643,
+                  -0.19296150264194248,
+                  0.39256256166107106,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 4,
+          "seed": 13990861792789321916,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "插头和黑色底座",
+              "delta_m": [
+                -0.04505806,
+                0.01560046,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/plug",
+                "/World/Household/plug_storage_base"
+              ]
+            },
+            {
+              "name": "桌面插排",
+              "delta_m": [
+                0.03167752,
+                -0.03563578,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "plug_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.2341683764125757,
+                  1.1927713459713905,
+                  0.9575000179335474
+                ],
+                "position_error_m": 3.451706416602676e-07,
+                "joint_positions_rad": [
+                  -0.27472418518805464,
+                  -1.4209406632669697,
+                  -1.1034815853230278,
+                  0.09795522831786695,
+                  0.3885483806018968,
+                  0.0
+                ]
+              },
+              {
+                "region": "socket_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.02769146155426476,
+                  1.1521567778563302,
+                  0.9799999998137354
+                ],
+                "position_error_m": 9.364439928359977e-08,
+                "joint_positions_rad": [
+                  -0.7462903952925852,
+                  2.0194967597143574,
+                  1.232081713829186,
+                  0.26125429752870266,
+                  -0.0175316035215348,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 5,
+          "seed": 3966341743485969557,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "插头和黑色底座",
+              "delta_m": [
+                0.04034042,
+                -0.0292607,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/plug",
+                "/World/Household/plug_storage_base"
+              ]
+            },
+            {
+              "name": "桌面插排",
+              "delta_m": [
+                -0.03336565,
+                0.00114824,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "plug_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3195668564125757,
+                  1.1479101859713905,
+                  0.9575000179335474
+                ],
+                "position_error_m": 6.5537920114328125e-09,
+                "joint_positions_rad": [
+                  -0.18282067264709792,
+                  1.7028038407469728,
+                  1.0435542571692653,
+                  -0.29521146516800517,
+                  0.04320862179778376,
+                  0.0
+                ]
+              },
+              {
+                "region": "socket_approach",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.03735170844573524,
+                  1.1889407978563302,
+                  0.9799999998137354
+                ],
+                "position_error_m": 5.352773023920078e-11,
+                "joint_positions_rad": [
+                  -0.8892895718528325,
+                  2.1560624738887118,
+                  1.142085116965748,
+                  0.7716597741008813,
+                  -0.07672741401286441,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "L1-03": {
+      "baseline_runtime_sha256": "3935f39f6fb561726dfcd0232c5adb5fcf3729ad6bce1ad80d722cc135da38c8",
+      "translation_ranges_m": [
+        [
+          0.03,
+          0.07
+        ],
+        [
+          0.0,
+          0.03
+        ]
+      ],
+      "variants": [
+        {
+          "variant": 1,
+          "seed": 4539422211209613661,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "帽子和蓝色盒子",
+              "delta_m": [
+                -0.01485866,
+                0.03904336,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/hat",
+                "/World/Household/source_box"
+              ]
+            },
+            {
+              "name": "挂帽架",
+              "delta_m": [
+                -0.01357796,
+                -0.00938601,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rotations": [
+            {
+              "name": "帽子相对盒子旋转",
+              "path": "/World/Household/hat",
+              "yaw_deg": -13.6374,
+              "pivot_path": "/World/Household/source_box",
+              "axis": "world +Z",
+              "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "hat_band_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.48745789281349294,
+                  1.257611183344763,
+                  0.9830606241197345
+                ],
+                "position_error_m": 9.305246198943248e-08,
+                "joint_positions_rad": [
+                  0.19762818497042256,
+                  1.0765174215703937,
+                  0.19138681169512395,
+                  0.49131362943744966,
+                  -0.1355238310032694,
+                  0.0
+                ]
+              },
+              {
+                "region": "lowest_hook_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.10091527595962888,
+                  1.23643908703266,
+                  1.2138973083575944
+                ],
+                "position_error_m": 5.8755351400957473e-08,
+                "joint_positions_rad": [
+                  -0.6001117288050029,
+                  1.361520950313349,
+                  0.9727481655687513,
+                  0.3865696896360306,
+                  0.40677949594108515,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "seed": 13189571218076250773,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "帽子和蓝色盒子",
+              "delta_m": [
+                0.01752135,
+                0.05301713,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/hat",
+                "/World/Household/source_box"
+              ]
+            },
+            {
+              "name": "挂帽架",
+              "delta_m": [
+                -0.01666052,
+                -0.01273154,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rotations": [
+            {
+              "name": "帽子相对盒子旋转",
+              "path": "/World/Household/hat",
+              "yaw_deg": 16.253,
+              "pivot_path": "/World/Household/source_box",
+              "axis": "world +Z",
+              "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "hat_band_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.49774397577186164,
+                  1.3149341490053048,
+                  0.9830606241197345
+                ],
+                "position_error_m": 5.669113821738681e-09,
+                "joint_positions_rad": [
+                  0.30083321219828646,
+                  -0.5104702413105148,
+                  -0.4451439981325995,
+                  0.11469947502727576,
+                  -0.09992731212756788,
+                  0.0
+                ]
+              },
+              {
+                "region": "lowest_hook_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.09783271595962888,
+                  1.2330935570326598,
+                  1.2138973083575944
+                ],
+                "position_error_m": 1.94348485126349e-09,
+                "joint_positions_rad": [
+                  -0.7706536183753157,
+                  1.4711289108046386,
+                  1.4983923125862468,
+                  -0.5008678288866532,
+                  -0.06297617868723349,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "seed": 3810268538581049546,
+          "sampling_attempt": 2,
+          "groups": [
+            {
+              "name": "帽子和蓝色盒子",
+              "delta_m": [
+                -0.01375323,
+                -0.02857002,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/hat",
+                "/World/Household/source_box"
+              ]
+            },
+            {
+              "name": "挂帽架",
+              "delta_m": [
+                -0.00252374,
+                0.00693804,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rotations": [
+            {
+              "name": "帽子相对盒子旋转",
+              "path": "/World/Household/hat",
+              "yaw_deg": -17.3169,
+              "pivot_path": "/World/Household/source_box",
+              "axis": "world +Z",
+              "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+            }
+          ],
+          "rejections_before_acceptance": {
+            "hat_box_intersects_actual_rack_segment_footprint": 1
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "hat_band_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.4896381584496897,
+                  1.1840371162496397,
+                  0.9830606241197345
+                ],
+                "position_error_m": 1.2386606491681404e-08,
+                "joint_positions_rad": [
+                  0.2318950505496493,
+                  1.9375869407671003,
+                  1.6230039193213142,
+                  -1.1628895052117771,
+                  0.01990149814184705,
+                  0.0
+                ]
+              },
+              {
+                "region": "lowest_hook_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.11196949595962888,
+                  1.2527631370326602,
+                  1.2138973083575944
+                ],
+                "position_error_m": 5.2108188189898784e-08,
+                "joint_positions_rad": [
+                  -1.0294682813083988,
+                  1.4029046607552143,
+                  0.8984143334302466,
+                  0.6402926405746763,
+                  -0.7741016716835964,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 4,
+          "seed": 10987712550009242467,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "帽子和蓝色盒子",
+              "delta_m": [
+                -0.03206266,
+                -0.04092748,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/hat",
+                "/World/Household/source_box"
+              ]
+            },
+            {
+              "name": "挂帽架",
+              "delta_m": [
+                0.01231355,
+                0.00454484,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rotations": [
+            {
+              "name": "帽子相对盒子旋转",
+              "path": "/World/Household/hat",
+              "yaw_deg": -18.163,
+              "pivot_path": "/World/Household/source_box",
+              "axis": "world +Z",
+              "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "hat_band_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.4715216075066651,
+                  1.17030008362117,
+                  0.9830606241197345
+                ],
+                "position_error_m": 6.461407911248234e-08,
+                "joint_positions_rad": [
+                  0.17529609925805312,
+                  1.9970613790088871,
+                  1.708298481606225,
+                  -1.2094873667170765,
+                  0.009325439824716281,
+                  0.0
+                ]
+              },
+              {
+                "region": "lowest_hook_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.12680678595962888,
+                  1.25036993703266,
+                  1.2138973083575944
+                ],
+                "position_error_m": 3.877518119758037e-08,
+                "joint_positions_rad": [
+                  -0.9357006121738882,
+                  1.5719046087980204,
+                  0.6918908908070645,
+                  1.4030947197638606,
+                  -0.5572245336064114,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 5,
+          "seed": 6866470620553224669,
+          "sampling_attempt": 2,
+          "groups": [
+            {
+              "name": "帽子和蓝色盒子",
+              "delta_m": [
+                0.00100145,
+                0.04145706,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/hat",
+                "/World/Household/source_box"
+              ]
+            },
+            {
+              "name": "挂帽架",
+              "delta_m": [
+                -0.00124006,
+                0.01966122,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/Fixture"
+              ]
+            }
+          ],
+          "rotations": [
+            {
+              "name": "帽子相对盒子旋转",
+              "path": "/World/Household/hat",
+              "yaw_deg": -21.5269,
+              "pivot_path": "/World/Household/source_box",
+              "axis": "world +Z",
+              "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+            }
+          ],
+          "rejections_before_acceptance": {
+            "hat_box_intersects_actual_rack_segment_footprint": 1
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "hat_band_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.5051505029174425,
+                  1.24717603409064,
+                  0.9830606241197345
+                ],
+                "position_error_m": 6.639101008170027e-08,
+                "joint_positions_rad": [
+                  0.15840692445247706,
+                  -1.3239165692672232,
+                  -0.6022166933928232,
+                  -0.5537911718208984,
+                  -0.3106692954613769,
+                  0.0
+                ]
+              },
+              {
+                "region": "lowest_hook_region",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.11325317595962889,
+                  1.2654863170326598,
+                  1.2138973083575944
+                ],
+                "position_error_m": 4.745505188986841e-09,
+                "joint_positions_rad": [
+                  -0.8027758953474622,
+                  1.3237596735027923,
+                  0.6670536754058528,
+                  0.9388342672564024,
+                  -0.07417712099014588,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "L1-04": {
+      "baseline_runtime_sha256": "f31ac428f045e82b2c552740057c7a31e98b311442ab979c39967f5101115cac",
+      "translation_ranges_m": [
+        [
+          0.03,
+          0.06
+        ],
+        [
+          0.03,
+          0.06
+        ]
+      ],
+      "variants": [
+        {
+          "variant": 1,
+          "seed": 9989741613880702887,
+          "sampling_attempt": 2,
+          "groups": [
+            {
+              "name": "画面右杯",
+              "delta_m": [
+                0.03163228,
+                -0.01563489,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/lower_cup"
+              ]
+            },
+            {
+              "name": "画面左杯",
+              "delta_m": [
+                -0.04841409,
+                -0.01339141,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/upper_cup"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {
+            "cup_front_back_difference_outside_1_to_5cm": 1
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "right_cup_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3274836653207588,
+                  1.1763638010835127,
+                  0.9360000179335475
+                ],
+                "position_error_m": 1.1619394382889593e-07,
+                "joint_positions_rad": [
+                  -0.19481592115438948,
+                  1.5861655161666401,
+                  0.5576060065902159,
+                  0.38998398538462187,
+                  -0.0011977106802741634,
+                  0.0
+                ]
+              },
+              {
+                "region": "left_cup_grasp",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.00417299227088621,
+                  1.1885130303295153,
+                  0.9360000179335475
+                ],
+                "position_error_m": 9.510560133093469e-08,
+                "joint_positions_rad": [
+                  0.051287056357689854,
+                  1.567913306447567,
+                  0.6810485660475893,
+                  0.06306388767561455,
+                  -0.31580724448580183,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_right",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.8869030658382482e-08,
+                "joint_positions_rad": [
+                  -0.59778602137126,
+                  1.5214825669281324,
+                  0.900615287338417,
+                  -0.02485995327938023,
+                  -0.09936355042521695,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_left",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.2219111866797396e-11,
+                "joint_positions_rad": [
+                  0.4376613659077442,
+                  1.563300693927364,
+                  0.846306751203417,
+                  0.1503809872436147,
+                  -0.3903000860241686,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "seed": 5595728710348135588,
+          "sampling_attempt": 2,
+          "groups": [
+            {
+              "name": "画面右杯",
+              "delta_m": [
+                -0.03635045,
+                -0.04172751,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/lower_cup"
+              ]
+            },
+            {
+              "name": "画面左杯",
+              "delta_m": [
+                -0.00074236,
+                -0.03666629,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/upper_cup"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {
+            "relative_offset_change_under_15mm": 1
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "right_cup_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.2595009353207588,
+                  1.1502711810835127,
+                  0.9360000179335475
+                ],
+                "position_error_m": 1.6514638629678542e-08,
+                "joint_positions_rad": [
+                  -0.33583708465950085,
+                  -1.5734870694838639,
+                  -1.0310578127200503,
+                  -0.42241641977263644,
+                  7.803002535474948e-05,
+                  0.0
+                ]
+              },
+              {
+                "region": "left_cup_grasp",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.05184472227088621,
+                  1.1652381503295153,
+                  0.9360000179335475
+                ],
+                "position_error_m": 5.792469703250614e-07,
+                "joint_positions_rad": [
+                  0.3251606775663311,
+                  1.657966429848024,
+                  0.7153310682617555,
+                  0.22126047065815338,
+                  0.09053427417207872,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_right",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.8869030658382482e-08,
+                "joint_positions_rad": [
+                  -0.59778602137126,
+                  1.5214825669281324,
+                  0.900615287338417,
+                  -0.02485995327938023,
+                  -0.09936355042521695,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_left",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.2219111866797396e-11,
+                "joint_positions_rad": [
+                  0.4376613659077442,
+                  1.563300693927364,
+                  0.846306751203417,
+                  0.1503809872436147,
+                  -0.3903000860241686,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "seed": 18087298221319484902,
+          "sampling_attempt": 3,
+          "groups": [
+            {
+              "name": "画面右杯",
+              "delta_m": [
+                -0.05161396,
+                0.00575562,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/lower_cup"
+              ]
+            },
+            {
+              "name": "画面左杯",
+              "delta_m": [
+                0.00477393,
+                -0.04429359,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/upper_cup"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {
+            "cup_front_back_difference_outside_1_to_5cm": 2
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "right_cup_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.24423742532075876,
+                  1.1977543110835127,
+                  0.9360000179335475
+                ],
+                "position_error_m": 4.8765599896385556e-08,
+                "joint_positions_rad": [
+                  -0.3733989599172294,
+                  -1.4000172210755015,
+                  -0.9031275595616767,
+                  -0.3575521025591268,
+                  0.09168714593859219,
+                  0.0
+                ]
+              },
+              {
+                "region": "left_cup_grasp",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.05736101227088621,
+                  1.1576108503295153,
+                  0.9360000179335475
+                ],
+                "position_error_m": 8.99734174225223e-08,
+                "joint_positions_rad": [
+                  0.29068106893533835,
+                  1.7183367815040154,
+                  0.5966381328363428,
+                  0.5768000736965678,
+                  -0.014865158512433748,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_right",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.8869030658382482e-08,
+                "joint_positions_rad": [
+                  -0.59778602137126,
+                  1.5214825669281324,
+                  0.900615287338417,
+                  -0.02485995327938023,
+                  -0.09936355042521695,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_left",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.2219111866797396e-11,
+                "joint_positions_rad": [
+                  0.4376613659077442,
+                  1.563300693927364,
+                  0.846306751203417,
+                  0.1503809872436147,
+                  -0.3903000860241686,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 4,
+          "seed": 5914237504742155021,
+          "sampling_attempt": 4,
+          "groups": [
+            {
+              "name": "画面右杯",
+              "delta_m": [
+                0.01705701,
+                -0.02526169,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/lower_cup"
+              ]
+            },
+            {
+              "name": "画面左杯",
+              "delta_m": [
+                -0.04386658,
+                0.0135579,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/upper_cup"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {
+            "cup_front_back_difference_outside_1_to_5cm": 3
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "right_cup_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.31290839532075876,
+                  1.1667370010835127,
+                  0.9360000179335475
+                ],
+                "position_error_m": 9.907479431621598e-08,
+                "joint_positions_rad": [
+                  -0.22595471508593923,
+                  1.6637714029308883,
+                  0.5217387960535306,
+                  0.6044638660092351,
+                  -0.00250978716841234,
+                  0.0
+                ]
+              },
+              {
+                "region": "left_cup_grasp",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.008720502270886207,
+                  1.2154623403295153,
+                  0.9360000179335475
+                ],
+                "position_error_m": 4.861544979079917e-08,
+                "joint_positions_rad": [
+                  -0.061537571312391695,
+                  -1.3108487277515326,
+                  -0.7934620500313239,
+                  -0.4003725340875565,
+                  -0.622685755542957,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_right",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.8869030658382482e-08,
+                "joint_positions_rad": [
+                  -0.59778602137126,
+                  1.5214825669281324,
+                  0.900615287338417,
+                  -0.02485995327938023,
+                  -0.09936355042521695,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_left",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.2219111866797396e-11,
+                "joint_positions_rad": [
+                  0.4376613659077442,
+                  1.563300693927364,
+                  0.846306751203417,
+                  0.1503809872436147,
+                  -0.3903000860241686,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 5,
+          "seed": 15199443688422471062,
+          "sampling_attempt": 3,
+          "groups": [
+            {
+              "name": "画面右杯",
+              "delta_m": [
+                0.02130492,
+                0.05032225,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/lower_cup"
+              ]
+            },
+            {
+              "name": "画面左杯",
+              "delta_m": [
+                -0.0366031,
+                0.02592271,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/upper_cup"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {
+            "cup_front_back_difference_outside_1_to_5cm": 1,
+            "relative_offset_change_under_15mm": 1
+          },
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "right_cup_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3171563053207588,
+                  1.2423209410835128,
+                  0.9360000179335475
+                ],
+                "position_error_m": 1.691015457218091e-07,
+                "joint_positions_rad": [
+                  -0.2491079656191668,
+                  1.3293138118575427,
+                  0.2985196691653782,
+                  0.433198500688258,
+                  0.0284005269203161,
+                  0.0
+                ]
+              },
+              {
+                "region": "left_cup_grasp",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.01598398227088621,
+                  1.2278271503295153,
+                  0.9360000179335475
+                ],
+                "position_error_m": 1.883029627312219e-09,
+                "joint_positions_rad": [
+                  0.22853995205470506,
+                  1.3916276846880844,
+                  0.34923914611798645,
+                  0.43777563974342565,
+                  -0.026480045056370288,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_right",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.8869030658382482e-08,
+                "joint_positions_rad": [
+                  -0.59778602137126,
+                  1.5214825669281324,
+                  0.900615287338417,
+                  -0.02485995327938023,
+                  -0.09936355042521695,
+                  0.0
+                ]
+              },
+              {
+                "region": "centre_left",
+                "arm_tool_id": "left",
+                "target_world_m": [
+                  0.1742192337958225,
+                  1.196951565706514,
+                  1.02
+                ],
+                "position_error_m": 2.2219111866797396e-11,
+                "joint_positions_rad": [
+                  0.4376613659077442,
+                  1.563300693927364,
+                  0.846306751203417,
+                  0.1503809872436147,
+                  -0.3903000860241686,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "L1-05": {
+      "baseline_runtime_sha256": "4f5786655464c7c3c1f07d92c2052b4446e73f6ec50bbadc2df71cf82f971398",
+      "translation_ranges_m": [
+        [
+          0.03,
+          0.07
+        ],
+        [
+          0.03,
+          0.07
+        ]
+      ],
+      "variants": [
+        {
+          "variant": 1,
+          "seed": 10299530311571057887,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "源杯、花和充电头",
+              "delta_m": [
+                0.03852401,
+                -0.04900945,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/source_cup",
+                "/World/Household/rose",
+                "/World/Household/source_charger",
+                "/World/Household/rose/LeafBodies/Leaf0",
+                "/World/Household/rose/LeafBodies/Leaf1"
+              ]
+            },
+            {
+              "name": "目标杯和10颗玻璃珠",
+              "delta_m": [
+                -0.04707765,
+                -0.01083934,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/target_cup",
+                "/World/Household/filler_0",
+                "/World/Household/filler_1",
+                "/World/Household/filler_2",
+                "/World/Household/filler_3",
+                "/World/Household/filler_4",
+                "/World/Household/filler_5",
+                "/World/Household/filler_6",
+                "/World/Household/filler_7",
+                "/World/Household/filler_8",
+                "/World/Household/filler_9"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "flower_head_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3735903059673197,
+                  1.0983186330071129,
+                  1.1520468428278252
+                ],
+                "position_error_m": 1.5527947299261108e-09,
+                "joint_positions_rad": [
+                  0.03026193525127996,
+                  1.5698256960498838,
+                  0.7605446475762547,
+                  0.9403169957699803,
+                  0.269490435411463,
+                  0.0
+                ]
+              },
+              {
+                "region": "target_cup_above",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.07224581204153943,
+                  1.2087258906010405,
+                  1.1310000179335473
+                ],
+                "position_error_m": 5.688006014519139e-07,
+                "joint_positions_rad": [
+                  -0.8070683664754753,
+                  1.9867960812733068,
+                  1.580967893560632,
+                  0.121055639585204,
+                  0.45924422006340965,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "seed": 11255514392680739346,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "源杯、花和充电头",
+              "delta_m": [
+                -0.00123261,
+                -0.06238396,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/source_cup",
+                "/World/Household/rose",
+                "/World/Household/source_charger",
+                "/World/Household/rose/LeafBodies/Leaf0",
+                "/World/Household/rose/LeafBodies/Leaf1"
+              ]
+            },
+            {
+              "name": "目标杯和10颗玻璃珠",
+              "delta_m": [
+                -0.01739967,
+                -0.02520197,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/target_cup",
+                "/World/Household/filler_0",
+                "/World/Household/filler_1",
+                "/World/Household/filler_2",
+                "/World/Household/filler_3",
+                "/World/Household/filler_4",
+                "/World/Household/filler_5",
+                "/World/Household/filler_6",
+                "/World/Household/filler_7",
+                "/World/Household/filler_8",
+                "/World/Household/filler_9"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "flower_head_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.33383368596731966,
+                  1.0849441230071128,
+                  1.1520468428278252
+                ],
+                "position_error_m": 4.4733415768820344e-08,
+                "joint_positions_rad": [
+                  -0.13302891834058206,
+                  1.5579452961048106,
+                  0.869357257629405,
+                  0.7050030136419503,
+                  0.03454667514748977,
+                  0.0
+                ]
+              },
+              {
+                "region": "target_cup_above",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.04256783204153943,
+                  1.1943632606010406,
+                  1.1310000179335473
+                ],
+                "position_error_m": 1.639711060291314e-08,
+                "joint_positions_rad": [
+                  -0.8202112525302275,
+                  1.8916851106195756,
+                  1.4391487047179048,
+                  0.1955385415338917,
+                  0.2120021517447273,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "seed": 1673264253908707437,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "源杯、花和充电头",
+              "delta_m": [
+                0.01552852,
+                0.02842423,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/source_cup",
+                "/World/Household/rose",
+                "/World/Household/source_charger",
+                "/World/Household/rose/LeafBodies/Leaf0",
+                "/World/Household/rose/LeafBodies/Leaf1"
+              ]
+            },
+            {
+              "name": "目标杯和10颗玻璃珠",
+              "delta_m": [
+                -0.00389086,
+                0.06568127,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/target_cup",
+                "/World/Household/filler_0",
+                "/World/Household/filler_1",
+                "/World/Household/filler_2",
+                "/World/Household/filler_3",
+                "/World/Household/filler_4",
+                "/World/Household/filler_5",
+                "/World/Household/filler_6",
+                "/World/Household/filler_7",
+                "/World/Household/filler_8",
+                "/World/Household/filler_9"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "flower_head_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3505948159673197,
+                  1.1757523130071128,
+                  1.1520468428278252
+                ],
+                "position_error_m": 3.6469932802253717e-08,
+                "joint_positions_rad": [
+                  -0.1652987659057778,
+                  1.234939365535712,
+                  0.4904333380229492,
+                  0.8754727946353813,
+                  -0.06943789225901494,
+                  0.0
+                ]
+              },
+              {
+                "region": "target_cup_above",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.029059022041539432,
+                  1.2852465006010405,
+                  1.1310000179335473
+                ],
+                "position_error_m": 7.579758083199028e-09,
+                "joint_positions_rad": [
+                  -1.0042200693628907,
+                  1.6709517318041422,
+                  1.0009902988441106,
+                  0.5859385146801028,
+                  -0.012479990728905108,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 4,
+          "seed": 4210720932532818440,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "源杯、花和充电头",
+              "delta_m": [
+                -0.00478569,
+                -0.04083095,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/source_cup",
+                "/World/Household/rose",
+                "/World/Household/source_charger",
+                "/World/Household/rose/LeafBodies/Leaf0",
+                "/World/Household/rose/LeafBodies/Leaf1"
+              ]
+            },
+            {
+              "name": "目标杯和10颗玻璃珠",
+              "delta_m": [
+                -0.00599651,
+                0.04143672,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/target_cup",
+                "/World/Household/filler_0",
+                "/World/Household/filler_1",
+                "/World/Household/filler_2",
+                "/World/Household/filler_3",
+                "/World/Household/filler_4",
+                "/World/Household/filler_5",
+                "/World/Household/filler_6",
+                "/World/Household/filler_7",
+                "/World/Household/filler_8",
+                "/World/Household/filler_9"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "flower_head_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3302806059673197,
+                  1.106497133007113,
+                  1.1520468428278252
+                ],
+                "position_error_m": 1.2788906725084793e-07,
+                "joint_positions_rad": [
+                  -0.07321260164563989,
+                  1.650021687103445,
+                  0.70803470946896,
+                  1.193044072711215,
+                  0.24250744760418888,
+                  0.0
+                ]
+              },
+              {
+                "region": "target_cup_above",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.031164672041539433,
+                  1.2610019506010406,
+                  1.1310000179335473
+                ],
+                "position_error_m": 1.0214465285117604e-07,
+                "joint_positions_rad": [
+                  -1.2795854146672259,
+                  2.1713067894109646,
+                  1.6823501841371375,
+                  0.28815697866844536,
+                  -1.4655736536371307,
+                  0.0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "variant": 5,
+          "seed": 2863797094332063307,
+          "sampling_attempt": 1,
+          "groups": [
+            {
+              "name": "源杯、花和充电头",
+              "delta_m": [
+                -0.02373314,
+                -0.06541064,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/source_cup",
+                "/World/Household/rose",
+                "/World/Household/source_charger",
+                "/World/Household/rose/LeafBodies/Leaf0",
+                "/World/Household/rose/LeafBodies/Leaf1"
+              ]
+            },
+            {
+              "name": "目标杯和10颗玻璃珠",
+              "delta_m": [
+                0.01663937,
+                0.03163112,
+                0.0
+              ],
+              "paths": [
+                "/World/Household/target_cup",
+                "/World/Household/filler_0",
+                "/World/Household/filler_1",
+                "/World/Household/filler_2",
+                "/World/Household/filler_3",
+                "/World/Household/filler_4",
+                "/World/Household/filler_5",
+                "/World/Household/filler_6",
+                "/World/Household/filler_7",
+                "/World/Household/filler_8",
+                "/World/Household/filler_9"
+              ]
+            }
+          ],
+          "rejections_before_acceptance": {},
+          "reachability_screen": {
+            "scope": "URDF position-only IK for key interaction regions; no orientation/path/contact-success guarantee",
+            "passed": true,
+            "checks": [
+              {
+                "region": "flower_head_grasp",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  0.3113331559673197,
+                  1.0819174430071128,
+                  1.1520468428278252
+                ],
+                "position_error_m": 3.244298466081733e-08,
+                "joint_positions_rad": [
+                  -0.14941185649978642,
+                  1.5815428573438188,
+                  0.9038720375318682,
+                  0.6836789399474728,
+                  0.11883306708907705,
+                  0.0
+                ]
+              },
+              {
+                "region": "target_cup_above",
+                "arm_tool_id": "right",
+                "target_world_m": [
+                  -0.008528792041539432,
+                  1.2511963506010404,
+                  1.1310000179335473
+                ],
+                "position_error_m": 1.5778319125794504e-08,
+                "joint_positions_rad": [
+                  -0.9089130414615109,
+                  -2.445757135246093,
+                  -1.3688318124778296,
+                  -0.8120996413717138,
+                  0.04466204140138844,
+                  0.0
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Optional: copy to codex.local.toml (gitignored).
+# auto: native Codex; on Windows, use WSL when native Codex is not installed.
+# wsl: Windows Isaac uses the selected WSL user's existing Codex login.
+# Linux always calls Codex natively. No account tokens belong in this file.
+host = "auto"
+# wsl_distribution = "Ubuntu-22.04"
+# wsl_user = "your-linux-user"
+wsl_python = "python3"
+# If Windows-launched WSL has no proxy, set one reachable from that WSL distro.
+# wsl_proxy = "http://<Windows-host-IP>:7899"

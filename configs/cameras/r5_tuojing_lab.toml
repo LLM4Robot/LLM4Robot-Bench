@@ -1,0 +1,51 @@
+# Runtime overview pose AND optics come from [simulation] in gpt_default.toml.
+# The matching values below are only fallback defaults for standalone rig loading.
+# Video-matched overview optics/extrinsics; wrist optics remain from the delivery.
+schema_version = 1
+calibration_status = "provisional_uncalibrated"
+notes = "Overview visually matched to the global 4:3 panel of 15_book_150s.mp4: centred between the arms, estimated floor height 1.45 m and 36 degree depression. Effective focal length is estimated to match framing, not hardware calibrated. Wrist optics and mounting unchanged."
+
+[cameras.overview]
+model = "Delivered Orbbec Gemini Pro overview shell with video-estimated pinhole optics"
+parent = "world"
+resolution = [1280, 960]
+intrinsics = [1160.0, 1160.0, 640.0, 480.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+optical_pose_wxyz = [0.1956512155, 0.55, 1.45, 0.8910065241883679, 0.45399049973954675, 0.0, 0.0]
+intrinsics_source = "2026-10-07 visual estimate from the 4:3 global video panel; fx=fy=1160 px at 1280x960. Session-layer lens override, not measured camera calibration."
+pose_source = "Video framing estimate: eye [0.1956512155, 0.55, 1.45], facing +world Y at 36 degrees below horizontal. Height is an estimate, not recovered physical camera height."
+asset = "../../assets/tuojing/source/common/lab/tuojing_lab.usda"
+asset_pose_wxyz = [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+asset_pose_source = "Delivered camera and tripod head moved together by session-layer overrides; source USD unchanged"
+clipping_m = [0.03999999910593033, 100.0]
+existing_prim_path = "/World/Cameras/ThirdPerson"
+
+[cameras.left_wrist]
+model = "Delivered Orbbec 305 wrist shell with estimated pinhole optics"
+parent = "left"
+resolution = [1280, 720]
+intrinsics = [913.8057799353841, 913.8203359098803, 640.0, 360.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+optical_pose_wxyz = [0.09702965115337059, 0.0, 0.06842268053406901, 0.6532814824381884, 0.27059805007309856, -0.27059805007309856, -0.6532814824381883]
+intrinsics_source = "USD focalLength / horizontalAperture / verticalAperture, centred pinhole; not hardware calibration"
+pose_source = "User-requested 45 degree wrist tilt: optical forward = (+X-Z)/sqrt(2) in link6; image right=-Y. Optical centre unchanged; rotate the delivered sensor/bracket assembly around it in the session layer."
+asset = "../../assets/tuojing/source/common/lab/tuojing_lab.usda"
+asset_pose_wxyz = [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+asset_pose_source = "Delivered wrist camera and mounting assembly move together with link6; source USD unchanged"
+clipping_m = [0.009999999776482582, 10.0]
+existing_prim_path = "/World/Robots/R5_Left/link6/WristSensor/Sensor/Camera"
+
+[cameras.right_wrist]
+model = "Delivered Orbbec 305 wrist shell with estimated pinhole optics"
+parent = "right"
+resolution = [1280, 720]
+intrinsics = [913.8057799353841, 913.8203359098803, 640.0, 360.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+optical_pose_wxyz = [0.09702965115337059, 0.0, 0.06842268053406897, 0.6532814824381884, 0.27059805007309856, -0.27059805007309856, -0.6532814824381883]
+intrinsics_source = "USD focalLength / horizontalAperture / verticalAperture, centred pinhole; not hardware calibration"
+pose_source = "User-requested 45 degree wrist tilt: optical forward = (+X-Z)/sqrt(2) in link6; image right=-Y. Optical centre unchanged; rotate the delivered sensor/bracket assembly around it in the session layer."
+asset = "../../assets/tuojing/source/common/lab/tuojing_lab.usda"
+asset_pose_wxyz = [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+asset_pose_source = "Delivered wrist camera and mounting assembly move together with link6; source USD unchanged"
+clipping_m = [0.009999999776482582, 10.0]
+existing_prim_path = "/World/Robots/R5_Right/link6/WristSensor/Sensor/Camera"

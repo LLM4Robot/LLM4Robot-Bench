@@ -1,0 +1,41 @@
+# Manufacturer asset identity is known. Deployment/calibration values are not.
+schema_version = 1
+model = "r5"
+hardware_match = ""
+limits_source = ""
+
+[asset]
+path = "../../assets/r5/R5a/urdf/R5a.urdf"
+robot_name = "R5a"
+lock_file = "../../assets/r5/source.lock.json"
+
+[asset.package_roots]
+R5a = "../../assets/r5/R5a"
+
+[kinematics]
+base_link = "base_link"
+# link6 is the parent of the finger joints, NOT an assumed grasp-center frame.
+ee_link = "link6"
+joint_names = ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
+tcp_source = ""
+# tcp_pose_wxyz = [x_m, y_m, z_m, qw, qx, qy, qz]  # pending
+
+[gripper]
+joint_names = ["joint7", "joint8"]
+calibration_source = ""
+# Public width is TOTAL fingertip opening (m).
+# q_finger = joint_scale * width + joint_offset_m; do not infer zero gap from q=0.
+# width_limits_m, joint_scale and joint_offset_m must be supplied together.
+
+[arms.left]
+prim_path = "/World/R5/left"
+# base_pose_wxyz (world xyz + wxyz) and home_positions_rad (joint1..joint6): pending
+
+[arms.right]
+prim_path = "/World/R5/right"
+# Both arm instances exist even when a task activates only one arm.
+
+[operating_limits]
+# Each joint entry must provide lower, upper, effort, velocity in SI units.
+# Rotational: rad, N*m, rad/s. Prismatic: m, N, m/s.
+# Manufacturer export has +/-10 rad and velocity=1000; do NOT use as real limits.

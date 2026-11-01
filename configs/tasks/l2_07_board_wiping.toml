@@ -1,0 +1,62 @@
+# Run in the Isaac Sim environment, using the configured shared model transport.
+# launch_command / launch_command_conda below are documentation, not auto-executed shell code.
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[robot]
+profile = "../robots/r5_video_20261015.toml"
+active_arms = ["right"]
+observation_arms = ["left"]
+
+[simulation]
+# Preserve the established wiping controller profile. GPU selection is a launch option.
+robot_gravity_compensation = false
+cartesian_completion_tolerance_m = 0.005
+environment = "tuojing_lab_v4"
+camera_profile = "../cameras/r5_tuojing_lab.toml"
+asset_directory = "../../build/tuojing_lab"
+headless = true
+width = 1280
+height = 720
+fps = 12
+arm_stiffness = 1500.0
+arm_damping = 80.0
+finger_stiffness = 2000.0
+finger_damping = 40.0
+self_collision = false
+solver_position_iterations = 32
+solver_velocity_iterations = 0
+
+[policy]
+model_config = "../models/gpt.toml"
+
+[completion]
+return_home = false
+
+[task]
+scene_delivery = "video_20261015"
+prompt_protocol = "feishu_english_20261015_v1"
+reference_document = "https://my.feishu.cn/docx/QK4EdOD3hotgp4x782ycgoyyn6g"
+reference_sheet_id = "KyMjZ7"
+reference_sheet_revision = 324
+reference_sheet_row = 28
+id = "L2-07"
+name = "抓板擦擦除白板字迹"
+execution_target = "simulation_and_real"
+simulation_enabled = true
+status = "implemented_proxy"
+implementation = "household"
+launch_command = "python tools/launch.py run L2-07 --gui"
+launch_command_conda = "conda run --no-capture-output -n isaac51 python tools/launch.py run L2-07 --gui"
+instruction = """
+Pick up the board eraser with the left arm and erase the writing on the whiteboard.
+"""
+
+# English scene context; task instruction retains source robot-perspective names.
+description = """
+Complete 2026-10-15 assets: room, table, robot mounts, lighting and task props. Robot initial joints and gripper openings follow the per-task video-visible setup. All camera views use the shared L3-01 rig. Prop placements follow the delivered video reconstruction. Task left/right use the robot perspective; overview-image left/right are reversed. No older individual prop is imported. Physical parameters remain uncalibrated.
+"""
+
+[execution]
+model_budget_basis = "completed_generations"
+retry_model_errors = true

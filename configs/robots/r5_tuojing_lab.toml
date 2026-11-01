@@ -1,0 +1,60 @@
+# L20 lab 2026-10-05 v4: base poses from USD; all six arm joints start at zero.
+# No scripted downward or observation-arm movement before the first model decision.
+# Room-floor frame; table top is z=0.78 m. TCP/limits remain engineering estimates.
+# ENGINEERING SIMULATION ONLY. These values are NOT measured R5 hardware limits.
+# Physical hardware profile stays in r5.toml with its pending values unchanged.
+schema_version = 1
+model = "r5"
+hardware_match = ""
+limits_source = "Engineering envelope for simulation integration checks, including a lightweight cube; not manufacturer operating limits or calibrated hardware forces."
+
+[asset]
+path = "../../assets/r5/R5a/urdf/R5a.urdf"
+robot_name = "R5a"
+lock_file = "../../assets/r5/source.lock.json"
+
+[asset.package_roots]
+R5a = "../../assets/r5/R5a"
+
+[kinematics]
+base_link = "base_link"
+ee_link = "link6"
+joint_names = ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
+# Designed simulation TCP between distal inner finger surfaces: x=0.140 m
+# from link6 (joint7/8 x=0.08657 + local finger x=0.05343, within distal
+# x=0.04..0.071 m region). Axes follow link6: +X forward, Y closing, Z transverse.
+# A convenient reference point, NOT a measured hardware/contact calibration.
+tcp_pose_wxyz = [0.140, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+tcp_source = "Designed R5a simulation control point from URDF finger origins and STL distal region; axes aligned with link6; not hardware-calibrated."
+
+[gripper]
+joint_names = ["joint7", "joint8"]
+# At local fingertip x > 0.04 m, opposing inner y surfaces are about +/-0.024898 m.
+# Combined with URDF joint origins +/-0.024898 m, q=0 gives approximately zero gap.
+# The manufacturer URDF and delivered lab joints both permit q=0. A 12-mm
+# software floor prevented pinching the native 6x8-mm drawer grip edge.
+# Nominal zero gap remains a geometric simulation mapping, not hardware calibration.
+calibration_source = "R5a STL distal inner faces and URDF joint7/8 zero lower limits; nominal 0-70 mm simulation gap, verify real contact."
+width_limits_m = [0.0, 0.070]
+joint_scale = [0.5, 0.5]
+joint_offset_m = [0.0, 0.0]
+
+[arms.left]
+prim_path = "/World/Robots/R5_Left"
+base_pose_wxyz = [-0.02470371669496446, 1.5628988169384406, 0.79, 0.7071067811865476, 0.0, 0.0, -0.7071067811865475]
+home_positions_rad = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+[arms.right]
+prim_path = "/World/Robots/R5_Right"
+base_pose_wxyz = [0.41600614770047356, 1.5628988169384406, 0.79, 0.7071067811865476, 0.0, 0.0, -0.7071067811865475]
+home_positions_rad = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+[operating_limits]
+joint1 = {lower = -2.5, upper = 2.5, effort = 40.0, velocity = 0.5}
+joint2 = {lower = -2.5, upper = 2.5, effort = 40.0, velocity = 0.5}
+joint3 = {lower = -2.5, upper = 2.5, effort = 40.0, velocity = 0.5}
+joint4 = {lower = -2.5, upper = 2.5, effort = 20.0, velocity = 0.5}
+joint5 = {lower = -2.5, upper = 2.5, effort = 20.0, velocity = 0.5}
+joint6 = {lower = -2.5, upper = 2.5, effort = 20.0, velocity = 0.5}
+joint7 = {lower = 0.0, upper = 0.04, effort = 20.0, velocity = 0.03}
+joint8 = {lower = 0.0, upper = 0.04, effort = 20.0, velocity = 0.03}

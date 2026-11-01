@@ -1,0 +1,63 @@
+{
+  "root": "D:\\research_runtime\\gpt_benchmark",
+  "kit_root": "isaacsim/5.1",
+  "environment": {
+    "TEMP": "tmp",
+    "TMP": "tmp",
+    "TMPDIR": "tmp",
+    "PIP_CACHE_DIR": "python/pip-cache",
+    "PYTHONPYCACHEPREFIX": "python/bytecode",
+    "CUDA_CACHE_PATH": "nvidia/ComputeCache",
+    "WARP_CACHE_PATH": "nvidia/warp/Cache/1.8.2",
+    "OPTIX_CACHE_PATH": "nvidia/OptixCache",
+    "HF_HOME": "models/huggingface",
+    "TORCH_HOME": "models/torch",
+    "MPLCONFIGDIR": "python/matplotlib",
+    "NUMBA_CACHE_DIR": "python/numba",
+    "XDG_CACHE_HOME": "cache"
+  },
+  "junctions": [
+    {
+      "base": "LOCALAPPDATA",
+      "source": "NVIDIA/OptixCache",
+      "target": "nvidia/OptixCache"
+    },
+    {
+      "base": "LOCALAPPDATA",
+      "source": "NVIDIA/warp",
+      "target": "nvidia/warp"
+    },
+    {
+      "base": "APPDATA",
+      "source": "NVIDIA/ComputeCache",
+      "target": "nvidia/ComputeCache"
+    },
+    {
+      "base": "LOCALAPPDATA",
+      "source": "ov",
+      "target": "omniverse/local"
+    },
+    {
+      "base": "LOCALAPPDATA",
+      "source": "pip/cache",
+      "target": "python/pip-cache"
+    },
+    {
+      "base": "USERPROFILE",
+      "source": ".nvidia-omniverse",
+      "target": "omniverse/profile"
+    }
+  ],
+  "shared_system_cache_exceptions": [
+    {
+      "base": "LOCALAPPDATA",
+      "source": "NVIDIA/GLCache",
+      "reason": "Shared Windows graphics-driver cache; keep the system default location."
+    },
+    {
+      "base": "LOCALAPPDATA",
+      "source": "NVIDIA/DXCache",
+      "reason": "Shared Windows graphics-driver cache; keep the system default location."
+    }
+  ]
+}

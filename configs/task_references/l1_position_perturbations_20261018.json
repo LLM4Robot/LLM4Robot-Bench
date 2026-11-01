@@ -1,0 +1,43 @@
+{
+  "id": "l1_xy_small_p01_20261018",
+  "description": "P01: one reproducible horizontal placement perturbation per L1 task; no random resampling at launch.",
+  "coordinate_frame": "world metres; +X is overview-image right, +Y is toward the robot bases; Z is unchanged",
+  "max_translation_m": 0.02,
+  "tasks": {
+    "L1-01": {
+      "baseline_runtime_sha256": "f8f4bafbb34eab9dc265bbb30540311f6d8a33249ac4290be154bf9195e5e4a7",
+      "groups": [
+        {"name": "白板笔", "delta_m": [0.012, -0.008, 0.0], "paths": ["/World/Household/marker"]},
+        {"name": "固定马克杯", "delta_m": [-0.010, 0.006, 0.0], "paths": ["/World/Household/Fixture"]}
+      ]
+    },
+    "L1-02": {
+      "baseline_runtime_sha256": "616d8f7f1e143f8e936abb26fd1402ab5644c4a68cfab4f40f8a51befa9df485",
+      "groups": [
+        {"name": "插头和黑色底座", "delta_m": [0.012, -0.006, 0.0], "paths": ["/World/Household/plug", "/World/Household/plug_storage_base"]},
+        {"name": "桌面插排", "delta_m": [-0.008, 0.008, 0.0], "paths": ["/World/Household/Fixture"]}
+      ]
+    },
+    "L1-03": {
+      "baseline_runtime_sha256": "3935f39f6fb561726dfcd0232c5adb5fcf3729ad6bce1ad80d722cc135da38c8",
+      "groups": [
+        {"name": "帽子和蓝色盒子", "delta_m": [0.010, -0.006, 0.0], "paths": ["/World/Household/hat", "/World/Household/source_box"]},
+        {"name": "挂帽架", "delta_m": [-0.010, 0.008, 0.0], "paths": ["/World/Household/Fixture"]}
+      ]
+    },
+    "L1-04": {
+      "baseline_runtime_sha256": "f31ac428f045e82b2c552740057c7a31e98b311442ab979c39967f5101115cac",
+      "groups": [
+        {"name": "画面右杯", "delta_m": [0.010, 0.006, 0.0], "paths": ["/World/Household/lower_cup"]},
+        {"name": "画面左杯", "delta_m": [-0.012, 0.004, 0.0], "paths": ["/World/Household/upper_cup"]}
+      ]
+    },
+    "L1-05": {
+      "baseline_runtime_sha256": "4f5786655464c7c3c1f07d92c2052b4446e73f6ec50bbadc2df71cf82f971398",
+      "groups": [
+        {"name": "源杯、花和充电头", "delta_m": [-0.012, 0.006, 0.0], "paths": ["/World/Household/source_cup", "/World/Household/rose", "/World/Household/source_charger", "/World/Household/rose/LeafBodies/Leaf0", "/World/Household/rose/LeafBodies/Leaf1"]},
+        {"name": "目标杯和10颗玻璃珠", "delta_m": [0.010, -0.006, 0.0], "paths": ["/World/Household/target_cup", "/World/Household/filler_0", "/World/Household/filler_1", "/World/Household/filler_2", "/World/Household/filler_3", "/World/Household/filler_4", "/World/Household/filler_5", "/World/Household/filler_6", "/World/Household/filler_7", "/World/Household/filler_8", "/World/Household/filler_9"]}
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.conda/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+
+# Credentials and private local configuration (examples remain versioned)
+.env
+.env.*
+!.env.example
+*.local.toml
+*.local.json
+AGENTS.local.md
+*.pem
+*.key
+/configs/runtime/windows.json
+
+# Local editor and automation configuration; omitted from public releases
+/.vscode/
+/.github/
+*.code-workspace
+.idea/
+
+# Generated simulations, downloads and machine-specific evidence
+/runs/
+/reports/
+/report/
+/exports/
+/real_videos/
+/assets/cameras/source/
+/assets/l1/source/
+/assets/tuojing/packages/
+# Current source scenes, runtime layers and visual textures are runtime inputs.
+# They are versioned in the pinned assets submodule; historical ZIP deliveries
+# and generated caches stay out of releases.
+# L1 appearance inputs under assets/tuojing/appearance/ are also runtime assets.
+# Original local delivery; metadata is tracked, ZIPs belong in asset releases.
+/新增三类资产_圆柱杯子插头底座_20261009.zip
+*.log
+# This is an immutable vendor source file covered by the R5 source lock.
+!/assets/r5/R5a/export.log
+*.tmp
+*.download
+*.part
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+
+/configs/runtime/local.toml
+.rsync-partial/

@@ -1,0 +1,83 @@
+[
+  {
+    "task": "L1-01",
+    "name": "白板笔入固定黑色陶瓷杯",
+    "baseline_profile": "baseline",
+    "perturbed_profile": "l1_xy_random_p03_20261018",
+    "perturbed_variant": 3,
+    "notes": [
+      "白板笔：左 6.80 cm，后 1.53 cm（距离 6.97 cm）",
+      "固定马克杯：左 1.47 cm，前 2.78 cm（距离 3.14 cm）"
+    ],
+    "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+    "baseline_config": "configs/experiments/l1_baseline/l1_01_cylinder_insertion.toml",
+    "perturbed_config": "configs/experiments/l1_perturbed/l1_01_cylinder_insertion.toml",
+    "comparison_image": "docs/l1_layouts_hym/L1-01.png",
+    "comparison_provenance": "Reviewed baseline/P03 comparison exported on 2026-10-18; reused unchanged."
+  },
+  {
+    "task": "L1-02",
+    "name": "USB 充电器插脚对齐",
+    "baseline_profile": "baseline",
+    "perturbed_profile": "l1_xy_random_p03_20261018",
+    "perturbed_variant": 3,
+    "notes": [
+      "插头和黑色底座：右 2.69 cm，前 5.13 cm（距离 5.80 cm）",
+      "桌面插排：右 2.85 cm，后 2.00 cm（距离 3.48 cm）"
+    ],
+    "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+    "baseline_config": "configs/experiments/l1_baseline/l1_02_plug_insertion.toml",
+    "perturbed_config": "configs/experiments/l1_perturbed/l1_02_plug_insertion.toml",
+    "comparison_image": "docs/l1_layouts_hym/L1-02.png",
+    "comparison_provenance": "Reviewed baseline/P03 comparison exported on 2026-10-18; reused unchanged."
+  },
+  {
+    "task": "L1-03",
+    "name": "黄色空顶帽挂上木质挂架",
+    "baseline_profile": "baseline",
+    "perturbed_profile": "l1_xy_random_p03_20261018",
+    "perturbed_variant": 2,
+    "notes": [
+      "帽子和蓝色盒子：右 1.75 cm，后 5.30 cm（距离 5.58 cm）",
+      "挂帽架：左 1.67 cm，前 1.27 cm（距离 2.10 cm）",
+      "帽子相对盒子旋转：俯视逆时针 16.25°"
+    ],
+    "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+    "baseline_config": "configs/experiments/l1_baseline/l1_03_ring_hook.toml",
+    "perturbed_config": "configs/experiments/l1_perturbed/l1_03_ring_hook.toml",
+    "comparison_image": "docs/l1_layouts_hym/L1-03.png",
+    "comparison_provenance": "Reviewed baseline/P03 comparison exported on 2026-10-18; reused unchanged."
+  },
+  {
+    "task": "L1-04",
+    "name": "两个波纹纸杯套叠",
+    "baseline_profile": "baseline",
+    "perturbed_profile": "l1_xy_random_p03_20261018",
+    "perturbed_variant": 1,
+    "notes": [
+      "画面右杯：右 3.16 cm，前 1.56 cm（距离 3.53 cm）",
+      "画面左杯：左 4.84 cm，前 1.34 cm（距离 5.02 cm）"
+    ],
+    "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+    "baseline_config": "configs/experiments/l1_baseline/l1_04_block_stack.toml",
+    "perturbed_config": "configs/experiments/l1_perturbed/l1_04_block_stack.toml",
+    "comparison_image": "docs/l1_layouts_hym/L1-04.png",
+    "comparison_provenance": "Reviewed baseline/P03 comparison exported on 2026-10-18; reused unchanged."
+  },
+  {
+    "task": "L1-05",
+    "name": "刚体玫瑰插花",
+    "baseline_profile": "baseline",
+    "perturbed_profile": "l1_xy_random_p03_20261018",
+    "perturbed_variant": 1,
+    "notes": [
+      "源杯、花和充电头：右 3.85 cm，前 4.90 cm（距离 6.23 cm）",
+      "目标杯和10颗玻璃珠：左 4.71 cm，前 1.08 cm（距离 4.83 cm）"
+    ],
+    "profile_sha256": "a21120a0eb95d7592f35694a5a7aa0732191e91a4701abe86f4b475d7715ee99",
+    "baseline_config": "configs/experiments/l1_baseline/l1_05_soft_stem_flower.toml",
+    "perturbed_config": "configs/experiments/l1_perturbed/l1_05_soft_stem_flower.toml",
+    "comparison_image": "docs/l1_layouts_hym/L1-05.png",
+    "comparison_provenance": "Reviewed baseline/P03 comparison exported on 2026-10-18; reused unchanged."
+  }
+]

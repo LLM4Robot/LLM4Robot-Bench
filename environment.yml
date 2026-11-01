@@ -1,0 +1,11 @@
+# Optional lightweight environment for the scaffold only, NOT an Isaac installer.
+# After creating/activating this environment, run: python -m pip install -e .
+# Existing sim-research / isaac51 environments use the same editable install.
+name: robot-task-framework
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.26,<3
+  - pillow>=10,<12

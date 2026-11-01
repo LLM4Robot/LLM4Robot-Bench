@@ -1,0 +1,10 @@
+# Copy to local.toml (gitignored). Activate Isaac Sim's environment, or set its
+# Python executable here. On Windows prefer forward slashes in paths.
+[isaacsim]
+python = "current"
+# Windows example: python = "D:/conda/envs/isaac51/python.exe"
+# Linux example: python = "/home/you/miniconda3/envs/isaacsim/bin/python"
+
+[paths]
+cache_dir = "auto"
+output_dir = "../../runs"

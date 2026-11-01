@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "bottle_preloosen",
+  "experiment_id": "L3-01_preloosen270",
+  "base_task": "L3-01",
+  "preloosen_degrees": 270.0,
+  "gpu_index": 0,
+  "max_calls": 150,
+  "max_wall_time_s": 18000.0
+}

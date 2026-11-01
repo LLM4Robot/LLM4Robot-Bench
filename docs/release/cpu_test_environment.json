@@ -1,0 +1,12 @@
+{
+  "python": "3.13.13",
+  "packages": {
+    "numpy": "2.5.4",
+    "pillow": "11.3.0",
+    "scipy": "1.18.1",
+    "usd-core": "26.8",
+    "trimesh": "4.12.2",
+    "rtree": "1.4.1",
+    "networkx": "3.7"
+  }
+}

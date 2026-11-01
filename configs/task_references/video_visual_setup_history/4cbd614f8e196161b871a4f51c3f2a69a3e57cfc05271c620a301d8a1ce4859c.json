@@ -1,0 +1,5982 @@
+{
+  "schema_version": 1,
+  "revision": "video_visible_setup_v27_l2_horizontal_orange_neutral_marker_20261016",
+  "basis": "One shared camera rig inferred from the real L3-03 background and table framing; no per-task camera fit. Task-specific joints, props and color remain unchanged.",
+  "source_videos_document": "https://my.feishu.cn/docx/Q7StdW6q3oXDAkxMakScReukn2d",
+  "tasks": {
+    "L1-01": {
+      "runtime_scene_sha256": "ccae8305ffdaf3426954925dae866ab43c832aa1639127dc00dca1a6c1a07023",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.0692336493143631,
+            -0.15410248157472994,
+            0.06434357645239638,
+            -0.2529839385616097,
+            0.022873083409014824,
+            -0.173587226930908
+          ],
+          "gripper_width_m": 0.06881652637144058,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-01",
+            "arm": "left",
+            "before_clearance_m": -0.010370525166727186,
+            "after_clearance_m": 0.002999999999999753,
+            "max_delta_deg": 4.811700580674739,
+            "home_before": [
+              0.06923364169480054,
+              -0.15410248606975177,
+              -0.019636441300500834,
+              -0.26069890806848356,
+              0.022907148234780805,
+              -0.17358720904305708
+            ],
+            "home_after": [
+              0.0692336493143631,
+              -0.15410248157472994,
+              0.06434357645239638,
+              -0.2529839385616097,
+              0.022873083409014824,
+              -0.173587226930908
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              460,
+              302
+            ],
+            "housing_predicted_uv": [
+              460.16341569630197,
+              298.6950611197425
+            ],
+            "cap_target_uv": [
+              470,
+              234
+            ],
+            "cap_predicted_uv": [
+              469.22561432262876,
+              234.5861395856027
+            ],
+            "object_name": "black mug",
+            "object_target_bbox": [
+              280.0,
+              0.0,
+              527.0,
+              294.0
+            ],
+            "object_predicted_bbox": [
+              265.6092637899682,
+              4.413970019292094,
+              550.6521388025128,
+              291.8657272316843
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.13008217112735967,
+            0.01376883814084176,
+            0.006075524920274363,
+            -0.09370849729246325,
+            -0.05456711441779326,
+            -0.004893777287951007
+          ],
+          "gripper_width_m": 0.0698590034886694,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-01",
+            "arm": "right",
+            "before_clearance_m": -0.001795590234561134,
+            "after_clearance_m": 0.00299999999666678,
+            "max_delta_deg": 1.7464385534229816,
+            "home_before": [
+              -0.13008248177576828,
+              0.01376883881226392,
+              -0.024405578020723552,
+              -0.09645056617422716,
+              -0.054557448635577585,
+              -0.004894086862328763
+            ],
+            "home_after": [
+              -0.13008217112735967,
+              0.01376883814084176,
+              0.006075524920274363,
+              -0.09370849729246325,
+              -0.05456711441779326,
+              -0.004893777287951007
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              974,
+              296
+            ],
+            "housing_predicted_uv": [
+              972.7202831624677,
+              294.03903033086283
+            ],
+            "cap_target_uv": [
+              948,
+              224
+            ],
+            "cap_predicted_uv": [
+              949.3102065691191,
+              225.22659618797445
+            ],
+            "object_name": "marker",
+            "object_target_bbox": [
+              802.0,
+              0.0,
+              950.0,
+              225.0
+            ],
+            "object_predicted_bbox": [
+              800.2796315234511,
+              0.0,
+              951.3938849435931,
+              225.03978437956525
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "5a3e32d423420f45b74a67176ea09a267e0159b03bfcb684b01fa1cd7b836531",
+      "source_video": "real_videos/L1-01/real_L1-01.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            429.78632478632477,
+            425.2393162393162
+          ],
+          [
+            596.6239316239316,
+            425.2393162393162
+          ],
+          [
+            447.56410256410254,
+            380.1111111111111
+          ],
+          [
+            592.5213675213674,
+            380.1111111111111
+          ],
+          [
+            811.3247863247864,
+            426.60683760683764
+          ],
+          [
+            987.7350427350427,
+            426.60683760683764
+          ],
+          [
+            819.5299145299145,
+            381.4786324786325
+          ],
+          [
+            975.4273504273505,
+            381.4786324786325
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            470,
+            234
+          ],
+          [
+            948,
+            224
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.3510990799686267,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.0192307692307692,
+          1.2755102040816326
+        ],
+        "reference_video_sha256": "5a3e32d423420f45b74a67176ea09a267e0159b03bfcb684b01fa1cd7b836531",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L1-01/color_fit.json"
+      },
+      "static_visibility": {
+        "/World/Furniture/ThirdCameraStand": "invisible"
+      }
+    },
+    "L1-03": {
+      "runtime_scene_sha256": "f34be328c9d2944b91b7a7f1c32340235399eba31e0b364c1259e6ba7a23d921",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.042096951036906895,
+            -0.11769385187927602,
+            -0.0418425143818621,
+            0.0431243626234975,
+            -0.13483166382480663,
+            1.4808002621493774
+          ],
+          "gripper_width_m": 0.024550884220820447,
+          "source_target_residual_m": 1.5606118352245914e-06,
+          "source_target_residual_rad": 1.9605768007511904e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-03",
+            "arm": "left",
+            "before_clearance_m": -0.004166202548148604,
+            "after_clearance_m": 0.0029999999938209593,
+            "max_delta_deg": 3.348350851487212,
+            "home_before": [
+              0.04209707069838949,
+              -0.1176938525292135,
+              -0.10028226125226962,
+              0.03819913331008797,
+              -0.13483391394485725,
+              1.4808001951840102
+            ],
+            "home_after": [
+              0.042096951036906895,
+              -0.11769385187927602,
+              -0.0418425143818621,
+              0.0431243626234975,
+              -0.13483166382480663,
+              1.4808002621493774
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              366,
+              376
+            ],
+            "housing_predicted_uv": [
+              364.9657768240512,
+              376.87378579725015
+            ],
+            "cap_target_uv": [
+              452,
+              246
+            ],
+            "cap_predicted_uv": [
+              453.21795481925193,
+              245.41285203115459
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.045308154484577326,
+            0.011900498462335441,
+            0.009690360813367983,
+            -0.10378587790662364,
+            -0.06938760179333125,
+            -0.02478446081195178
+          ],
+          "gripper_width_m": 0.03560583538931607,
+          "source_target_residual_m": 1.5558218962179634e-06,
+          "source_target_residual_rad": 1.6866881223918916e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-03",
+            "arm": "right",
+            "before_clearance_m": -0.0017872861833827108,
+            "after_clearance_m": 0.0029999999999947152,
+            "max_delta_deg": 1.7243828861994661,
+            "home_before": [
+              -0.0453080858571647,
+              0.01190051547857712,
+              -0.02040579811585539,
+              -0.10650094993405257,
+              -0.06938041304641401,
+              -0.024784402793007004
+            ],
+            "home_after": [
+              -0.045308154484577326,
+              0.011900498462335441,
+              0.009690360813367983,
+              -0.10378587790662364,
+              -0.06938760179333125,
+              -0.02478446081195178
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              990,
+              314
+            ],
+            "housing_predicted_uv": [
+              989.6008132171658,
+              312.9224257088967
+            ],
+            "cap_target_uv": [
+              944,
+              242
+            ],
+            "cap_predicted_uv": [
+              944.7630336125412,
+              242.92595861600225
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "944b9303e04ea3b269eff6d02c41ee4c4a232362d75e0a44b82c0e517ef1ce6b",
+      "source_video": "real_videos/L1-03/real_L1-03.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            400.9086538461539,
+            437.80480769230763
+          ],
+          [
+            569.8317307692308,
+            437.80480769230763
+          ],
+          [
+            418.9086538461539,
+            392.11249999999995
+          ],
+          [
+            565.6778846153845,
+            392.11249999999995
+          ],
+          [
+            787.2163461538462,
+            439.18942307692305
+          ],
+          [
+            965.8317307692307,
+            439.18942307692305
+          ],
+          [
+            795.5240384615385,
+            393.4971153846154
+          ],
+          [
+            953.3701923076923,
+            393.4971153846154
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            452,
+            246
+          ],
+          [
+            944,
+            242
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.3316926495890966,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.0192307692307692,
+          1.2755102040816326
+        ],
+        "reference_video_sha256": "944b9303e04ea3b269eff6d02c41ee4c4a232362d75e0a44b82c0e517ef1ce6b",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L1-03/color_fit.json"
+      },
+      "static_visibility": {
+        "/World/Furniture/ThirdCameraStand": "invisible"
+      }
+    },
+    "L1-07": {
+      "runtime_scene_sha256": "adf528889fa196abc968fdaf1d0f89432720496430e9ef68b2cd18170f3ef772",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -7.997100238077871e-08,
+            -0.08052000820349779,
+            -0.031221504741892322,
+            0.012449827036769404,
+            -3.6202549869519075e-05,
+            -5.2939045126373636e-08
+          ],
+          "gripper_width_m": 0.0688179157912623,
+          "source_target_residual_m": 1.560611889988229e-06,
+          "source_target_residual_rad": 1.960576396849937e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-07",
+            "arm": "left",
+            "before_clearance_m": -0.0037787173431885757,
+            "after_clearance_m": 0.0029999999977680103,
+            "max_delta_deg": 2.970699952393632,
+            "home_before": [
+              0.0,
+              -0.08052,
+              -0.08307,
+              0.008,
+              0.0,
+              0.0
+            ],
+            "home_after": [
+              -7.997100238077871e-08,
+              -0.08052000820349779,
+              -0.031221504741892322,
+              0.012449827036769404,
+              -3.6202549869519075e-05,
+              -5.2939045126373636e-08
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": null,
+            "housing_predicted_uv": [
+              437.2573445589758,
+              295.0716120981973
+            ],
+            "cap_target_uv": null,
+            "cap_predicted_uv": [
+              471.7484894867336,
+              235.09654190517296
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.025140888292749554,
+            0.0010799689006884283,
+            -0.07454908501472465,
+            0.1509656727019355,
+            0.007250206613920211,
+            0.004519739582705905
+          ],
+          "gripper_width_m": 0.06931901539272488,
+          "source_target_residual_m": 1.5558218962179634e-06,
+          "source_target_residual_rad": 1.6866881223918916e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-07",
+            "arm": "right",
+            "before_clearance_m": 0.00014070469571177482,
+            "after_clearance_m": 0.003000000000032095,
+            "max_delta_deg": 0.6744733740233554,
+            "home_before": [
+              -0.025140892809139177,
+              0.0012880359852078598,
+              -0.0863208661084674,
+              0.1509163548705954,
+              0.00724987229145641,
+              0.0045197357956135685
+            ],
+            "home_after": [
+              -0.025140888292749554,
+              0.0010799689006884283,
+              -0.07454908501472465,
+              0.1509656727019355,
+              0.007250206613920211,
+              0.004519739582705905
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              1000,
+              266
+            ],
+            "housing_predicted_uv": [
+              1000.1666451032565,
+              270.0917173767173
+            ],
+            "cap_target_uv": [
+              966,
+              218
+            ],
+            "cap_predicted_uv": [
+              966.30877489813,
+              214.50896404561513
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              695.0,
+              0.0,
+              1075.0,
+              255.0
+            ],
+            "object_predicted_bbox": [
+              247.1426226123213,
+              138.90208848230796,
+              1007.2147010622684,
+              636.17338134483
+            ],
+            "joint_positions_are_urdf_consistent": true,
+            "upper_outline_real_top_v": 153,
+            "upper_outline_predicted_top_v": 154.3970812734355,
+            "upper_outline_source": "Real overview dark robot silhouette vs projected visible body geometry; resolves the upper-link ambiguity of two-point fitting."
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "056cbad469027e1d93d3b78705b71e25de550093d9f8647eac0dc92d72d90ce8",
+      "source_video": "real_videos/L1-07/real_L1-07.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            449.41933760683776,
+            404.54284188034177
+          ],
+          [
+            610.0005341880343,
+            404.54284188034177
+          ],
+          [
+            466.5304487179489,
+            361.10694444444437
+          ],
+          [
+            606.0518162393163,
+            361.10694444444437
+          ],
+          [
+            816.6501068376068,
+            405.8590811965811
+          ],
+          [
+            986.4449786324785,
+            405.8590811965811
+          ],
+          [
+            824.5475427350427,
+            362.4231837606837
+          ],
+          [
+            974.5988247863247,
+            362.4231837606837
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            966,
+            218
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 0.9057654361367828,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9108437081422789,
+          0.9929854990915775,
+          1.4161472699774607
+        ],
+        "reference_video_sha256": "056cbad469027e1d93d3b78705b71e25de550093d9f8647eac0dc92d72d90ce8",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L1-07/color_fit.json"
+      },
+      "static_visibility": {
+        "/World/Furniture/ThirdCameraStand": "invisible"
+      }
+    },
+    "L1-08": {
+      "runtime_scene_sha256": "0b02fce1c3e036a4882836d0f9f9e21578e143e192512d8c4971f0b27007e353",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.08561632111342883,
+            -0.007541753039701502,
+            -0.04077251869007156,
+            0.04022635386957659,
+            -0.03827900072030946,
+            -0.02746844847047541
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 1.560611889988229e-06,
+          "source_target_residual_rad": 1.960576396849937e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-08",
+            "arm": "left",
+            "before_clearance_m": 0.0004437052948932235,
+            "after_clearance_m": 0.0029999999994197724,
+            "max_delta_deg": 1.0151653452647684,
+            "home_before": [
+              0.08561621416974885,
+              -0.007541756491454247,
+              -0.0584904964170868,
+              0.03873049269986039,
+              -0.03826979341183546,
+              -0.027468554026646545
+            ],
+            "home_after": [
+              0.08561632111342883,
+              -0.007541753039701502,
+              -0.04077251869007156,
+              0.04022635386957659,
+              -0.03827900072030946,
+              -0.02746844847047541
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              460,
+              282
+            ],
+            "housing_predicted_uv": [
+              459.2062907623621,
+              282.8014694514999
+            ],
+            "cap_target_uv": [
+              474,
+              232
+            ],
+            "cap_predicted_uv": [
+              473.5729953856992,
+              231.50059255972707
+            ],
+            "object_name": "upper_cup red sleeve",
+            "object_target_bbox": [
+              376.0,
+              189.0,
+              438.0,
+              278.0
+            ],
+            "object_predicted_bbox": [
+              395.98543019343475,
+              237.6472786456385,
+              564.1329184505321,
+              424.95184786342514
+            ],
+            "joint_positions_are_urdf_consistent": true,
+            "upper_outline_real_top_v": 191,
+            "upper_outline_predicted_top_v": 191.70716979720356,
+            "upper_outline_source": "Real overview dark robot silhouette vs projected visible body geometry; resolves the upper-link ambiguity of two-point fitting."
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.01262587190672347,
+            -0.23441964610358967,
+            -0.01972213206237486,
+            -0.02026155528731691,
+            0.05326353305496272,
+            0.0529119597689522
+          ],
+          "gripper_width_m": 0.0113,
+          "source_target_residual_m": 1.5558218962179634e-06,
+          "source_target_residual_rad": 1.6866881223918916e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-08",
+            "arm": "right",
+            "before_clearance_m": -0.0071492552778437,
+            "after_clearance_m": 0.0029999999992496307,
+            "max_delta_deg": 5.037636544120887,
+            "home_before": [
+              0.01262587916820051,
+              -0.23441965368566273,
+              -0.10764547627607293,
+              -0.027932893263044874,
+              0.053344720195414856,
+              0.052911967651418354
+            ],
+            "home_after": [
+              0.01262587190672347,
+              -0.23441964610358967,
+              -0.01972213206237486,
+              -0.02026155528731691,
+              0.05326353305496272,
+              0.0529119597689522
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              988,
+              274
+            ],
+            "housing_predicted_uv": [
+              987.9664939966099,
+              269.1313505243845
+            ],
+            "cap_target_uv": [
+              956,
+              230
+            ],
+            "cap_predicted_uv": [
+              956.4911291303351,
+              230.45674592352418
+            ],
+            "object_name": "lower_cup red sleeve",
+            "object_target_bbox": [
+              865.0,
+              249.0,
+              992.0,
+              338.0
+            ],
+            "object_predicted_bbox": [
+              849.7448028576331,
+              206.46370506149745,
+              1001.499644660568,
+              376.26004473757723
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "d0581b614079494b1aa0f94fc80197599bc8a162dfb38c9d64cdcabd3693cfe9",
+      "source_video": "real_videos/L1-08/real_L1-08.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            429.78632478632477,
+            424.2393162393162
+          ],
+          [
+            596.6239316239316,
+            424.2393162393162
+          ],
+          [
+            447.56410256410254,
+            379.1111111111111
+          ],
+          [
+            592.5213675213674,
+            379.1111111111111
+          ],
+          [
+            811.3247863247864,
+            425.60683760683764
+          ],
+          [
+            987.7350427350427,
+            425.60683760683764
+          ],
+          [
+            819.5299145299145,
+            380.4786324786325
+          ],
+          [
+            975.4273504273505,
+            380.4786324786325
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            474,
+            232
+          ],
+          [
+            956,
+            230
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.038042722098094,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.0192307692307692,
+          1.2755102040816326
+        ],
+        "reference_video_sha256": "d0581b614079494b1aa0f94fc80197599bc8a162dfb38c9d64cdcabd3693cfe9",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L1-08/color_fit.json"
+      },
+      "static_visibility": {
+        "/World/Furniture/ThirdCameraStand": "invisible"
+      }
+    },
+    "L1-09": {
+      "runtime_scene_sha256": "586d62703640280d76cb070645506606b7664b1c4fa7938fec9b387121b686b1",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.10786029295943779,
+            -0.09183449452121327,
+            -0.03488561934234377,
+            0.022645855699660877,
+            -0.10204214427085408,
+            -0.03295977343601649
+          ],
+          "gripper_width_m": 0.0688179157912623,
+          "source_target_residual_m": 1.560611889988229e-06,
+          "source_target_residual_rad": 1.960576396849937e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-09",
+            "arm": "left",
+            "before_clearance_m": -0.0043174554250963865,
+            "after_clearance_m": 0.0029999999995957566,
+            "max_delta_deg": 3.339217653951019,
+            "home_before": [
+              0.10786004142610962,
+              -0.0918344948508502,
+              -0.09316596184450969,
+              0.017669149506581532,
+              -0.10203424288045312,
+              -0.03295985259801705
+            ],
+            "home_after": [
+              0.10786029295943779,
+              -0.09183449452121327,
+              -0.03488561934234377,
+              0.022645855699660877,
+              -0.10204214427085408,
+              -0.03295977343601649
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              454,
+              296
+            ],
+            "housing_predicted_uv": [
+              453.47441534861923,
+              296.1687168973747
+            ],
+            "cap_target_uv": [
+              452,
+              246
+            ],
+            "cap_predicted_uv": [
+              452.3262416012939,
+              245.87471053004725
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.1224074314487539,
+            -0.14508134053444008,
+            -0.040169950997690974,
+            0.03818197777144627,
+            -0.10894172355895215,
+            -0.036203682221259775
+          ],
+          "gripper_width_m": 0.06931901539272488,
+          "source_target_residual_m": 1.5558218962179634e-06,
+          "source_target_residual_rad": 1.6866881223918916e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L1-09",
+            "arm": "right",
+            "before_clearance_m": -0.004422349682915702,
+            "after_clearance_m": 0.002999999999898792,
+            "max_delta_deg": 3.4873414498084325,
+            "home_before": [
+              -0.12240767205999091,
+              -0.14508133400843057,
+              -0.1010355414381207,
+              0.03303543620463835,
+              -0.10893533728661246,
+              -0.03620361794967626
+            ],
+            "home_after": [
+              -0.1224074314487539,
+              -0.14508134053444008,
+              -0.040169950997690974,
+              0.03818197777144627,
+              -0.10894172355895215,
+              -0.036203682221259775
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              968,
+              280
+            ],
+            "housing_predicted_uv": [
+              967.4238751473707,
+              279.7098159488106
+            ],
+            "cap_target_uv": [
+              922,
+              236
+            ],
+            "cap_predicted_uv": [
+              923.720279176039,
+              236.3495520534125
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "b89a0c615b6f420613687f727fde1cc017aaa265ef16c5918696ac2976b2be34",
+      "source_video": "real_videos/L1-09/real_L1-09.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            400.9086538461539,
+            427.80480769230763
+          ],
+          [
+            569.8317307692308,
+            427.80480769230763
+          ],
+          [
+            418.9086538461539,
+            382.11249999999995
+          ],
+          [
+            565.6778846153845,
+            382.11249999999995
+          ],
+          [
+            787.2163461538462,
+            429.18942307692305
+          ],
+          [
+            965.8317307692307,
+            429.18942307692305
+          ],
+          [
+            795.5240384615385,
+            383.4971153846154
+          ],
+          [
+            953.3701923076923,
+            383.4971153846154
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            452,
+            246
+          ],
+          [
+            922,
+            236
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.1799956713370057,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8887351506327313,
+          1.0076486880584372,
+          1.3438301061600977
+        ],
+        "reference_video_sha256": "b89a0c615b6f420613687f727fde1cc017aaa265ef16c5918696ac2976b2be34",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L1-09/color_fit.json"
+      },
+      "static_visibility": {
+        "/World/Furniture/ThirdCameraStand": "invisible"
+      }
+    },
+    "L2-01": {
+      "runtime_scene_sha256": "0cb24c0c22527f4d516cdbda5e14ad53731af8f2774c1019f0232a0f3ac8f792",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.041733416894118844,
+            0.06032036920378096,
+            -0.039765939916543196,
+            0.03712332246298857,
+            -0.06188567489959394,
+            -0.11379777942180551
+          ],
+          "gripper_width_m": 0.0017,
+          "method": "User requested the same neutral initial arm posture as the other L2 tasks; copy the validated L2-03 joint home and gripper opening.",
+          "reference_task": "L2-03",
+          "initial_self_collision_clearance": {
+            "task": "L2-03",
+            "arm": "left",
+            "before_clearance_m": 0.0001776023896337131,
+            "after_clearance_m": 0.0029999999993214205,
+            "max_delta_deg": 1.1253917348536786,
+            "home_before": [
+              -0.041733636946817365,
+              0.06032036675445114,
+              -0.05940773106447091,
+              0.035461084904347004,
+              -0.06187811077336296,
+              -0.11379799899905889
+            ],
+            "home_after": [
+              -0.041733416894118844,
+              0.06032036920378096,
+              -0.039765939916543196,
+              0.03712332246298857,
+              -0.06188567489959394,
+              -0.11379777942180551
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.04153385379889032,
+            0.06756832075774427,
+            -0.045595233690796336,
+            0.05458180176353272,
+            -0.03840756187907503,
+            -0.042511889367648784
+          ],
+          "gripper_width_m": 0.02292682990898565,
+          "method": "User requested the same neutral initial arm posture as the other L2 tasks; copy the validated L2-03 joint home and gripper opening.",
+          "reference_task": "L2-03",
+          "initial_self_collision_clearance": {
+            "task": "L2-03",
+            "arm": "right",
+            "before_clearance_m": 0.0006532469909833194,
+            "after_clearance_m": 0.002999999999387659,
+            "max_delta_deg": 0.9394131019484653,
+            "home_before": [
+              -0.041533943966799255,
+              0.06756831492256463,
+              -0.06199108535617021,
+              0.053211125738000686,
+              -0.03839882325623794,
+              -0.04251198035072427
+            ],
+            "home_after": [
+              -0.04153385379889032,
+              0.06756832075774427,
+              -0.045595233690796336,
+              0.05458180176353272,
+              -0.03840756187907503,
+              -0.042511889367648784
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "bfaaf4ae84ebebbda42fc2e2440dfc70e2cd43ba907199ec46ec2599ec636e9a",
+      "source_video": "real_videos/L2-01/real_L2-01.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            449.41933760683776,
+            404.54284188034177
+          ],
+          [
+            610.0005341880343,
+            404.54284188034177
+          ],
+          [
+            466.5304487179489,
+            361.10694444444437
+          ],
+          [
+            606.0518162393163,
+            361.10694444444437
+          ],
+          [
+            816.6501068376068,
+            405.8590811965811
+          ],
+          [
+            986.4449786324785,
+            405.8590811965811
+          ],
+          [
+            824.5475427350427,
+            362.4231837606837
+          ],
+          [
+            974.5988247863247,
+            362.4231837606837
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            530,
+            224
+          ],
+          [
+            986,
+            208
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.429977177326255,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9370681467302451,
+          1.0087712242148361,
+          1.2905554208005583
+        ],
+        "reference_video_sha256": "bfaaf4ae84ebebbda42fc2e2440dfc70e2cd43ba907199ec46ec2599ec636e9a",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L2-01/color_fit.json"
+      }
+    },
+    "L2-03": {
+      "runtime_scene_sha256": "8ab152a7e835b1cf02a77f39cc06da85621681eb4fc91c63000bf2af6ff6bbd8",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.041733416894118844,
+            0.06032036920378096,
+            -0.039765939916543196,
+            0.03712332246298857,
+            -0.06188567489959394,
+            -0.11379777942180551
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 0.004181670903737243,
+          "source_target_residual_rad": 0.031497858096760166,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-03",
+            "arm": "left",
+            "before_clearance_m": 0.0001776023896337131,
+            "after_clearance_m": 0.0029999999993214205,
+            "max_delta_deg": 1.1253917348536786,
+            "home_before": [
+              -0.041733636946817365,
+              0.06032036675445114,
+              -0.05940773106447091,
+              0.035461084904347004,
+              -0.06187811077336296,
+              -0.11379799899905889
+            ],
+            "home_after": [
+              -0.041733416894118844,
+              0.06032036920378096,
+              -0.039765939916543196,
+              0.03712332246298857,
+              -0.06188567489959394,
+              -0.11379777942180551
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              442,
+              314
+            ],
+            "housing_predicted_uv": [
+              439.62441214979447,
+              311.20217012785105
+            ],
+            "cap_target_uv": [
+              448,
+              252
+            ],
+            "cap_predicted_uv": [
+              449.96446043088315,
+              253.2836077735469
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              179.0,
+              0.0,
+              531.0,
+              343.0
+            ],
+            "object_predicted_bbox": [
+              0.0,
+              0.0,
+              565.8343565648102,
+              341.7000438713819
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.04153385379889032,
+            0.06756832075774427,
+            -0.045595233690796336,
+            0.05458180176353272,
+            -0.03840756187907503,
+            -0.042511889367648784
+          ],
+          "gripper_width_m": 0.02292682990898565,
+          "source_target_residual_m": 0.006328497120616538,
+          "source_target_residual_rad": 0.034705751493035696,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-03",
+            "arm": "right",
+            "before_clearance_m": 0.0006532469909833194,
+            "after_clearance_m": 0.002999999999387659,
+            "max_delta_deg": 0.9394131019484653,
+            "home_before": [
+              -0.041533943966799255,
+              0.06756831492256463,
+              -0.06199108535617021,
+              0.053211125738000686,
+              -0.03839882325623794,
+              -0.04251198035072427
+            ],
+            "home_after": [
+              -0.04153385379889032,
+              0.06756832075774427,
+              -0.045595233690796336,
+              0.05458180176353272,
+              -0.03840756187907503,
+              -0.042511889367648784
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              948,
+              312
+            ],
+            "housing_predicted_uv": [
+              952.8843343617677,
+              307.4032689350538
+            ],
+            "cap_target_uv": [
+              922,
+              248
+            ],
+            "cap_predicted_uv": [
+              919.5097371954162,
+              250.30609990563374
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              953.0,
+              0.0,
+              1273.0,
+              327.0
+            ],
+            "object_predicted_bbox": [
+              953.325851778674,
+              0.0,
+              1280.0,
+              324.68813741195476
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "46fc15f896e36c2668e6d696de22be2b30bc444c109fb946125f3b6bce206c53",
+      "source_video": "real_videos/L2-03/real_L2-03.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            404.78632478632477,
+            436.2393162393162
+          ],
+          [
+            571.6239316239316,
+            436.2393162393162
+          ],
+          [
+            422.56410256410254,
+            391.1111111111111
+          ],
+          [
+            567.5213675213674,
+            391.1111111111111
+          ],
+          [
+            786.3247863247864,
+            437.60683760683764
+          ],
+          [
+            962.7350427350427,
+            437.60683760683764
+          ],
+          [
+            794.5299145299145,
+            392.4786324786325
+          ],
+          [
+            950.4273504273505,
+            392.4786324786325
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            448,
+            252
+          ],
+          [
+            922,
+            248
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.2028882519423645,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9104313336125517,
+          1.0600567880076088,
+          0.9920508525746616
+        ],
+        "reference_video_sha256": "46fc15f896e36c2668e6d696de22be2b30bc444c109fb946125f3b6bce206c53",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L2-03/color_fit.json"
+      }
+    },
+    "L2-04": {
+      "runtime_scene_sha256": "b190d773e057f083c96511e661e8cb85708bf7a03cc1eb74cc68e31b50dc8371",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.06298023883260549,
+            -0.15771903635888446,
+            0.0049016383991522215,
+            -0.0903010431874753,
+            -0.02148453447863629,
+            -0.04903126898286758
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 0.0038627345693584203,
+          "source_target_residual_rad": 0.0063610586692288825,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-04",
+            "arm": "left",
+            "before_clearance_m": -0.008867432830731908,
+            "after_clearance_m": 0.002999999999972039,
+            "max_delta_deg": 5.632624383485002,
+            "home_before": [
+              -0.06298022373910839,
+              -0.15771898701991668,
+              -0.09340620262077677,
+              -0.09913062397741153,
+              -0.021439109174852262,
+              -0.04903128496213994
+            ],
+            "home_after": [
+              -0.06298023883260549,
+              -0.15771903635888446,
+              0.0049016383991522215,
+              -0.0903010431874753,
+              -0.02148453447863629,
+              -0.04903126898286758
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              606,
+              274
+            ],
+            "housing_predicted_uv": [
+              605.5934809032353,
+              261.9167096525494
+            ],
+            "cap_target_uv": [
+              618,
+              220
+            ],
+            "cap_predicted_uv": [
+              617.8931026076767,
+              222.19075953875057
+            ],
+            "object_name": "receiver_cup red sleeve",
+            "object_target_bbox": [
+              334.0,
+              229.0,
+              496.0,
+              359.0
+            ],
+            "object_predicted_bbox": [
+              324.8534885781506,
+              193.73436573337352,
+              512.084001635986,
+              393.24965754731886
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.11184038645491645,
+            -0.1351547042873924,
+            -0.06186553177493043,
+            0.1109337983369246,
+            0.29701745337523344,
+            0.0322489939931617
+          ],
+          "gripper_width_m": 0.03829788621472291,
+          "source_target_residual_m": 0.02348651714447184,
+          "source_target_residual_rad": 0.03044725027260905,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-04",
+            "arm": "right",
+            "before_clearance_m": -0.008818785754674083,
+            "after_clearance_m": 0.0029999999999613253,
+            "max_delta_deg": 3.902760792214624,
+            "home_before": [
+              0.1118408446121345,
+              -0.13515466112132982,
+              -0.1299815575168179,
+              0.10554582982088179,
+              0.2971937615929516,
+              0.032249127440046536
+            ],
+            "home_after": [
+              0.11184038645491645,
+              -0.1351547042873924,
+              -0.06186553177493043,
+              0.1109337983369246,
+              0.29701745337523344,
+              0.0322489939931617
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              1110,
+              274
+            ],
+            "housing_predicted_uv": [
+              1110.5365876838177,
+              241.08508806543676
+            ],
+            "cap_target_uv": [
+              1078,
+              214
+            ],
+            "cap_predicted_uv": [
+              1075.8225429550143,
+              218.77513353734054
+            ],
+            "object_name": "source_cup red sleeve",
+            "object_target_bbox": [
+              946.0,
+              256.0,
+              969.0,
+              315.0
+            ],
+            "object_predicted_bbox": [
+              856.744671220807,
+              183.28483857754347,
+              1001.4028990730047,
+              345.06736897036194
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "e5530e532b8901ee5dfbc18413cfe5a2a8052f342765cacd0bef9e9d253bd482",
+      "source_video": "real_videos/L2-04/real_L2-04.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            549.8917378917379,
+            396.0084283000949
+          ],
+          [
+            705.1433998100665,
+            400.64280626780624
+          ],
+          [
+            567.6885090218424,
+            354.5079534662868
+          ],
+          [
+            702.5792972459639,
+            358.5345441595441
+          ],
+          [
+            904.8964862298196,
+            407.87927350427356
+          ],
+          [
+            1069.0560303893637,
+            412.77955840455843
+          ],
+          [
+            913.7853751187084,
+            366.11289173789174
+          ],
+          [
+            1058.8566001899335,
+            370.4433760683761
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            618,
+            220
+          ],
+          [
+            1078,
+            214
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.3416640264962978,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.0192307692307692,
+          1.2755102040816326
+        ],
+        "reference_video_sha256": "e5530e532b8901ee5dfbc18413cfe5a2a8052f342765cacd0bef9e9d253bd482",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L2-04/color_fit.json"
+      }
+    },
+    "L2-06": {
+      "runtime_scene_sha256": "e8438198a3363e7840aa17f1025a4dd124aa8d53a50df915b53db971b080d194",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.005261590947290374,
+            0.004967613926621767,
+            -0.011148015900718773,
+            -0.045203997445634844,
+            -0.00923823880545562,
+            -0.11333324522080211
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 0.004754859447589801,
+          "source_target_residual_rad": 0.042023985190067184,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-06",
+            "arm": "left",
+            "before_clearance_m": -0.00393538552100367,
+            "after_clearance_m": 0.0029999999998981397,
+            "max_delta_deg": 2.825613327652376,
+            "home_before": [
+              -0.005261553736321137,
+              0.00496762232403994,
+              -0.06046427185648607,
+              -0.049560542412562435,
+              -0.009209903725988353,
+              -0.1133332162157701
+            ],
+            "home_after": [
+              -0.005261590947290374,
+              0.004967613926621767,
+              -0.011148015900718773,
+              -0.045203997445634844,
+              -0.00923823880545562,
+              -0.11333324522080211
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              510,
+              300
+            ],
+            "housing_predicted_uv": [
+              508.31000590331746,
+              299.3277107421859
+            ],
+            "cap_target_uv": [
+              508,
+              236
+            ],
+            "cap_predicted_uv": [
+              509.0006988689645,
+              236.49224720001567
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              5.0,
+              0.0,
+              443.0,
+              323.0
+            ],
+            "object_predicted_bbox": [
+              0.0,
+              0.0,
+              475.83242035569776,
+              322.82660142886687
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.009456021835491081,
+            0.06774426416990496,
+            -0.048631503534090036,
+            0.06456085463241613,
+            0.05117438895561682,
+            -0.02907710055474061
+          ],
+          "gripper_width_m": 0.05960587309344304,
+          "source_target_residual_m": 0.004204336577965283,
+          "source_target_residual_rad": 0.025339717603392882,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-06",
+            "arm": "right",
+            "before_clearance_m": 0.002049769955905126,
+            "after_clearance_m": 0.0029999999999303084,
+            "max_delta_deg": 0.37043482982385895,
+            "home_before": [
+              -0.009456064792031026,
+              0.06774426071757172,
+              -0.05509681097858126,
+              0.06402499058043523,
+              0.051181325843667864,
+              -0.029077144014970788
+            ],
+            "home_after": [
+              -0.009456021835491081,
+              0.06774426416990496,
+              -0.048631503534090036,
+              0.06456085463241613,
+              0.05117438895561682,
+              -0.02907710055474061
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              1002,
+              286
+            ],
+            "housing_predicted_uv": [
+              1003.3679803190882,
+              282.46055705141333
+            ],
+            "cap_target_uv": [
+              970,
+              226
+            ],
+            "cap_predicted_uv": [
+              968.8480495321585,
+              227.6140756826768
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              853.0,
+              0.0,
+              1275.0,
+              324.0
+            ],
+            "object_predicted_bbox": [
+              853.2895562334977,
+              0.0,
+              1280.0,
+              322.1905529478313
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "2397234b6b15779ce99fb3bf6c100c335a3c94f2ed0ef6a8e964fd44d2e538ad",
+      "source_video": "real_videos/L2-06/real_L2-06.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            444.5416666666664,
+            412.10833333333346
+          ],
+          [
+            607.2083333333333,
+            412.10833333333346
+          ],
+          [
+            461.8749999999998,
+            368.1083333333334
+          ],
+          [
+            603.2083333333331,
+            368.1083333333334
+          ],
+          [
+            816.5416666666667,
+            413.44166666666683
+          ],
+          [
+            988.5416666666667,
+            413.44166666666683
+          ],
+          [
+            824.5416666666667,
+            369.4416666666668
+          ],
+          [
+            976.5416666666669,
+            369.4416666666668
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            508,
+            236
+          ],
+          [
+            970,
+            226
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.271100725754054,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9191607652948608,
+          0.9863150396148179,
+          1.2594997619994082
+        ],
+        "reference_video_sha256": "2397234b6b15779ce99fb3bf6c100c335a3c94f2ed0ef6a8e964fd44d2e538ad",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L2-06/color_fit.json"
+      }
+    },
+    "L2-07": {
+      "runtime_scene_sha256": "fcdc25acce380539287aff2dca76bfb692006907521c213cda9fd495fb2ff11e",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.042498668013966484,
+            0.06018991542423943,
+            0.012645871680608201,
+            -0.11202911324399563,
+            -0.10546889952953048,
+            -0.03644723476629881
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 0.0009106500097110413,
+          "source_target_residual_rad": 0.015699770921621555,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-07",
+            "arm": "left",
+            "before_clearance_m": 0.0006417636792104137,
+            "after_clearance_m": 0.002999999999987124,
+            "max_delta_deg": 0.8073391497498227,
+            "home_before": [
+              0.042498684953933594,
+              0.06018993496201416,
+              -0.0014448546627777582,
+              -0.11330338962121679,
+              -0.1054677629435625,
+              -0.036447198734463546
+            ],
+            "home_after": [
+              0.042498668013966484,
+              0.06018991542423943,
+              0.012645871680608201,
+              -0.11202911324399563,
+              -0.10546889952953048,
+              -0.03644723476629881
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              448,
+              310
+            ],
+            "housing_predicted_uv": [
+              447.3048088120358,
+              309.21017978762563
+            ],
+            "cap_target_uv": [
+              450,
+              246
+            ],
+            "cap_predicted_uv": [
+              450.7374854359442,
+              246.67858082032063
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.03409596849124767,
+            0.007091247043477588,
+            -0.032461096609265466,
+            0.015585334322443864,
+            -0.09077615579032865,
+            -0.06918674182217434
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 0.009252045892572582,
+          "source_target_residual_rad": 0.007808158334890943,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L2-07",
+            "arm": "right",
+            "before_clearance_m": -0.0021012717265117414,
+            "after_clearance_m": 0.00299999999999874,
+            "max_delta_deg": 2.1197921907096773,
+            "home_before": [
+              -0.03409582293420977,
+              0.0070912499868633575,
+              -0.06945844979521289,
+              0.012412834566290222,
+              -0.090768640971637,
+              -0.06918687225453905
+            ],
+            "home_after": [
+              -0.03409596849124767,
+              0.007091247043477588,
+              -0.032461096609265466,
+              0.015585334322443864,
+              -0.09077615579032865,
+              -0.06918674182217434
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              946,
+              302
+            ],
+            "housing_predicted_uv": [
+              943.8062658722554,
+              301.282490880858
+            ],
+            "cap_target_uv": [
+              904,
+              248
+            ],
+            "cap_predicted_uv": [
+              907.963244722816,
+              248.63373315600612
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              0.0,
+              0.0,
+              786.0,
+              216.0
+            ],
+            "object_predicted_bbox": [
+              460.8379291567878,
+              0.0,
+              862.0561566965622,
+              105.15724956691952
+            ],
+            "joint_positions_are_urdf_consistent": true,
+            "upper_outline_real_top_v": 202,
+            "upper_outline_predicted_top_v": 202.66209918692533,
+            "upper_outline_source": "Real overview dark robot silhouette vs projected visible body geometry; resolves the upper-link ambiguity of two-point fitting."
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "c73b4e57dcd4e41b64edaf2644c02647da6836833b355575851b9fbb5f61ce52",
+      "source_video": "real_videos/L2-07/real_L2-07.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            402.9086538461539,
+            436.80480769230763
+          ],
+          [
+            571.8317307692308,
+            436.80480769230763
+          ],
+          [
+            420.9086538461539,
+            391.11249999999995
+          ],
+          [
+            567.6778846153845,
+            391.11249999999995
+          ],
+          [
+            789.2163461538462,
+            438.18942307692305
+          ],
+          [
+            967.8317307692307,
+            438.18942307692305
+          ],
+          [
+            797.5240384615385,
+            392.4971153846154
+          ],
+          [
+            955.3701923076923,
+            392.4971153846154
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            450,
+            246
+          ],
+          [
+            904,
+            248
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 0.85,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9965108426592217,
+          0.9674133958663795,
+          1.0515910510500195
+        ],
+        "reference_video_sha256": "c73b4e57dcd4e41b64edaf2644c02647da6836833b355575851b9fbb5f61ce52",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L2-07/color_fit.json"
+      }
+    },
+    "L3-03": {
+      "runtime_scene_sha256": "c9ba68dae4e5a01999ffa179a7d5723bb36a1b27c05d3d9fa75249168179c3c7",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.00457447524898121,
+            0.11858125272561458,
+            0.036213560393000055,
+            -0.1764998378920236,
+            -0.012730197253867889,
+            -0.004698029841852904
+          ],
+          "gripper_width_m": 0.021581943429734563,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-03",
+            "arm": "left",
+            "before_clearance_m": -0.0007187236883935966,
+            "after_clearance_m": 0.00299999999978752,
+            "max_delta_deg": 1.2206807274901692,
+            "home_before": [
+              0.004574386017405648,
+              0.11858124803058334,
+              0.014908662582656943,
+              -0.17845014073196774,
+              -0.01272164983567706,
+              -0.004698119109913029
+            ],
+            "home_after": [
+              0.00457447524898121,
+              0.11858125272561458,
+              0.036213560393000055,
+              -0.1764998378920236,
+              -0.012730197253867889,
+              -0.004698029841852904
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              430,
+              342
+            ],
+            "housing_predicted_uv": [
+              429.90149099733037,
+              340.48581942112685
+            ],
+            "cap_target_uv": [
+              448,
+              260
+            ],
+            "cap_predicted_uv": [
+              448.1005948416889,
+              261.2022400227568
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.12724875991161655,
+            0.002482211132861897,
+            -0.020571100563836958,
+            -0.018024664952298406,
+            0.03369162377060591,
+            0.0109645505143188
+          ],
+          "gripper_width_m": 0.06608323742899228,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-03",
+            "arm": "right",
+            "before_clearance_m": -0.0016857204576338908,
+            "after_clearance_m": 0.0029999999994543697,
+            "max_delta_deg": 1.8471814265673525,
+            "home_before": [
+              0.1272486531056794,
+              0.0024822112447108378,
+              -0.052810498339123116,
+              -0.02083584479791241,
+              0.03371842759633016,
+              0.01096444171100681
+            ],
+            "home_after": [
+              0.12724875991161655,
+              0.002482211132861897,
+              -0.020571100563836958,
+              -0.018024664952298406,
+              0.03369162377060591,
+              0.0109645505143188
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              988,
+              308
+            ],
+            "housing_predicted_uv": [
+              988.1960851041135,
+              308.13870301481677
+            ],
+            "cap_target_uv": [
+              948,
+              252
+            ],
+            "cap_predicted_uv": [
+              947.0975987514856,
+              251.91971229241636
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "77e1de7d2c295f46dbc92a2b7af8e72c4ffd0e0f548cc6a83487a0f1c3104326",
+      "source_video": "real_videos/L3-03/real_L3-03.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            398.27564102564094,
+            451.50128205128203
+          ],
+          [
+            573.4551282051282,
+            451.50128205128203
+          ],
+          [
+            416.9423076923076,
+            404.1166666666667
+          ],
+          [
+            569.1474358974358,
+            404.1166666666667
+          ],
+          [
+            798.8910256410256,
+            452.93717948717955
+          ],
+          [
+            984.1217948717949,
+            452.93717948717955
+          ],
+          [
+            807.5064102564103,
+            405.55256410256413
+          ],
+          [
+            971.198717948718,
+            405.55256410256413
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            448,
+            260
+          ],
+          [
+            948,
+            252
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.1106303379032727,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8675994511023815,
+          1.007348638822017,
+          1.4388401353211833
+        ],
+        "reference_video_sha256": "77e1de7d2c295f46dbc92a2b7af8e72c4ffd0e0f548cc6a83487a0f1c3104326",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L3-03/color_fit.json"
+      }
+    },
+    "L3-05": {
+      "runtime_scene_sha256": "07d262133bdc06afe89ba6564e026e9db8a198612463448ff246cafdd9eee22e",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.04667809317458358,
+            0.01658645230051724,
+            0.002931503146018444,
+            -0.08457723532650696,
+            0.016579792456542623,
+            -0.07581281865547256
+          ],
+          "gripper_width_m": 0.05774088240390173,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-05",
+            "arm": "left",
+            "before_clearance_m": -0.003698173855385928,
+            "after_clearance_m": 0.0029999999999879984,
+            "max_delta_deg": 2.572986731936548,
+            "home_before": [
+              -0.0466780768466784,
+              0.016586463397424586,
+              -0.041975586936403055,
+              -0.08860099214066876,
+              0.016608525493278896,
+              -0.07581280327388958
+            ],
+            "home_after": [
+              -0.04667809317458358,
+              0.01658645230051724,
+              0.002931503146018444,
+              -0.08457723532650696,
+              0.016579792456542623,
+              -0.07581281865547256
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              504,
+              288
+            ],
+            "housing_predicted_uv": [
+              503.04040402325256,
+              287.68168972519936
+            ],
+            "cap_target_uv": [
+              514,
+              224
+            ],
+            "cap_predicted_uv": [
+              514.6510443358848,
+              224.39373396709044
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              5.0,
+              0.0,
+              456.0,
+              367.0
+            ],
+            "object_predicted_bbox": [
+              0.0,
+              0.0,
+              479.62515279561353,
+              370.9831727158138
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            -0.054864014991846656,
+            0.12642361409636907,
+            -0.06857761082302605,
+            0.14237647698541625,
+            0.020024383366156726,
+            0.00979760225784793
+          ],
+          "gripper_width_m": 0.06581379184768739,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-05",
+            "arm": "right",
+            "before_clearance_m": 0.0037253559293017324,
+            "after_clearance_m": 0.0037253559293017324,
+            "max_delta_deg": 0.0,
+            "home_before": [
+              -0.054864014991846656,
+              0.12642361409636907,
+              -0.06857761082302605,
+              0.14237647698541625,
+              0.020024383366156726,
+              0.00979760225784793
+            ],
+            "home_after": [
+              -0.054864014991846656,
+              0.12642361409636907,
+              -0.06857761082302605,
+              0.14237647698541625,
+              0.020024383366156726,
+              0.00979760225784793
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              994,
+              278
+            ],
+            "housing_predicted_uv": [
+              998.0608683890534,
+              271.77861370309125
+            ],
+            "cap_target_uv": [
+              968,
+              218
+            ],
+            "cap_predicted_uv": [
+              965.5604672602676,
+              220.63265477934334
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              912.0,
+              0.0,
+              1275.0,
+              354.0
+            ],
+            "object_predicted_bbox": [
+              912.2554611856082,
+              0.0,
+              1280.0,
+              350.6009585952348
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "dae5619c7935ca340cc243ec911ead04b175ad406e1651a513aab147542e9c03",
+      "source_video": "real_videos/L3-05/real_L3-05.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            458.17467948717945,
+            400.41185897435895
+          ],
+          [
+            614.5849358974359,
+            400.41185897435895
+          ],
+          [
+            474.84134615384613,
+            358.10416666666663
+          ],
+          [
+            610.738782051282,
+            358.10416666666663
+          ],
+          [
+            815.8669871794872,
+            401.6939102564103
+          ],
+          [
+            981.2516025641025,
+            401.6939102564103
+          ],
+          [
+            823.5592948717949,
+            359.38621794871796
+          ],
+          [
+            969.7131410256411,
+            359.38621794871796
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            514,
+            224
+          ],
+          [
+            968,
+            218
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.022670391521373,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.9319288422419717,
+          0.9835404295562123,
+          1.3110491682537921
+        ],
+        "reference_video_sha256": "dae5619c7935ca340cc243ec911ead04b175ad406e1651a513aab147542e9c03",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L3-05/color_fit.json"
+      }
+    },
+    "L3-11": {
+      "runtime_scene_sha256": "f90aef610465e511ec3ee8c154b5deda351efeb5b462aa5b81b62cda373663d5",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.14186280159851844,
+            -0.0295234889113033,
+            -0.045542591583217905,
+            0.05435121183945974,
+            -0.2058184468359835,
+            -0.05965290756829715
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-11",
+            "arm": "left",
+            "before_clearance_m": -0.002227620945582473,
+            "after_clearance_m": 0.0029999999999751475,
+            "max_delta_deg": 2.2804935077993633,
+            "home_before": [
+              -0.14186275600715953,
+              -0.029523473046762633,
+              -0.08534471186467178,
+              0.05102369066746816,
+              -0.2058365433897845,
+              -0.059652849464827705
+            ],
+            "home_after": [
+              -0.14186280159851844,
+              -0.0295234889113033,
+              -0.045542591583217905,
+              0.05435121183945974,
+              -0.2058184468359835,
+              -0.05965290756829715
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              428,
+              304
+            ],
+            "housing_predicted_uv": [
+              426.92982579903065,
+              305.2418785130149
+            ],
+            "cap_target_uv": [
+              438,
+              260
+            ],
+            "cap_predicted_uv": [
+              440.62742117363564,
+              259.0692810181662
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.2256987093283456,
+            -0.01430908195310436,
+            -0.042592134837127614,
+            0.04640033238228184,
+            0.04676661315864254,
+            0.014360301132180345
+          ],
+          "gripper_width_m": 0.05745375172622516,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-11",
+            "arm": "right",
+            "before_clearance_m": -0.00015628390113581192,
+            "after_clearance_m": 0.0029999999994736737,
+            "max_delta_deg": 1.2771762713127544,
+            "home_before": [
+              0.22569867177298383,
+              -0.014309079816435545,
+              -0.06488306589987958,
+              0.04452933004139306,
+              0.04678910581487824,
+              0.014360263922420166
+            ],
+            "home_after": [
+              0.2256987093283456,
+              -0.01430908195310436,
+              -0.042592134837127614,
+              0.04640033238228184,
+              0.04676661315864254,
+              0.014360301132180345
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              996,
+              290
+            ],
+            "housing_predicted_uv": [
+              996.3463113854659,
+              290.94675609369386
+            ],
+            "cap_target_uv": [
+              948,
+              246
+            ],
+            "cap_predicted_uv": [
+              946.3284369319679,
+              245.3438825053251
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "4c0d98953d4ac2407066ae558df834aa191544525e813c0425e5018bd236bcbc",
+      "source_video": "real_videos/L3-11/real_L3-11.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            398.27564102564094,
+            452.50128205128203
+          ],
+          [
+            573.4551282051282,
+            452.50128205128203
+          ],
+          [
+            416.9423076923076,
+            405.1166666666667
+          ],
+          [
+            569.1474358974358,
+            405.1166666666667
+          ],
+          [
+            798.8910256410256,
+            453.93717948717955
+          ],
+          [
+            984.1217948717949,
+            453.93717948717955
+          ],
+          [
+            807.5064102564103,
+            406.55256410256413
+          ],
+          [
+            971.198717948718,
+            406.55256410256413
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            438,
+            260
+          ],
+          [
+            948,
+            246
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.191441961639685,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.008553837448225,
+          1.2755102040816326
+        ],
+        "method": "Shared median appearance correction from the other fourteen tasks; no separate L3-11 warm matching, per user instruction.",
+        "shared_correction_source_tasks": [
+          "L1-01",
+          "L1-03",
+          "L1-07",
+          "L1-08",
+          "L1-09",
+          "L2-01",
+          "L2-03",
+          "L2-04",
+          "L2-06",
+          "L2-07",
+          "L3-03",
+          "L3-05",
+          "L3-14",
+          "L3-15"
+        ],
+        "reference_setup_sha256": "809b18f85e0e9a4a15ff16e51ac8b33d8c5c8dcc3d1644d2a57a614b206160c0"
+      }
+    },
+    "L3-14": {
+      "runtime_scene_sha256": "d2f5c53ed5c5a352093c82d2fc840998b10596efb67370efa3a10217d87ce166",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            0.014636248880524717,
+            -0.011958845701329263,
+            -0.010420082613394478,
+            -0.04756365142760322,
+            -0.07325935239205474,
+            -0.024623620527861746
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-14",
+            "arm": "left",
+            "before_clearance_m": -0.003905396963127139,
+            "after_clearance_m": 0.002999999999823949,
+            "max_delta_deg": 2.8053296000302366,
+            "home_before": [
+              0.014636632586863901,
+              -0.011958837331064417,
+              -0.05938232073757772,
+              -0.051895856763625355,
+              -0.07324680797384717,
+              -0.02462322885149128
+            ],
+            "home_after": [
+              0.014636248880524717,
+              -0.011958845701329263,
+              -0.010420082613394478,
+              -0.04756365142760322,
+              -0.07325935239205474,
+              -0.024623620527861746
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              512,
+              298
+            ],
+            "housing_predicted_uv": [
+              511.5521958027882,
+              297.65279728928203
+            ],
+            "cap_target_uv": [
+              510,
+              236
+            ],
+            "cap_predicted_uv": [
+              510.5764640895734,
+              236.2838448433544
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.03144734991619446,
+            -0.07551736802550725,
+            -0.02598234356863062,
+            -0.0031484468732479566,
+            -0.07181481261387114,
+            -0.02413170453497246
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-14",
+            "arm": "right",
+            "before_clearance_m": -0.0036616321863922607,
+            "after_clearance_m": 0.0029999999996730697,
+            "max_delta_deg": 2.849916133133588,
+            "home_before": [
+              0.031447596721297544,
+              -0.07551735656473646,
+              -0.07572276349751679,
+              -0.00745794551422693,
+              -0.07180017236417523,
+              -0.024131436959682874
+            ],
+            "home_after": [
+              0.03144734991619446,
+              -0.07551736802550725,
+              -0.02598234356863062,
+              -0.0031484468732479566,
+              -0.07181481261387114,
+              -0.02413170453497246
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              1024,
+              280
+            ],
+            "housing_predicted_uv": [
+              1023.5222704073029,
+              279.6461909504274
+            ],
+            "cap_target_uv": [
+              968,
+              230
+            ],
+            "cap_predicted_uv": [
+              968.5456672591911,
+              230.27152792093702
+            ],
+            "object_name": null,
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "242e38844935dce1b2dc937713dbca9f5fa104e0065bc05c19a4553d2ce69ac9",
+      "source_video": "real_videos/L3-14/real_L3-14.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            444.5416666666664,
+            412.10833333333346
+          ],
+          [
+            607.2083333333333,
+            412.10833333333346
+          ],
+          [
+            461.8749999999998,
+            368.1083333333334
+          ],
+          [
+            603.2083333333331,
+            368.1083333333334
+          ],
+          [
+            816.5416666666667,
+            413.44166666666683
+          ],
+          [
+            988.5416666666667,
+            413.44166666666683
+          ],
+          [
+            824.5416666666667,
+            369.4416666666668
+          ],
+          [
+            976.5416666666669,
+            369.4416666666668
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            510,
+            236
+          ],
+          [
+            968,
+            230
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.2904990438721438,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8893569819419263,
+          1.0083364506816137,
+          1.3391001639200455
+        ],
+        "reference_video_sha256": "242e38844935dce1b2dc937713dbca9f5fa104e0065bc05c19a4553d2ce69ac9",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L3-14/color_fit.json"
+      }
+    },
+    "L3-15": {
+      "runtime_scene_sha256": "0cd40b180c7955836a53dff32b8dc147615d8bccd7f1e697f75506bb8be8f76a",
+      "arms": {
+        "left": {
+          "home_positions_rad": [
+            -0.05494302568785501,
+            -0.007976671436218384,
+            -0.01210934082833997,
+            -0.04280088494130639,
+            -0.07840037208519521,
+            -0.02605689860692805
+          ],
+          "gripper_width_m": 0.0017,
+          "source_target_residual_m": 1.5632667869035516e-06,
+          "source_target_residual_rad": 1.9681320455488786e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-15",
+            "arm": "left",
+            "before_clearance_m": -0.006810140790529731,
+            "after_clearance_m": 0.002999999999999989,
+            "max_delta_deg": 4.54524743471073,
+            "home_before": [
+              -0.0549430193616427,
+              -0.007976680067040056,
+              -0.09143887388186822,
+              -0.04980690246235734,
+              -0.07838160498982823,
+              -0.026056889910681984
+            ],
+            "home_after": [
+              -0.05494302568785501,
+              -0.007976671436218384,
+              -0.01210934082833997,
+              -0.04280088494130639,
+              -0.07840037208519521,
+              -0.02605689860692805
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              508,
+              306
+            ],
+            "housing_predicted_uv": [
+              507.52691948177915,
+              305.7798104076591
+            ],
+            "cap_target_uv": [
+              510,
+              244
+            ],
+            "cap_predicted_uv": [
+              510.93306813765207,
+              244.15896587276086
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": null,
+            "object_predicted_bbox": null,
+            "joint_positions_are_urdf_consistent": true
+          }
+        },
+        "right": {
+          "home_positions_rad": [
+            0.00917678458198644,
+            0.09921185004662203,
+            -0.05336066075256966,
+            0.07930667802404713,
+            0.07880912878195308,
+            -0.07192749712201506
+          ],
+          "gripper_width_m": 0.040729474984735635,
+          "source_target_residual_m": 1.5524267623258991e-06,
+          "source_target_residual_rad": 1.6687113684812574e-06,
+          "method": "video-guided wrist orientation and opening; legal URDF inverse kinematics of the supplied visual wrist pose, not independent body transforms",
+          "initial_self_collision_clearance": {
+            "task": "L3-15",
+            "arm": "right",
+            "before_clearance_m": 0.0015101747440639524,
+            "after_clearance_m": 0.00299999999992083,
+            "max_delta_deg": 0.5944420852875328,
+            "home_before": [
+              0.009176796824514824,
+              0.09921186974074461,
+              -0.06373563235325805,
+              0.07845748972792518,
+              0.07882213791410107,
+              -0.0719274954868027
+            ],
+            "home_after": [
+              0.00917678458198644,
+              0.09921185004662203,
+              -0.05336066075256966,
+              0.07930667802404713,
+              0.07880912878195308,
+              -0.07192749712201506
+            ],
+            "optimization_success": true,
+            "method": "Minimum weighted joint-angle correction with unchanged production arm collision spheres and joint limits; mounted-rig/world planning validation is recorded separately."
+          },
+          "prior_visible_fit_before_collision_clearance": {
+            "housing_target_uv": [
+              1008,
+              290
+            ],
+            "housing_predicted_uv": [
+              1007.5015406917234,
+              286.19790226415756
+            ],
+            "cap_target_uv": [
+              970,
+              230
+            ],
+            "cap_predicted_uv": [
+              969.6540486397151,
+              231.65421457640664
+            ],
+            "object_name": "blue support box",
+            "object_target_bbox": [
+              70.0,
+              0.0,
+              705.0,
+              310.0
+            ],
+            "object_predicted_bbox": [
+              70.12801488721288,
+              0.0,
+              718.071374725613,
+              308.1573704541012
+            ],
+            "joint_positions_are_urdf_consistent": true
+          }
+        }
+      },
+      "cameras": {
+        "left_wrist": {
+          "pose": [
+            0.11621923529301374,
+            0.0005323971811255985,
+            0.07327136309263524,
+            0.663428658176889,
+            0.2663286288186903,
+            -0.2748011478838518,
+            -0.6429741877423123
+          ],
+          "intrinsics": [
+            574.742865123003,
+            574.742865123003,
+            685.4731011278298,
+            289.80236452183027
+          ],
+          "self_finger_tip_rms_px": 1.4410939806638265,
+          "optical_mount_image_fit_translation_m": [
+            0.010140548756308428,
+            0.017005957182281446
+          ]
+        },
+        "right_wrist": {
+          "pose": [
+            0.12280170330856653,
+            0.0002843751031316942,
+            0.073967289566056,
+            0.6574624629518901,
+            0.2688550760324718,
+            -0.27232986890589156,
+            -0.6490735708704432
+          ],
+          "intrinsics": [
+            543.9462027832203,
+            543.9462027832203,
+            689.1940740404027,
+            205.66243323364472
+          ],
+          "self_finger_tip_rms_px": 3.1899544396677033,
+          "optical_mount_image_fit_translation_m": [
+            0.01430296219848614,
+            0.022146049380322063
+          ]
+        },
+        "overview": {
+          "pose": [
+            0.1567300829641812,
+            0.606254022867113,
+            1.3955363168746642,
+            0.8706517922092198,
+            0.49090588567529375,
+            0.023331395391782347,
+            0.020796973849606142
+          ],
+          "intrinsics": [
+            930.8776156213771,
+            930.8776156213771,
+            642.1886416808067,
+            485.5862487876495
+          ],
+          "resolution": [
+            1280,
+            954
+          ],
+          "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913"
+        }
+      },
+      "source_video_sha256": "9bd7caa5230917c901fd7079de8ffe907889edf19b6132d05ed3f1401566ea03",
+      "source_video": "real_videos/L3-15/real_L3-15.mp4",
+      "overview_visible_references": {
+        "baseplate_world": [
+          [
+            -0.17145039154237074,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            -0.17145039154237074,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.03854960845762924,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.5103988169384406,
+            0.89
+          ],
+          [
+            0.29854960845762923,
+            1.6153988169384406,
+            0.89
+          ],
+          [
+            0.5085496084576292,
+            1.6153988169384406,
+            0.89
+          ]
+        ],
+        "baseplate_real_uv": [
+          [
+            444.5416666666664,
+            412.10833333333346
+          ],
+          [
+            607.2083333333333,
+            412.10833333333346
+          ],
+          [
+            461.8749999999998,
+            368.1083333333334
+          ],
+          [
+            603.2083333333331,
+            368.1083333333334
+          ],
+          [
+            816.5416666666667,
+            413.44166666666683
+          ],
+          [
+            988.5416666666667,
+            413.44166666666683
+          ],
+          [
+            824.5416666666667,
+            369.4416666666668
+          ],
+          [
+            976.5416666666669,
+            369.4416666666668
+          ]
+        ],
+        "cap_real_uv": [
+          [
+            510,
+            244
+          ],
+          [
+            970,
+            230
+          ]
+        ]
+      },
+      "background_reference": {
+        "world_transform": [
+          [
+            0.8846597990853676,
+            0.0,
+            0.007369887946826959,
+            0.026614721145398063
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -2.220446049250313e-16
+          ],
+          [
+            -0.0065200206609967734,
+            0.0,
+            0.9999728420070473,
+            0.011175307347512486
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "paths": [
+          "/World/Room/PowerStrip",
+          "/World/Room/Socket0",
+          "/World/Room/SocketHole0_0",
+          "/World/Room/SocketHole0_2",
+          "/World/Room/Socket1",
+          "/World/Room/SocketHole1_0",
+          "/World/Room/SocketHole1_2",
+          "/World/Room/Socket2",
+          "/World/Room/SocketHole2_0",
+          "/World/Room/SocketHole2_2",
+          "/World/Room/Socket3",
+          "/World/Room/SocketHole3_0",
+          "/World/Room/SocketHole3_2",
+          "/World/VisualRevision/Plug0",
+          "/World/VisualRevision/DropCable0",
+          "/World/VisualRevision/Plug1",
+          "/World/VisualRevision/DropCable1"
+        ],
+        "source_anchor_world": [
+          [
+            0.11455,
+            1.886,
+            0.945
+          ],
+          [
+            0.23755,
+            1.886,
+            0.945
+          ]
+        ],
+        "target_anchor_world": [
+          [
+            0.1349170452403784,
+            1.8859999999999997,
+            0.9554027746774549
+          ],
+          [
+            0.24373020052787864,
+            1.8859999999999997,
+            0.9546008121361523
+          ]
+        ],
+        "observed_uv": [
+          [
+            664.1500000000001,
+            282.37537777777777
+          ],
+          [
+            739.75,
+            282.37537777777777
+          ]
+        ],
+        "method": "Static wall strip dimensions and position fitted to visible plug centres in the real frame; 3D scene transform, not image warping."
+      },
+      "render_appearance": {
+        "intensity_multiplier": 1.0238269495925045,
+        "light_rgb_multiplier": [
+          0.95,
+          0.98,
+          1.0
+        ],
+        "window_multiplier": 1.8,
+        "table_rgb_multiplier": [
+          0.8990825688073394,
+          1.0192307692307692,
+          1.2755102040816326
+        ],
+        "reference_video_sha256": "9bd7caa5230917c901fd7079de8ffe907889edf19b6132d05ed3f1401566ea03",
+        "method": "Video tabletop color fit with task-specific light intensity and cool window fill; native scene render, no video postprocessing",
+        "fit_evidence": "build/color_alignment_20261015/fits/L3-15/color_fit.json"
+      }
+    }
+  },
+  "camera_reference_task": "L3-03",
+  "camera_policy": {
+    "overview": "All tasks use one native overview fitted directly to the exact user-supplied L3-03 image. Shared world pose, projection and sensor raster; no per-task camera changes and no output-image warp.",
+    "wrists": "Fixed link6-relative mounts and projections shared from L3-03; cameras follow their own arms.",
+    "per_task_camera_overrides": false,
+    "source": "Latest user instruction: make L3-03 match the supplied image and use this exact view for all tasks; this supersedes the earlier original-no-turn choice.",
+    "static_environment": "Same table/room geometry; use L3-03 wall-strip transform and the reference invisibility of the external camera stand. Keep task props and robot initial states."
+  },
+  "overview_reference_image_fit": {
+    "path": "configs/task_references/user_l303_camera_fit_20261015.json",
+    "sha256": "fee672a2732de39f044340998f8df0801fc7dbf2d615dced0e05a92505d40c9d",
+    "image": "configs/task_references/images/user_L3-03_camera_reference_20261015.png",
+    "image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913",
+    "target_size": [
+      594,
+      442
+    ],
+    "native_resolution": [
+      1280,
+      954
+    ],
+    "runtime_image_warp": false
+  },
+  "historical_real_video_edge_annotations": {
+    "method": "Original L3-03 framing restored exactly. Real-image edge deviations are diagnostic only; no camera re-fit or horizontal turn.",
+    "source_video_sha256": "77e1de7d2c295f46dbc92a2b7af8e72c4ffd0e0f548cc6a83487a0f1c3104326",
+    "observed_edges_at_1280x960": {
+      "left": [
+        [
+          292.0,
+          25.0
+        ],
+        [
+          308.0,
+          100.0
+        ],
+        [
+          326.0,
+          180.0
+        ],
+        [
+          343.0,
+          260.0
+        ]
+      ],
+      "right": [
+        [
+          1138.0,
+          25.0
+        ],
+        [
+          1123.0,
+          100.0
+        ],
+        [
+          1103.0,
+          180.0
+        ],
+        [
+          1086.0,
+          260.0
+        ]
+      ],
+      "table": [
+        [
+          100.0,
+          432.0
+        ],
+        [
+          180.0,
+          432.0
+        ],
+        [
+          1100.0,
+          425.0
+        ],
+        [
+          1180.0,
+          425.0
+        ]
+      ]
+    },
+    "strict_edge_identity_claimed": false,
+    "table_geometry_modified": false
+  }
+}

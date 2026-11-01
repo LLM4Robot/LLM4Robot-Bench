@@ -1,0 +1,19 @@
+{
+  "host": "cluster.example.org",
+  "user": "researcher",
+  "project": "/srv/r5/GPT_Benchmark_combined",
+  "runtime": "/srv/r5/runtime_combined",
+  "bridge_port": 18469,
+  "machines": {
+    "cluster": 22
+  },
+  "default_machine": "cluster",
+  "direct_machines": [
+    "cluster"
+  ],
+  "isaac_root": "/opt/isaac-sim",
+  "planner_root": "/srv/r5/r5-curobo",
+  "use_local_codex": false,
+  "max_concurrent": 5,
+  "guard_projects": []
+}

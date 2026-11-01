@@ -1,0 +1,21 @@
+# Engineering acceptance only. No GPT calls and no task success claim.
+# Isaac Python: python -m robot_tasks.integrationtest.tuojing_lab --gui
+schema_version = 2
+workflow_profile = "../workflows/gpt_default.toml"
+
+[task]
+id = "TUOJING-LAB"
+instruction = "Verify laboratory binding, bounded arm motion and synchronized RGB-D; not a benchmark task."
+
+[robot]
+profile = "../robots/r5_tuojing_lab.toml"
+active_arms = ["left", "right"]
+
+[simulation]
+environment = "tuojing_lab_v4"
+camera_profile = "../cameras/r5_tuojing_lab.toml"
+asset_directory = "../../build/tuojing_lab"
+headless = true
+width = 1280
+height = 720
+fps = 12

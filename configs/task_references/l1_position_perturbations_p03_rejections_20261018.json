@@ -1,0 +1,50 @@
+{
+  "master_seed": 20261018,
+  "rejections": [
+    {
+      "task": "L1-03",
+      "variant": 4,
+      "seed": 10987712550009242467,
+      "candidate_sha256": "0dea13fdec467f7359b86b00ebee47a3c95b9898f8d1991408c9d08d9a9169fe",
+      "candidate": {
+        "groups": [
+          {
+            "name": "帽子和蓝色盒子",
+            "delta_m": [
+              0.03518017,
+              0.03987205,
+              0.0
+            ],
+            "paths": [
+              "/World/Household/hat",
+              "/World/Household/source_box"
+            ]
+          },
+          {
+            "name": "挂帽架",
+            "delta_m": [
+              -0.01488818,
+              0.0218212,
+              0.0
+            ],
+            "paths": [
+              "/World/Household/Fixture"
+            ]
+          }
+        ],
+        "rotations": [
+          {
+            "name": "帽子相对盒子旋转",
+            "path": "/World/Household/hat",
+            "yaw_deg": 23.4986,
+            "pivot_path": "/World/Household/source_box",
+            "axis": "world +Z",
+            "pivot_note": "translated box centre; positive yaw is counterclockwise seen from above"
+          }
+        ]
+      },
+      "reason": "Unexpected arm/attachment contact in initial scene: {'arm': 'left', 'link': 'link6', 'component': 'link6', 'robot_collider': '/World/Robots/R5_Left/link6/collisions/link6/node_STL_BINARY_', 'other_collider': '/World/Household/Fixture/Colliders/Leg1', 'impulse_ns': 2.952552272734406, 'separation_m': -0.0038405656814575195, 'robot_actor': '/World/Robots/R5_Left/link6', 'other_actor': '/World/Household/Fixture/Colliders/Leg1', 'force_n': 708.6125454562574}",
+      "evidence": "/home/hym/Documents/ChatGPT/Tuojing/GPT_Benchmark_without_runs_reports_20261015_222239/GPT_Benchmark/build/l1_position_perturbations_p03_20261018/rejected_samples/L1-03_v04_r0/result.json"
+    }
+  ]
+}

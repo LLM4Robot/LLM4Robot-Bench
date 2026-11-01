@@ -1,0 +1,87 @@
+{
+  "reference_image": "configs/task_references/images/user_L3-01_camera_reference_20261015.png",
+  "reference_image_sha256": "ae7bb59e476cec162d1597e26bfb78ac87c45ce2e8b987cbf58c344ef71ae913",
+  "reference_size": [
+    594,
+    442
+  ],
+  "native_resolution": [
+    1280,
+    954
+  ],
+  "pose": [
+    0.1567300829641812,
+    0.606254022867113,
+    1.3955363168746642,
+    0.8706517922092198,
+    0.49090588567529375,
+    0.023331395391782347,
+    0.020796973849606142
+  ],
+  "intrinsics": [
+    930.8776156213771,
+    930.8776156213771,
+    642.1886416808067,
+    485.5862487876495
+  ],
+  "source_camera_pose": [
+    0.1567300829641812,
+    0.606254022867113,
+    1.3955363168746642,
+    0.8706517922092198,
+    0.49090588567529375,
+    0.023331395391782347,
+    0.020796973849606142
+  ],
+  "source_intrinsics": [
+    915.7371720708479,
+    915.7371720708479,
+    640,
+    480
+  ],
+  "image_correspondence_scale_xy_translation_xy": [
+    0.4717676285264811,
+    0.4708089703424038,
+    -4.185438734397963,
+    -1.2946353522136584
+  ],
+  "matched_points": 182,
+  "all_correspondence_median_px": 0.23702696414535013,
+  "all_correspondence_p95_px": 0.8116609586334345,
+  "heldout_points": 37,
+  "heldout_median_px": 0.2546070159732876,
+  "heldout_p95_px": 0.7113306119642113,
+  "native_square_pixel_fit_median_px": 0.2350142869448492,
+  "native_square_pixel_fit_p95_px": 0.8049461613820449,
+  "scope": "Exact user image is the target. Native camera pose/projection only; original scene/robot/props/lighting retained. Feature residuals are at the 594x442 attachment size. Native rendering validation is required before applying to all tasks.",
+  "camera_position_pitch_roll_unchanged_from_original": true,
+  "world_z_rotation_from_original_deg": 1.25,
+  "output_image_warp_used": false,
+  "native_preview_verification": {
+    "matches": 182,
+    "inliers": 173,
+    "direct_no_warp_median_px": 0.2957940101623535,
+    "direct_no_warp_p95_px": 0.9760685563087463,
+    "direct_no_warp_max_px": 1.2866747379302979,
+    "direct_RGB_MAE": 1.7723019536745026,
+    "diagnostic_homography": [
+      [
+        1.0004245029124017,
+        -0.00040145765609505337,
+        -0.07863115874640349
+      ],
+      [
+        2.8957804447305252e-05,
+        1.0011719824532428,
+        -0.2264541623341513
+      ],
+      [
+        1.687086666115883e-06,
+        -9.028379378742701e-07,
+        0.9999999999999999
+      ]
+    ],
+    "method": "Native render resized only to supplied reference size, no fitted output-image warp."
+  },
+  "native_preview_image_sha256": "7bd4e3943622e8097eeafaee22ab1ec07e1cb48f9b1a1a378ada27ce45f18d54"
+}

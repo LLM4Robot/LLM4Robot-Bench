@@ -1,0 +1,38 @@
+# Shared experiment parameters. Depth is optional; all other workflow logic is shared.
+# No task assets, task ID, robot roles, provider endpoint or credentials belong here.
+[simulation]
+# Complete overview framing matched to the global panel of 15_book_150s.mp4.
+# Estimated 1.45 m floor height, 36 degree depression, 4:3 image; not calibrated.
+# Legacy scenes map the pose by table-front centre and heading. Wrists stay unchanged.
+camera_reference_frame = "tuojing_lab"
+camera_position = [0.1956512155, 0.55, 1.45]
+camera_target = [0.1956512155, 1.4721758867156862, 0.78]
+camera_resolution = [1280, 960]
+camera_intrinsics = [1160.0, 1160.0, 640.0, 480.0] # fx, fy, cx, cy in pixels
+
+[runtime]
+seed = 0
+max_steps = 0 # No total physics-tick cap; per-action, 150-call and 5-hour budgets apply.
+max_wall_time_s = 18000.0 # Five hours; an explicit zero disables this limit.
+physics_dt_s = 0.004166666666666667
+control_dt_s = 0.08333333333333333
+
+[observation]
+cameras = ["overview", "left_wrist", "right_wrist"]
+include_depth = false # Opt in with run TASK --depth, or set true here/per task.
+
+[recording]
+save_rgb = true
+# save_depth defaults to include_depth: RGB runs do not collect or record depth.
+save_video = true
+
+[execution]
+max_action_steps = 120
+completion_samples = 3
+wait_steps = 12
+settle_steps = 12
+stop_steps = 12
+max_decisions = 150
+fixed_arm_tolerance_rad = 0.01
+
+# Model defaults, including reasoning effort, live in configs/models/gpt.toml.

@@ -1,0 +1,22 @@
+# Shared default for every task and batch. No credentials belong in this file.
+# Codex uses its existing ChatGPT login; no API key is needed for codex_cli.
+[gpt]
+transport = "codex_cli"
+codex_bin = "codex"
+# For Responses API use transport = "responses", set base_url/model for that
+# provider and export OPENAI_API_KEY. These two fields are unused by codex_cli.
+base_url = "https://api.openai.com/v1"
+api_key_env = "OPENAI_API_KEY"
+model = "gpt-6-astra"
+reasoning_effort = "xhigh"
+# Omit service_tier for normal speed. Uncomment only when explicitly needed.
+# service_tier = ""
+# Per-request timeout, in seconds; this preserves the existing 150-minute limit.
+timeout_s = 9000.0
+structured_output = true
+history_steps = 2
+# Explicit execution.max_decisions / batch --max-calls override this budget.
+max_calls = 150
+image_max_edge = 768
+# Responses only; omit for Codex CLI and gateways that reject this option.
+# max_output_tokens = 4096

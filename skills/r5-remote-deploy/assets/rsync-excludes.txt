@@ -1,0 +1,34 @@
+/runs/
+/reports/
+/report/
+# User selected a runnable deployment without historical caches/environments.
+/build/
+/.cache/
+/.git/
+/real_videos/
+/exports/
+# Private browser login/session data and credentials stay on this computer.
+/build/task_repairs_20261015/chrome-profile/
+.env
+.env.*
+*.pem
+*.key
+*.local.json
+/AGENTS.local.md
+# Host-local runtime files are replaced by launch environment variables.
+/configs/runtime/*.local.toml
+/configs/runtime/local.toml
+/configs/runtime/windows.json
+# Active IPC and disposable interpreter caches are not portable source assets.
+/build/codex/
+__pycache__/
+*.pyc
+
+# Local environments and release archives are not runtime project inputs.
+.venv/
+venv/
+.conda/
+*.egg-info/
+node_modules/
+/dist/
+/skills/**/.env*

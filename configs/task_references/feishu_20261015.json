@@ -1,0 +1,406 @@
+{
+  "source_document": "https://my.feishu.cn/docx/QK4EdOD3hotgp4x782ycgoyyn6g",
+  "sheet_id": "KyMjZ7",
+  "sheet_revision": 324,
+  "protocol": "feishu_english_20261015_v1",
+  "priority": "Prompt English column in simulation rows; old Chinese summaries and historical result columns are not active instructions",
+  "arm_mapping": {
+    "real_left": "simulation_right",
+    "real_right": "simulation_left",
+    "object_left_right": "unchanged; no mirroring of cup names or scene coordinates",
+    "prompt_frame": "Robot perspective: left is overview-image right; tool IDs retain overview-base names."
+  },
+  "tasks": [
+    {
+      "task_id": "L1-01",
+      "sheet_row": 2,
+      "source_setting_zh": "白板笔入固定黑色陶瓷杯。带帽白板笔长约151 mm，竖直立在画面右侧桌面；黑色白内壁陶瓷杯位于左侧，杯口朝上、杯柄朝桌前，杯高约90 mm、内口直径约85 mm，两者中心相距约300 mm。笔可自由移动，杯固定。左臂操作，右臂提供补充视角。保持笔帽不拆，将笔任一端真正送入杯腔即可。",
+      "source_prompt_en": "Pick up the thick marker with the left arm and place it in the wide-mouth cup, then release it.",
+      "simulation_prompt_en": "Pick up the thick marker with the left arm and place it in the wide-mouth cup, then release it.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the thick marker with the left arm and place it in the wide-mouth cup, then release it."
+    },
+    {
+      "task_id": "L1-02",
+      "sheet_row": 4,
+      "source_setting_zh": "USB充电器插入固定插线板。白色充电器竖直放在画面右侧的黑色凹槽底座中，插脚朝下、塑料外壳上部露出；底座自由放置，不与充电器或桌面固定。白色插线板固定在左侧桌面，长边沿画面左右方向、孔口朝上，线缆盘在后方；两者中心相距约330 mm。左臂操作，右臂提供补充视角。先将充电器竖直拔离底座，再对准插线板中间蓝色双孔，使两片插脚分别真正进入对应孔。允许浅插和继续夹持，不要求完全落座、松手或通电；仅对准、碰到面板或只进入一片插脚不算成功。",
+      "source_prompt_en": "Pick up the power adapter with the left arm and align its prongs with the socket holes closest to the left arm.",
+      "simulation_prompt_en": "Pick up the power adapter with the left arm and align its prongs with the socket holes closest to the left arm.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the power adapter with the left arm and align its prongs with the socket holes closest to the left arm."
+    },
+    {
+      "task_id": "L1-03",
+      "sheet_row": 8,
+      "source_setting_zh": "黄色空顶遮阳帽挂架。初始放在画面左侧、木架旁的四个45 mm高被动支撑块上，以露出帽檐下方供夹取，帽子未固定。82 cm高木架固定在桌面，最低斜挂杆已转向左臂便于接近。左臂夹起整顶帽子，右臂观察；将椭圆头孔套过最低挂杆的圆头，并松手，使帽带由该挂杆承托。允许自然晃动，不要求额外稳定等待；仅搭在杆尖、挂到其他杆或靠夹爪托住不算成功。",
+      "source_prompt_en": "Use the left arm to hang the hat on the lowest rod through its head opening.",
+      "simulation_prompt_en": "Use the left arm to hang the hat on the lowest rod through its head opening.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Use the left arm to hang the hat on the lowest rod through its head opening."
+    },
+    {
+      "task_id": "L1-04",
+      "sheet_row": 10,
+      "source_setting_zh": "两个相同波纹纸杯套叠。两只空杯初始均竖直、杯口朝上，均可自由移动，未固定。待搬杯位于画面左后侧、较靠左臂；接收杯位于右前侧、较靠相机。杯高约108 mm、外口直径约85 mm。左臂抓第一杯放到中央，释放回位；右臂再抓第二杯套入第一杯，释放撤离后确认稳定并回位，一次只动一臂。完成要求为上杯实际进入下杯、由下杯承托且已释放，套叠关系稳定。不要求指定绕竖轴朝向或严格居中；只张爪但杯子仍卡在指间不算完成。",
+      "source_prompt_en": "Use the left arm to place the left cup at the center and release it, then use the right arm to nest the right cup inside it and release it.",
+      "simulation_prompt_en": "Use the left arm to place the left cup at the center and release it, then use the right arm to nest the right cup inside it and release it.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Use the left arm to place the left cup at the center and release it, then use the right arm to nest the right cup inside it and release it."
+    },
+    {
+      "task_id": "L1-05",
+      "sheet_row": 12,
+      "source_setting_zh": "白色仿真花初始置于离左臂近的源纸杯（含白色充电头的源纸杯），左臂自主取花，插入另一离右臂近的纸杯（含玻璃弹珠和白色珍珠的纸杯）；执行中确认目标杯内有彩色填充物（玻璃弹珠，白色珍珠，白色充电头）。右臂辅助观察。要求释放后花和杯独立稳定。",
+      "source_prompt_en": "Pick up the flower from the left cup, insert its stem into the right cup, and release it.",
+      "simulation_prompt_en": "Pick up the flower from the left cup, insert its stem into the right cup, and release it.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the flower from the left cup, insert its stem into the right cup, and release it."
+    },
+    {
+      "task_id": "L2-01",
+      "sheet_row": 14,
+      "source_setting_zh": "**双臂拔笔帽。**可拔帽马克笔总长约151 mm，水平躺在两臂之间的绿色盒子上，长轴沿画面左右方向，笔身在右、笔帽在左；未固定、未预先抓持。右臂抓笔身并拿起整支笔，左臂抓帽沿笔轴向右拔出；最后将两部分分别放在桌面并松手，无指定落点。",
+      "source_prompt_en": "Pick up the black pen with the right arm, then grasp the cap with the left arm and pull it off along the pen’s axis.",
+      "simulation_prompt_en": "Pick up the black pen with the right arm, then grasp the cap with the left arm and pull it off along the pen’s axis.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Pick up the black pen with the right arm, then grasp the cap with the left arm and pull it off along the pen’s axis."
+    },
+    {
+      "task_id": "L2-02",
+      "sheet_row": 16,
+      "source_setting_zh": "中层书本侧向抽取。三本约220×140×20 mm的书平叠在蓝色支撑盒上，书堆位于画面左侧、左臂前方；封面朝上，书本长边沿相机—机械臂方向。中层书向画面右侧突出40 mm；上下书固定，中层可动，上方留5 mm净空。左臂从突出侧上下夹住书本厚度，向右抽出；右臂观察，不扶书。本轮尚不是后来调整的居中摆放。",
+      "source_prompt_en": "Hold the top book steady with the right arm and pull the middle book out 5 cm with the left arm.",
+      "simulation_prompt_en": "Hold the top book steady with the right arm and pull the middle book out 5 cm with the left arm.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Hold the top book steady with the right arm and pull the middle book out 5 cm with the left arm."
+    },
+    {
+      "task_id": "L2-03",
+      "sheet_row": 18,
+      "source_setting_zh": "**杯间倒珍珠。**两只波纹纸杯并排放在机械臂前方，杯口向上，中心相距200 mm；左杯装料、右杯接收。杯高约108 mm、杯口直径85 mm；左杯装10颗绿色玻璃弹珠小球，可自由移动，左杯固定在桌面。左臂夹住源杯较窄的杯身，从左向右倾倒，随后将源杯放回桌面并松手；右臂只观察。要求放回、释放稳定及双臂回位。若至多1个弹珠没有进入右杯，则判定为成功，否则失败",
+      "source_prompt_en": "Pick up the left cup with the left arm, pour its contents into the right cup until empty, then place it back and release it.",
+      "simulation_prompt_en": "Pick up the left cup with the left arm, pour its contents into the right cup until empty, then place it back and release it.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the left cup with the left arm, pour its contents into the right cup until empty, then place it back and release it."
+    },
+    {
+      "task_id": "L2-04",
+      "sheet_row": 20,
+      "source_setting_zh": "从承台夹起橘子瓣。绿色盒子固定在两臂中间、靠相机一侧，橘子瓣置于盒子顶面中央，宽面平放、果肉面朝上、长轴沿画面前后方向，橘子瓣靠近左臂方向。橘子未固定；左臂夹起，右臂观察。相对初始位置整体抬高50 mm即可，保持夹持，不要求搬运或放下。",
+      "source_prompt_en": "Use the left arm to lift the orange segment 5–20 cm without damaging it,  then place it back on the box and release it.",
+      "simulation_prompt_en": "Use the left arm to lift the orange segment 5–20 cm without damaging it,  then place it back on the box and release it.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Use the left arm to lift the orange segment 5–20 cm without damaging it,  then place it back on the box and release it."
+    },
+    {
+      "task_id": "L2-05",
+      "sheet_row": 22,
+      "source_setting_zh": "白色收纳盒第一层抽屉已打开。左臂建立夹持并拉出约5厘米，再推回本轮初始开度；右臂可辅助观察。",
+      "source_prompt_en": "Use the left arm to pull the partially open top drawer out another 5 cm, then push it back to its original position.",
+      "simulation_prompt_en": "Use the left arm to pull the partially open top drawer out another 5 cm, then push it back to its original position.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Use the left arm to pull the partially open top drawer out another 5 cm, then push it back to its original position."
+    },
+    {
+      "task_id": "L3-01",
+      "sheet_row": 24,
+      "source_setting_zh": "瓶子初始立于桌面，左爪抓稳瓶身，右爪接近瓶盖旋下，要求完全退丝后分离3—5厘米。采用左低右高、近似对向布局；未量化预松程度。",
+      "source_prompt_en": "Hold the bottle steady with the left arm, unscrew the cap with the right arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "simulation_prompt_en": "The bottle body is fixed to the table. Unscrew the cap with the right arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Unscrew the cap with the left arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "real_sim_prompt_difference": "The simulation row is the active source for this simulation project; the real row describes a distinct variant.",
+      "user_setup_override": {
+        "date": "2026-10-15",
+        "requirement": "Bottle body is fixed, as explicitly clarified by the user; source_prompt_en preserved for provenance."
+      }
+    },
+    {
+      "task_id": "L3-02",
+      "sheet_row": 26,
+      "source_setting_zh": "双臂旋出螺母。约90 mm长的膨胀螺栓横放在两臂中间、平放绿色盒面，双爪空手。长轴沿画面左右方向，套管主体朝右、螺母及螺纹端朝左。主体不固定，初态预松3圈。右臂拿起并稳住主体，左臂向外旋出螺母；完全分离后两手继续拿着即可，不要求放桌。",
+      "source_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off.",
+      "simulation_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off."
+    },
+    {
+      "task_id": "L2-07",
+      "sheet_row": 28,
+      "source_setting_zh": "带字黑板和蓝色硬质板擦。故障恢复后人工将板擦预置于左爪，左臂接触擦拭，右臂观察。用户将目标从擦除字迹改为只需有擦拭动作。",
+      "source_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard.",
+      "simulation_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard."
+    },
+    {
+      "task_id": "L3-03",
+      "sheet_row": 30,
+      "source_setting_zh": "双臂协作推叠书转移。两本书叠放在桌面的一个黑色矩形框内，另一个黑色矩形框为目标区域。左右臂使用夹爪共同推动整叠书，从起始框移至目标框，并在移动过程中使整叠书沿桌面旋转一整圈（360°）。全程保持两本书叠放且由桌面承托，禁止抓取或抬起。最终两本书均完全进入目标框，不要求居中或固定朝向。",
+      "source_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "simulation_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "active_arms": [
+        "right",
+        "left"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "previous_reference_20261015": {
+        "source_setting_zh": "桌面上放置一个黑板擦块，平放在目标区的画面右上方，较靠近机械臂，红线矩形目标区域位于两臂中间。左臂用夹爪边缘沿桌面推动，右腕原位观察；禁止夹起搬放，不要求居中或固定朝向。",
+        "source_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "real_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "simulation_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "active_arms": [
+          "right"
+        ],
+        "observation_arms": [
+          "left"
+        ]
+      },
+      "user_override_20261019": {
+        "reference": "20261019的L3最后两个任务/L3-04",
+        "max_wall_time_s": 18000,
+        "max_calls": 0,
+        "meaning": "0 means unlimited within the wall-time deadline"
+      },
+      "previous_reference_before_20261020": {
+        "source_setting_zh": "两本书叠放在桌面右上方，深色矩形目标框在左下方。双臂均可推动或扶稳；保持叠放并沿桌面推入框，不夹起搬运。",
+        "source_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "real_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "simulation_prompt_en": "Use either or both grippers to push the two stacked books along the tabletop into the dark rectangular outline. Either arm may push or steady the stack. Keep the books stacked; do not grasp and lift or carry them. Both books must lie fully inside the outline, with the lower book supported by the table and the upper book supported by the lower book. Then withdraw the grippers. No particular in-plane orientation or centering is required."
+      },
+      "user_override_20261020": {
+        "reference": "User-provided blue-box real prompt screenshot",
+        "both_grippers": true,
+        "rotation_deg": 360,
+        "release_required": false,
+        "formal_experiment_requested": false
+      }
+    },
+    {
+      "task_id": "L3-04",
+      "sheet_row": 32,
+      "source_setting_zh": "三块蓝色方块呈三角形分布于固定簸箕与绿色支撑盒之间。左臂持刷扫三块全部入簸箕并由其承托，右臂观察，不要求放刷。",
+      "source_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+      "simulation_prompt_en": "Pick up the brush next to the green box with the left arm and use it to sweep all three blue blocks into the fixed dustpan. The right arm observes. All three blocks must be inside the pan and supported by it. Keep the dustpan fixed and do not manipulate blocks directly with the grippers. Setting down the brush is not required.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+      "previous_reference_20261015": {
+        "source_setting_zh": "持刷扫两块入簸箕。簸箕固定在画面左侧，入口薄唇贴桌，开口朝右、柄向左伸出。手刷靠着右侧的绿色盒子，刷柄朝右、刷毛朝左对着簸箕。两块20×20×10 mm蓝色方块放在两者之间，一块偏左且靠机械臂，另一块偏右且靠相机，错开放置。左臂拿刷从右向左扫，右臂观察；两块入簸箕并受其承托即可，不要求放刷。",
+        "source_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "real_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "simulation_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "active_arms": [
+          "right"
+        ],
+        "observation_arms": [
+          "left"
+        ]
+      },
+      "user_override_20261019": {
+        "reference": "20261019的L3最后两个任务/L3-05",
+        "max_wall_time_s": 18000,
+        "max_calls": 0,
+        "meaning": "0 means unlimited within the wall-time deadline"
+      }
+    },
+    {
+      "task_id": "L3-01_v3",
+      "sheet_row": 24,
+      "source_setting_zh": "瓶子初始立于桌面，左爪抓稳瓶身，右爪接近瓶盖旋下，要求完全退丝后分离3—5厘米。采用左低右高、近似对向布局；未量化预松程度。",
+      "source_prompt_en": "Hold the bottle steady with the left arm, unscrew the cap with the right arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "simulation_prompt_en": "The bottle body is fixed to the table. Unscrew the cap with the right arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Unscrew the cap with the left arm, then lift the cap 3–5 cm away from the bottle opening.",
+      "real_sim_prompt_difference": "The simulation row is the active source for this simulation project; the real row describes a distinct variant.",
+      "user_setup_override": {
+        "date": "2026-10-15",
+        "requirement": "Bottle body is fixed, as explicitly clarified by the user; source_prompt_en preserved for provenance."
+      }
+    },
+    {
+      "task_id": "L3-02_v3",
+      "sheet_row": 26,
+      "source_setting_zh": "双臂旋出螺母。约90 mm长的膨胀螺栓横放在两臂中间、平放绿色盒面，双爪空手。长轴沿画面左右方向，套管主体朝右、螺母及螺纹端朝左。主体不固定，初态预松3圈。右臂拿起并稳住主体，左臂向外旋出螺母；完全分离后两手继续拿着即可，不要求放桌。",
+      "source_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off.",
+      "simulation_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off.",
+      "active_arms": [
+        "left",
+        "right"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Pick up and hold the threaded rod steady with the right arm, then unscrew the hex nut counterclockwise with the left arm until it comes off."
+    },
+    {
+      "task_id": "L2-07_v3",
+      "sheet_row": 28,
+      "source_setting_zh": "带字黑板和蓝色硬质板擦。故障恢复后人工将板擦预置于左爪，左臂接触擦拭，右臂观察。用户将目标从擦除字迹改为只需有擦拭动作。",
+      "source_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard.",
+      "simulation_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the board eraser with the left arm and erase the writing on the whiteboard."
+    },
+    {
+      "task_id": "L3-03_v3",
+      "sheet_row": 30,
+      "source_setting_zh": "双臂协作推叠书转移。两本书叠放在桌面的一个黑色矩形框内，另一个黑色矩形框为目标区域。左右臂使用夹爪共同推动整叠书，从起始框移至目标框，并在移动过程中使整叠书沿桌面旋转一整圈（360°）。全程保持两本书叠放且由桌面承托，禁止抓取或抬起。最终两本书均完全进入目标框，不要求居中或固定朝向。",
+      "source_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "simulation_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "active_arms": [
+        "right",
+        "left"
+      ],
+      "observation_arms": [],
+      "real_prompt_en": "Use both grippers to push the two stacked books from one black rectangle fully into the other, rotating the stack one full turn along the way. Keep the books stacked on the table without grasping or lifting them.",
+      "previous_reference_20261015": {
+        "source_setting_zh": "桌面上放置一个黑板擦块，平放在目标区的画面右上方，较靠近机械臂，红线矩形目标区域位于两臂中间。左臂用夹爪边缘沿桌面推动，右腕原位观察；禁止夹起搬放，不要求居中或固定朝向。",
+        "source_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "real_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "simulation_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "active_arms": [
+          "right"
+        ],
+        "observation_arms": [
+          "left"
+        ]
+      },
+      "user_override_20261019": {
+        "reference": "20261019的L3最后两个任务/L3-04",
+        "max_wall_time_s": 18000,
+        "max_calls": 0,
+        "meaning": "0 means unlimited within the wall-time deadline"
+      },
+      "previous_reference_before_20261020": {
+        "source_setting_zh": "两本书叠放在桌面右上方，深色矩形目标框在左下方。双臂均可推动或扶稳；保持叠放并沿桌面推入框，不夹起搬运。",
+        "source_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "real_prompt_en": "Use the edge of the left gripper to push the board eraser into the red region without grasping it.",
+        "simulation_prompt_en": "Use either or both grippers to push the two stacked books along the tabletop into the dark rectangular outline. Either arm may push or steady the stack. Keep the books stacked; do not grasp and lift or carry them. Both books must lie fully inside the outline, with the lower book supported by the table and the upper book supported by the lower book. Then withdraw the grippers. No particular in-plane orientation or centering is required."
+      },
+      "user_override_20261020": {
+        "reference": "User-provided blue-box real prompt screenshot",
+        "both_grippers": true,
+        "rotation_deg": 360,
+        "release_required": false,
+        "formal_experiment_requested": false
+      },
+      "trial3_user_clarification": "Frame boundary judged by lower book; upper book initially rotated 20 degrees"
+    },
+    {
+      "task_id": "L3-04_v3",
+      "sheet_row": 32,
+      "source_setting_zh": "三块蓝色方块呈三角形分布于固定簸箕与绿色支撑盒之间。左臂持刷扫三块全部入簸箕并由其承托，右臂观察，不要求放刷。",
+      "source_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+      "simulation_prompt_en": "Pick up the brush next to the green box with the left arm and use it to sweep all three blue blocks into the fixed dustpan. The right arm observes. All three blocks must be inside the pan and supported by it. Keep the dustpan fixed and do not manipulate blocks directly with the grippers. Setting down the brush is not required.",
+      "active_arms": [
+        "right"
+      ],
+      "observation_arms": [
+        "left"
+      ],
+      "real_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+      "previous_reference_20261015": {
+        "source_setting_zh": "持刷扫两块入簸箕。簸箕固定在画面左侧，入口薄唇贴桌，开口朝右、柄向左伸出。手刷靠着右侧的绿色盒子，刷柄朝右、刷毛朝左对着簸箕。两块20×20×10 mm蓝色方块放在两者之间，一块偏左且靠机械臂，另一块偏右且靠相机，错开放置。左臂拿刷从右向左扫，右臂观察；两块入簸箕并受其承托即可，不要求放刷。",
+        "source_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "real_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "simulation_prompt_en": "Pick up the brush next to the green box with the left arm, sweep both blue blocks into the dustpan, then set the brush down.",
+        "active_arms": [
+          "right"
+        ],
+        "observation_arms": [
+          "left"
+        ]
+      },
+      "user_override_20261019": {
+        "reference": "20261019的L3最后两个任务/L3-05",
+        "max_wall_time_s": 18000,
+        "max_calls": 0,
+        "meaning": "0 means unlimited within the wall-time deadline"
+      }
+    }
+  ],
+  "not_imported": [
+    {
+      "task_id": "L1-05",
+      "reason": "English prompt is To be added; retain existing proxy definition"
+    },
+    {
+      "task_id": null,
+      "name": "Packaged jelly grasp",
+      "reason": "Task has no assigned benchmark ID"
+    }
+  ]
+}

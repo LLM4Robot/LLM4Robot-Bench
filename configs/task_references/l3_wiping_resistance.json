@@ -1,0 +1,9 @@
+{
+  "revision": "l3-11-normal-force-ink-wear-v2-20261018",
+  "force_deadband_n": 0.1,
+  "force_half_gain_n": 2.0,
+  "force_max_gain": 1.5,
+  "coverage_required": 2.5,
+  "motion_deadband_m": 0.0005,
+  "max_sample_slide_m": 0.02
+}

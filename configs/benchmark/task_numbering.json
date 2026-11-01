@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "numbering": "paper_alignment_20261026",
+  "previous_commit": "a14b8e4b095ccc0d9dc361126cf8c3d528810824",
+  "tasks": [
+    {
+      "legacy_id": "L1-01",
+      "id": "L1-01",
+      "title": "Cylinder insertion"
+    },
+    {
+      "legacy_id": "L1-03",
+      "id": "L1-02",
+      "title": "Plug alignment"
+    },
+    {
+      "legacy_id": "L1-07",
+      "id": "L1-03",
+      "title": "Hat on a rack"
+    },
+    {
+      "legacy_id": "L1-08",
+      "id": "L1-04",
+      "title": "Block stacking"
+    },
+    {
+      "legacy_id": "L1-09",
+      "id": "L1-05",
+      "title": "Flower arrangement"
+    },
+    {
+      "legacy_id": "L2-01",
+      "id": "L2-01",
+      "title": "Uncap a marker"
+    },
+    {
+      "legacy_id": "L2-03",
+      "id": "L2-02",
+      "title": "Extract the middle book"
+    },
+    {
+      "legacy_id": "L2-04",
+      "id": "L2-03",
+      "title": "Pour glass beads"
+    },
+    {
+      "legacy_id": "L2-06",
+      "id": "L2-04",
+      "title": "Lift an orange segment"
+    },
+    {
+      "legacy_id": "L2-07",
+      "id": "L2-05",
+      "title": "Open and close a drawer"
+    },
+    {
+      "legacy_id": "L2-08",
+      "id": "L2-06",
+      "title": "Lift a jelly"
+    },
+    {
+      "legacy_id": "L3-11",
+      "id": "L2-07",
+      "title": "Wipe a whiteboard"
+    },
+    {
+      "legacy_id": "L3-03",
+      "id": "L3-01",
+      "title": "Unscrew a bottle cap"
+    },
+    {
+      "legacy_id": "L3-05",
+      "id": "L3-02",
+      "title": "Thread a nut"
+    },
+    {
+      "legacy_id": "L3-14",
+      "id": "L3-03",
+      "title": "Push stacked books"
+    },
+    {
+      "legacy_id": "L3-15",
+      "id": "L3-04",
+      "title": "Bimanual sweeping"
+    }
+  ],
+  "previous_numbering": "level_reclassification_20261024",
+  "changes_from_previous": {
+    "L3-04": "L3-03",
+    "L3-05": "L3-04"
+  },
+  "legacy_numbering": "original_delivery",
+  "legacy_commit": "6adaa49b8b7a2986b469df451716350f34de0aa8"
+}

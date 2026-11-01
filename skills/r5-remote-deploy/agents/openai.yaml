@@ -1,0 +1,4 @@
+interface:
+  display_name: "R5 Remote Deployment"
+  short_description: "Optional SSH deployment for R5 benchmark hosts"
+  default_prompt: "Use $r5-remote-deploy to configure this benchmark on my SSH host while preserving its task settings."

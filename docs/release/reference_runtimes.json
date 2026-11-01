@@ -1,0 +1,31 @@
+{
+  "verification_date": "2026-10-21",
+  "simulation_validation": {
+    "isaac_sim": "5.1.0",
+    "python": "3.11.13",
+    "numpy": "1.26.4",
+    "pillow": "11.3.0",
+    "scipy": "1.15.3",
+    "torch": "2.7.0+cu128"
+  },
+  "planner": {
+    "python": "3.11.4",
+    "numpy": "2.4.6",
+    "pillow": "11.3.0",
+    "scipy": "1.17.1",
+    "torch": "2.9.1",
+    "curobo_commit": "78fd485fa82d9b9a063fb4985e371814587e666a"
+  },
+  "framework": {
+    "python": "3.11.4",
+    "numpy": "2.4.6",
+    "pillow": "11.3.0",
+    "scipy": "1.17.1"
+  },
+  "notes": [
+    "Observed versions in the validated cluster runtimes.",
+    "Isaac provides its bundled dependencies; do not replace them with the framework versions.",
+    "Software tests also run in a separate clean Python 3.13 environment.",
+    "GPU/driver numerical variation can affect FEM and image pixels; unchanged task parameters are verified independently."
+  ]
+}

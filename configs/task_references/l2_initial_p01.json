@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "name": "l2_p01",
+  "scope": "Initial prop poses only; deterministic and opt-in; no model calls in preview",
+  "tasks": {
+    "L2-01": {
+      "base_runtime_sha256": "0cb24c0c22527f4d516cdbda5e14ad53731af8f2774c1019f0232a0f3ac8f792",
+      "description_zh": "马克笔绕自身中心水平旋转 90°，长轴在画面中朝上下；盒子不动。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/marker"
+          ],
+          "pivot_world_m": [
+            0.12335897255463212,
+            1.1239380739288918,
+            0.88
+          ],
+          "yaw_deg": 90,
+          "translation_world_m": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "L2-02": {
+      "base_runtime_sha256": "8ab152a7e835b1cf02a77f39cc06da85621681eb4fc91c63000bf2af6ff6bbd8",
+      "description_zh": "书堆与支撑盒整体水平偏转 15°；保留原有叠放间距、书页斜度和凸边支撑关系。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/lower_book",
+            "/World/L2/middle_book",
+            "/World/L2/upper_book",
+            "/World/L2/support_box"
+          ],
+          "pivot_world_m": [
+            0.1328965877845687,
+            1.1564355765282295,
+            0.9591423302364748
+          ],
+          "yaw_deg": 15,
+          "translation_world_m": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "L2-03": {
+      "base_runtime_sha256": "b190d773e057f083c96511e661e8cb85708bf7a03cc1eb74cc68e31b50dc8371",
+      "description_zh": "两杯居中前后排列、远离机械臂底座；源杯及 12 颗球在后，接收杯在前，中心间距 21 cm。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/source_cup",
+            "/World/L2/load_0",
+            "/World/L2/load_1",
+            "/World/L2/load_2",
+            "/World/L2/load_3",
+            "/World/L2/load_4",
+            "/World/L2/load_5",
+            "/World/L2/load_6",
+            "/World/L2/load_7",
+            "/World/L2/load_8",
+            "/World/L2/load_9",
+            "/World/L2/load_10",
+            "/World/L2/load_11"
+          ],
+          "pivot_world_m": [
+            0,
+            0,
+            0
+          ],
+          "yaw_deg": 0,
+          "translation_world_m": [
+            -0.285587124527371,
+            -0.076924245865021,
+            0
+          ]
+        },
+        {
+          "roots": [
+            "/World/L2/receiver_cup"
+          ],
+          "pivot_world_m": [
+            0,
+            0,
+            0
+          ],
+          "yaw_deg": 0,
+          "translation_world_m": [
+            -0.033869354184992345,
+            -0.3047090928561007,
+            0
+          ]
+        }
+      ]
+    },
+    "L2-04": {
+      "base_runtime_sha256": "e8438198a3363e7840aa17f1025a4dd124aa8d53a50df915b53db971b080d194",
+      "description_zh": "橘瓣在原处水平旋转 90°，画面中长轴朝上下；盒子不动。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/orange"
+          ],
+          "pivot_world_m": [
+            0.1573894260529144,
+            1.1042152444722095,
+            0.940075
+          ],
+          "yaw_deg": 90,
+          "translation_world_m": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "L2-05": {
+      "base_runtime_sha256": "fcdc25acce380539287aff2dca76bfb692006907521c213cda9fd495fb2ff11e",
+      "description_zh": "收纳盒居中并向镜头方向前移 12 cm，远离机械臂底座；抽屉朝画面左侧抽拉。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/organizer",
+            "/World/L2/support_box"
+          ],
+          "pivot_world_m": [
+            0.41267540996125096,
+            0.9607581695798174,
+            0.95
+          ],
+          "yaw_deg": 40.84557399650694,
+          "translation_world_m": [
+            -0.24412580150362176,
+            0.1792418304201826,
+            0
+          ]
+        }
+      ]
+    },
+    "L2-06": {
+      "base_runtime_sha256": "e4e56fae752f6860a45016c8eeff0c904996f72b66b8662b3d33f39941871b4e",
+      "description_zh": "果冻向画面右侧平移 5 cm，靠近盒面右边缘，仍完全位于盒面内。",
+      "operations": [
+        {
+          "roots": [
+            "/World/L2/jelly"
+          ],
+          "pivot_world_m": [
+            0,
+            0,
+            0
+          ],
+          "yaw_deg": 0,
+          "translation_world_m": [
+            0.05,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

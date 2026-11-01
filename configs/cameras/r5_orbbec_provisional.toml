@@ -1,0 +1,56 @@
+# Runtime overview pose is overridden by simulation.camera_position/target in gpt_default.toml.
+# 临时工程参数：用户允许先估算。未经过现场标定，不可作为真机内外参。
+schema_version = 1
+calibration_status = "provisional_uncalibrated"
+notes = "Raised overview for task visibility: floor-equivalent height 1.58 m, aimed at the shared manipulation workspace. Wrist optics and intrinsics unchanged; provisional simulation extrinsics, not hardware calibration."
+
+[cameras.overview]
+model = "Wheeltec Gemini Pro / Orbbec Gemini module"
+parent = "world"
+resolution = [640, 480]
+# fx=w/(2*tan(HFOV/2)), fy=h/(2*tan(VFOV/2)); principal point at image centre.
+intrinsics = [444.508041, 444.798040, 320.0, 240.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+intrinsics_source = "Nominal RGB FOV H71.5 V56.7: https://orbbec.com.cn/index/Product/info.html?cate=38&id=16 ; 640x480 engineering mode, no per-device calibration."
+# xyz metres + scalar-first quaternion; optical axes are USD: -Z forward, +Y up.
+# 正对双臂：世界 +X 为机械臂前方，Y=0 为两底座中线；从高处朝下看。
+# 旧场景桌面 Z=0；离地 1.58 m 对应桌面上方 0.80 m。
+# 桌前沿 X=1.0，相机在外侧 0.25 m；瞄准操作区 [0.38, 0, 0.08]。
+optical_pose_wxyz = [1.25, 0, 0.8, 0.6398374234979981, 0.3010117464343269, 0.3010117464343269, 0.6398374234979981]
+pose_source = "Simulation overview framing: eye [1.25, 0, 0.8]; look-at [0.38, 0, 0.08] in this scene world frame. Horizontal front-edge clearance 0.25 m. Not hardware calibrated."
+asset = "../../assets/cameras/gemini_pro.usdc"
+asset_pose_wxyz = [0.0, 0.0, 0.035, 0.707106781, 0.707106781, 0.0, 0.0]
+asset_pose_source = "Assumed optical centre at housing front; centred CAD +Y mapped to camera +Z. Optical offset/sign not surveyed."
+clipping_m = [0.005, 20.0]
+
+[cameras.left_wrist]
+model = "Orbbec Gemini 305 USB"
+parent = "left"
+resolution = [640, 400]
+intrinsics = [298.404828, 296.512194, 320.0, 200.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+intrinsics_source = "Nominal full RGB FOV H94 V68: https://www.orbbec.com/gemini-305/ ; half-resolution 640x400 synthetic stream. Native sensor/channel and actual hardware mode pending."
+# 同向安装在两侧 link6 的 +Z 一侧；这里的“上方”随末端转动，不是世界坐标上方。
+# 保留原光心偏移，将相机及固定座朝向微调为相对 link6 +X 向 -Z 倾斜 45°。
+# 装配依据和可替换的估计量见 assets/cameras/gemini305_r5_mounted.json。
+optical_pose_wxyz = [0.093654885, 0.0, 0.071184894, 0.6532814824381883, 0.2705980500730985, -0.2705980500730985, -0.6532814824381883]
+pose_source = "Original bracket/CAD optical centre retained; user-requested 45 degree tilt from link6 +X toward -Z, image right -Y. Camera and housing rotate together; same mount on both arms, not hand-eye calibrated."
+asset = "../../assets/cameras/gemini305_r5_mounted.usda"
+asset_pose_wxyz = [0.0, 0.0, 0.014, 0.707106781, 0.707106781, 0.0, 0.0]
+asset_pose_source = "Assembly origin is the centred Gemini305 CAD frame; +Y maps to optical +Z. Includes supplied bracket with provisional link6 registration. RGB/IR imager offset and image roll not measured."
+clipping_m = [0.005, 20.0]
+
+[cameras.right_wrist]
+model = "Orbbec Gemini 305 USB"
+parent = "right"
+resolution = [640, 400]
+intrinsics = [298.404828, 296.512194, 320.0, 200.0]
+distortion = [0.0, 0.0, 0.0, 0.0, 0.0]
+intrinsics_source = "Nominal full RGB FOV H94 V68: https://www.orbbec.com/gemini-305/ ; half-resolution 640x400 synthetic stream. Native sensor/channel and actual hardware mode pending."
+# 与左侧共用相同局部安装方向；现场校准时可分别修改两侧位姿。
+optical_pose_wxyz = [0.093654885, 0.0, 0.071184894, 0.6532814824381883, 0.2705980500730985, -0.2705980500730985, -0.6532814824381883]
+pose_source = "Original bracket/CAD optical centre retained; user-requested 45 degree tilt from link6 +X toward -Z, image right -Y. Camera and housing rotate together; same mount on both arms, not hand-eye calibrated."
+asset = "../../assets/cameras/gemini305_r5_mounted.usda"
+asset_pose_wxyz = [0.0, 0.0, 0.014, 0.707106781, 0.707106781, 0.0, 0.0]
+asset_pose_source = "Assembly origin is the centred Gemini305 CAD frame; +Y maps to optical +Z. Includes supplied bracket with provisional link6 registration. RGB/IR imager offset and image roll not measured."
+clipping_m = [0.005, 20.0]
