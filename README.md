@@ -124,6 +124,10 @@ Runs retain configuration snapshots, model requests and replies, observations, a
 
 ## Development
 
+The [opt-in R5 control revalidation profile](docs/release/CONTROL_REVALIDATION.md)
+packages precision planning, conservative finger-mesh checks and advisory
+arrival feedback without replacing frozen benchmark configurations.
+
 ```bash
 python -m unittest discover -s tests -v
 python tools/release/check_task_contract.py
