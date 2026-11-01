@@ -1,0 +1,4 @@
+python-fcl==0.7.0.11
+trimesh>=4,<5
+rtree>=1,<2
+networkx>=3,<4
