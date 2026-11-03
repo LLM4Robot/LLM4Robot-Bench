@@ -6,7 +6,7 @@ Part of the **LLM4Robot** research series.
 
 **How Far Can GPT-6 Astra Go in Robotic Manipulation?**
 
-A Hierarchical, Matched Sim–Real Benchmark
+A Hierarchical, Paired Sim–Real Benchmark
 
 [Project Page](https://llm4robot.github.io/bench/) · [Paper](https://arxiv.org/abs/2610.34527) · [1-minute Film](https://llm4robot.github.io/bench/#overview) · [Quick Start](#quick-start) · [Benchmark](#benchmark) · [Documentation](#documentation) · [Citation](#citation)
 
@@ -15,10 +15,10 @@ A Hierarchical, Matched Sim–Real Benchmark
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue)](LICENSE)
 
 <a href="https://llm4robot.github.io/bench/media/paper/figure1.png">
-  <img src="https://llm4robot.github.io/bench/media/paper/figure1.png" width="1040" alt="Figure 1: matched sim–real evaluation, the three-level LLM4Robot-Bench, and GPT-6 Astra’s success by level">
+  <img src="https://llm4robot.github.io/bench/media/paper/figure1.png" width="1040" alt="Figure 1: paired sim–real evaluation, the three-level LLM4Robot-Bench, and GPT-6 Astra’s success by level">
 </a>
 
-*Figure 1. Matched sim–real evaluation, increasing interaction demands, and observed performance across three levels.*
+*Figure 1. Paired sim–real evaluation, increasing interaction demands, and observed performance across three levels.*
 
 [View full-size figure](https://llm4robot.github.io/bench/media/paper/figure1.png) · [Figure PDF](https://llm4robot.github.io/bench/media/paper/figure1.pdf) · [Explore the interactive project page](https://llm4robot.github.io/bench/)
 
@@ -26,7 +26,7 @@ A Hierarchical, Matched Sim–Real Benchmark
 
 ## Overview
 
-LLM4Robot-Bench evaluates contact-rich manipulation across **16 tasks**, **three levels** of interaction difficulty, and matched simulation and real-world setups on the **ARX R5** dual-arm platform.
+LLM4Robot-Bench evaluates contact-rich manipulation across **16 tasks**, **three levels** of interaction difficulty, and paired simulation and real-world setups on the **ARX R5** dual-arm platform.
 
 This repository provides the simulation framework, task assets, configurations, and automatic evaluators. Each task has an independently selectable original and fixed alternative configuration, giving **32 runnable settings**. The project page brings together paired recordings, sim–real matching details, and an interactive task explorer.
 
@@ -147,7 +147,7 @@ If you use LLM4Robot-Bench in your research, please cite our [paper](https://arx
 
 ```bibtex
 @misc{llm4robotbench2026,
-  title = {LLM4Robot-Bench: How Far Can GPT-6 Astra Go in Robotic Manipulation? A Hierarchical, Matched Sim–Real Benchmark},
+  title = {LLM4Robot-Bench: How Far Can GPT-6 Astra Go in Robotic Manipulation? A Hierarchical, Paired Sim–Real Benchmark},
   author = {Yu, Haibao and Meng, Jiaqi and Zhang, Zijian and Jing, Bowen and Yang, Lei and Hu, Yue and Ge, Chenchen and Hou, Yiming and Xin, Chenbo and Ye, Dawen and Qin, Haifang and Li, Jin and Zhou, Weitao and Qiu, Jianing and Sun, Jiankai and Zhang, Dandan and Nie, Zaiqing and Luo, Ping and Zhao, Ding},
   year = {2026},
   eprint = {2610.34527},
