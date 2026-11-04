@@ -124,9 +124,12 @@ Runs retain configuration snapshots, model requests and replies, observations, a
 
 ## Development
 
-The [opt-in R5 control revalidation profile](docs/release/CONTROL_REVALIDATION.md)
-packages precision planning, conservative finger-mesh checks and advisory
-arrival feedback without replacing frozen benchmark configurations.
+This **local validation branch** uses the [R5 control revalidation profile](docs/release/CONTROL_REVALIDATION.md)
+by default for GPT task runs, including batch/fleet runs and the explicit 270°
+experiment. It combines precision planning, conservative solid collision checks
+and advisory arrival feedback. These are new control experiments, not reproductions
+of the paper's scored trials. The released `main` branch and frozen task files
+remain unchanged; no improved task success rate has been established.
 
 ```bash
 python -m unittest discover -s tests -v

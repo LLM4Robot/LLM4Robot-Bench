@@ -53,10 +53,14 @@ def check_runtime():
         ('Isaac', 'GPT_BENCHMARK_PYTHON',
          'import importlib.util; import numpy, PIL; '
          'assert importlib.util.find_spec("isaacsim"), "isaacsim package is missing"'),
-        ('planner', 'GPT_BENCHMARK_PLANNER_PYTHON', 'import torch, curobo'),
+        ('planner', 'GPT_BENCHMARK_PLANNER_PYTHON',
+         'import torch, curobo; import fcl, trimesh, rtree, networkx; '
+         'from scipy.optimize import least_squares; '
+         'from importlib.metadata import version; '
+         'assert version("python-fcl") == "0.7.0.11", "Install control_revalidation/requirements.txt"'),
     )
     for name, variable, code in checks:
-        executable = os.environ.get(variable)
+        executable = (os.environ.get('R5_PRECISION_PYTHON') if name == 'planner' else None) or os.environ.get(variable)
         if not executable or not Path(executable).is_file():
             raise SystemExit(f'{name} runtime missing: {variable}={executable!r}; run fleet.py bootstrap')
         try:

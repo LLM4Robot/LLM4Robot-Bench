@@ -16,7 +16,28 @@ MIN_GAP_M=0.000025
 MAX_CONFIGURATIONS=4096
 
 def mesh_shape(mesh):
-    m=fcl.BVHModel();m.beginModel(len(mesh.vertices),len(mesh.faces));m.addSubModel(np.asarray(mesh.vertices,dtype=float),np.asarray(mesh.faces,dtype=np.int32));m.endModel();return m
+    """Conservative *solid* enclosure, not unsigned triangle-surface distance.
+
+    FCL's BVH mesh query can miss a finger entirely inside a closed obstacle.
+    A convex hull encloses every source triangle and detects containment in
+    either direction. It also fills concavities: that may reject a clear path,
+    but cannot authorize one through an obstacle. Only this fallback changes;
+    the ordinary planner and simulator geometry remain untouched.
+    """
+    vertices = np.asarray(mesh.vertices, dtype=float)
+    faces = np.asarray(mesh.faces)
+    if (vertices.ndim != 2 or vertices.shape[1] != 3 or len(vertices) < 4
+            or not np.isfinite(vertices).all() or faces.ndim != 2
+            or faces.shape[1] != 3 or not len(faces)
+            or np.any(faces < 0) or np.any(faces >= len(vertices))):
+        raise ValueError('Invalid obstacle mesh; solid clearance cannot be certified')
+    try:
+        hull = mesh.convex_hull
+    except Exception as exc:
+        raise ValueError('Obstacle has no certifiable solid enclosure') from exc
+    if not hull.is_volume or not math.isfinite(hull.volume) or hull.volume <= 0:
+        raise ValueError('Obstacle has no certifiable solid enclosure')
+    return convex_shape(hull)
 
 def convex_shape(hull):
     faces=np.c_[np.full(len(hull.faces),3,dtype=np.int32),np.asarray(hull.faces,dtype=np.int32)].reshape(-1)
@@ -85,7 +106,7 @@ class FingerMeshGuard:
         self.cache[key]=best;return best
     def validate(self,positions):
         t=time.monotonic();positions=np.asarray(positions,dtype=float)
-        if len(positions)<2:raise ValueError('No path to validate')
+        if positions.ndim != 2 or len(positions)<2 or not positions.shape[1] or not np.isfinite(positions).all():raise ValueError('No finite path to validate')
         # A deliberately loose global bound on motion of any robot point under
         # joint interpolation. Factor2 also bounds two moving own-link points.
         reach=float(self.w.kin.reach_bound_m)+.5
@@ -97,4 +118,4 @@ class FingerMeshGuard:
             if depth>=20:raise ValueError('Exact-finger swept clearance could not be certified')
             mid=(a+b)/2;segment(a,mid,depth+1);segment(mid,b,depth+1)
         for a,b in zip(positions[:-1],positions[1:]):segment(a,b)
-        return {'protocol':'bounded_finger_mesh_narrow_phase_v1','configurations':self.calls,'minimum_mesh_gap_m':self.minimum_gap,'clearance_margin_m':MIN_GAP_M,'closest_pair':self.closest,'wall_s':time.monotonic()-t,'continuous_between_samples':'Conservative joint-displacement bound with adaptive subdivision.','original_other_link_self_world_payload_guards_retained':True,'geometry_limitation':'Conservative closed convex hull per connected component of original URDF finger collision mesh; no components removed. Physical cooking remains independently monitored. Not a hardware collision guarantee.'}
+        return {'protocol':'bounded_finger_solid_narrow_phase_v2','configurations':self.calls,'minimum_mesh_gap_m':self.minimum_gap,'clearance_margin_m':MIN_GAP_M,'closest_pair':self.closest,'wall_s':time.monotonic()-t,'continuous_between_samples':'Conservative joint-displacement bound with adaptive subdivision.','original_other_link_self_world_payload_guards_retained':True,'geometry_limitation':'Conservative closed convex hull per finger component and per world mesh. World concavities are filled and may cause extra rejections. Degenerate obstacles fail closed. Physical cooking remains independently monitored. Not a hardware collision guarantee.'}

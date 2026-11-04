@@ -11,6 +11,13 @@ python tools/experiments/bottle_preloosen.py check --experiment-config configs/e
 
 The check verifies the initial pose, active arms, prompt, budget and scene/scoring agreement. It does not start Isaac Sim or request a model response.
 
+On `experiment/r5-control-revalidation`, this check also describes the branch's
+default [control profile](CONTROL_REVALIDATION.md). Install its planner-only
+dependencies in the selected remote cuRobo environment before running. The
+270° initial state, 150-call budget, five-hour deadline and Mac Codex bridge
+remain in the existing supervised launch chain; the additional control changes
+are recorded separately from the paper baseline.
+
 ## Run on your configured remote machine
 
 Configure your own runtime and local Codex bridge as described in `skills/r5-remote-deploy/SKILL.md`, then run from your local controller:

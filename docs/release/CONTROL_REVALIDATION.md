@@ -1,113 +1,135 @@
-# Opt-in R5 control revalidation
+# R5 control revalidation branch
 
-This profile packages the L3-01 control diagnosis without replacing the frozen
-paper baseline. All files under `src/`, task configurations, asset locks,
-prompts, scoring, camera layouts and initial object layouts remain unchanged.
-Runs using this profile must be labelled separately from baseline runs.
+`experiment/r5-control-revalidation` is a local experimental branch based on
+PR #1 (`3fe766aae0a9bfb65902606a637234392181095d`). GPT task runs through the
+normal CLI, batch/reproduction/fleet chain and explicit bottle experiment use
+this profile by default. `main` is unchanged. This branch has not been pushed,
+merged, deployed, or validated by new GPU/model runs.
 
-## What changes
+Task files, assets, prompts, success criteria, cameras and original initial
+layouts remain frozen. `tools/release/check_task_contract.py` must pass without
+refreshing the lock. These runs are new control experiments, not replays of the
+paper's scored trials. Selecting 270° remains an explicit initial-state choice.
 
-- Enable the existing `simulation.robot_gravity_compensation` robot-control
-  option in the run's effective configuration. The original task file is not
-  edited. Keep its native Cartesian completion tolerance unchanged (5 mm for
-  L3-01); do not confuse this with precise arrival or task success.
-- Use a separate planner worker with 0.1 mm position-solving tolerance and
-  0.25 mm endpoint FK acceptance, instead of 1 mm and 2 mm respectively.
-  Orientation limits and real joint limits are retained.
-- On a single-arm Cartesian `start_collision` request of at most 3 cm and
-  15.01 degrees, try conservative closed convex hulls for each connected
-  component of the original finger collision meshes. This is a replacement
-  for coarse finger spheres, not a collision exemption. Other links, the other
-  arm, self-collision and payload checks remain. A candidate must pass an FCL
-  distance check with a 25 micrometre gap and adaptive swept-path subdivision;
-  budget exhaustion, nonfinite distance or an uncertified segment rejects it.
-- On `goal_ik_not_found`, try at most four numerical IK seeds within the
-  original joint limits, 200 function evaluations per seed and an elapsed-time
-  check before each seed. A candidate must satisfy 0.1 mm / 0.01 rad, then pass
-  native whole-path joint planning, collision, payload and time-law checks.
-  The final path is independently checked against the original requested pose.
-  The elapsed-time check does not impose a hard deadline on native planning.
-- Report measured arrival residuals for **every arm**, including an unchanged
-  working-arm target during a camera-arm move. A completed action outside the
-  0.5 mm reporting marker is labelled `partial_execution`, not precise arrival.
-  This marker never terminates the episode, and repeated partial feedback does
-  not terminate it either. Native errors/rejections remain visible. No recovery
-  action is selected or executed by the wrapper.
+## Control changes
 
-The previous experiment-only 0.5 mm / 2 mm residual and consecutive-partial
-episode-stop rules were diagnostic controls, not requirements of the original
-benchmark. They are deliberately not included here. Object truth, contact
-forces and evaluator flags are not inputs to the arrival annotator. A blocked
-gripper or a small TCP residual is not proof of holding or cap detachment.
+- Enable the existing robot gravity compensation option in the effective run
+  configuration. Keep the native Cartesian completion tolerance (5 mm for
+  L3-01), joint limits and orientation limits.
+- Solve Cartesian targets to 0.1 mm and require endpoint FK error below 0.25 mm
+  (originally 1 mm and 2 mm). Keep the reviewed planner mirror and its source
+  hash guard; do not silently fall back to the old planner on an import error.
+- On a finger-only coarse `start_collision`, permit a narrowly scoped fallback
+  for one Cartesian arm, at most 3 cm / 15.01°. Finger components use closed
+  convex hulls; **each world mesh uses a solid convex enclosure**. The latter
+  replaces the PR's unsigned BVH surface query, which can miss a finger fully
+  contained in a closed mesh. Intersections and containment in either direction
+  are rejected. Invalid/degenerate geometry fails closed.
+- The world enclosure can fill concavities and join disconnected components.
+  It can therefore reject clear narrow paths. This is an intentional
+  conservative tradeoff, only in the fallback; simulation meshes and ordinary
+  native collision checks are unchanged. Other-link, self, other-arm and payload
+  checks remain in force. Candidate paths need a 25 µm clearance and bounded
+  adaptive subdivision; unverified paths are rejected.
+- On `goal_ik_not_found`, retain the PR's at most four numerical IK seeds and
+  200 function evaluations per seed, then native whole-path checks and a final
+  original-target check. The three-second pre-seed check is **not** a hard
+  deadline inside native planning. The planner client and process supervisor
+  remain responsible for their respective timeouts.
+- Report measured residuals for all arms, including retained working-arm
+  targets. Above the 0.5 mm reporting marker, native `completed` feedback is
+  annotated `partial_execution`; native errors remain visible. This neither
+  stops an episode nor selects recovery actions. No object truth, contact
+  forces or evaluator flags are added to the actor observation.
 
-## CPU-only check
+Tighter planning and advisory feedback may increase rejection, runtime or model
+calls. Compensation changes contact behavior; small planned FK errors do not
+establish precise physical execution. No claim of universal improvement is made.
 
-From the repository root, with its pinned assets available:
+## CPU-only checks
+
+With the project installed and its pinned assets available:
 
 ```bash
 python tools/control_revalidation/run.py check --task L3-01
-python -m unittest discover -s tests -p test_control_revalidation.py -v
+python tools/control_revalidation/run.py check \
+  --experiment-config configs/experiments/l3_01_preloosen_270.json
+python -m unittest discover -s tests -p 'test_control_revalidation*.py' -v
 python tools/release/check_task_contract.py
 python tools/verify_runtime_assets.py
 ```
 
-These commands never start Isaac, call a provider or actuate a robot. The check
-verifies that the original task instruction, control instructions and schema
-remain identical. Use the existing asset installation procedure; no lock needs
-to be refreshed for this profile.
+The first check uses the default **180°** task. The second uses the existing
+**270°** experiment and verifies the scene/scoring pose agreement, approximately
+6.75 mm cap lift, 150 completed generations and 18,000 seconds. Both are offline
+and do not call a model. Geometry regressions require the dependencies in
+`tools/control_revalidation/requirements.txt`; without them those tests skip.
+Run them with those dependencies before claiming the containment fix verified.
 
-## Explicit simulation run
+## Runtime and launch integration
 
-Use the existing installed Isaac and pinned cuRobo environments. Install
-`tools/control_revalidation/requirements.txt` into the **cuRobo** environment
-(FCL must match that environment's Python/NumPy). The interpreter shim is Linux
-only; it is not a newly validated Windows/WSL deployment.
+Install `tools/control_revalidation/requirements.txt` into an appropriate
+**cuRobo** environment, compatible with its Python/NumPy. No dependencies are
+installed automatically. This profile currently supports a Linux simulator and
+planner host; native Windows/WSL split deployment is not validated.
+
+The profile reuses `GPT_BENCHMARK_PLANNER_PYTHON` or the configured planner Python
+from `configs/runtime/planner.local.toml`. An explicit `R5_PRECISION_PYTHON` can
+select a separate validation environment. Set it to the real cuRobo interpreter,
+not `planner_python.py`. The scoped adapter restores the original environment
+and policy registration on return or exception. Remote preflight checks the
+planner dependencies before accepting a job.
+
+Use the same Mac Codex → SSH bridge → remote supervisor chain for 270°:
 
 ```bash
-export R5_PRECISION_PYTHON=/absolute/path/to/curobo-python
-export CUDA_VISIBLE_DEVICES=0
-/absolute/path/to/isaac-python tools/control_revalidation/run.py run \
-  --task L3-01 --gpu 0 --output runs/control_revalidation_001 \
+python skills/r5-remote-deploy/scripts/fleet.py start --machine cluster \
+  --tasks L3-01 \
+  --experiment-config configs/experiments/l3_01_preloosen_270.json
+```
+
+Only run after the branch has been explicitly deployed and the selected GPU is
+idle. This command calls the model and starts simulation. The branch changes do
+not create credentials, change model transport, add retries or generate actions
+outside the configured policy.
+
+For a directly configured Linux host, an explicit general task run is:
+
+```bash
+python tools/control_revalidation/run.py run --task L2-01 --gpu 0 \
+  --output runs/control_revalidation_001 \
   --model-config configs/models/gpt.local.toml
 ```
 
-`run` is explicit and **does call the configured model**. It uses the existing
-provider/login configuration and task budgets; it does not create credentials,
-add skills, demonstrations or automatic model retries. Any retry policy already
-declared by the selected task remains the native runner's policy. The output
-directory must be new, and an occupied GPU is rejected without terminating any
-existing process. Use a compatible physical GPU index in both places above.
+`run` keeps the framework supervisor alive, invokes the configured Isaac Python
+as a worker, and forwards a monotonic deadline covering startup and model waits.
+It reuses `robot_tasks.batch.run_job` for owned-process-tree cancellation and
+cleanup. The extra 300 seconds is cleanup grace, not extra task time. Supplying
+`--experiment-config` delegates to the existing bottle launcher rather than
+reimplementing the 270° setup. Existing batch/fleet paths retain their supervision.
 
-The effective configuration and `control-profile.json` disclose the opt-in
-control changes. The native recorder retains requested actions, planner results,
-measured robot feedback and native scoring. Planner-only geometry audits stay
-in the planner cache; they are not passed to the actor.
+## Evidence and rollback
 
-Rollback is selecting the original launcher/configuration: no original sources
-or task files are rewritten. The standalone `native_precision.py` mirror is
-intentional: changing a frozen shared worker would invalidate historical task
-contracts. A source SHA guard and AST regression check require review/rebase if
-the upstream worker changes. The only mirrored algorithm changes are two
-precision constants and two endpoint-residual diagnostic fields.
+Each real episode has effective control metadata in `effective_config.json`,
+plus a sidecar under the output root's `control-profiles/`. This saves the profile,
+source hashes, angle (when explicitly selected), budgets and inherited deadline
+before simulator startup. The native recorder still captures actions, model
+requests/replies, measured feedback, scores and videos. Private geometric audit
+logs remain outside model inputs. Batch resume now fingerprints the experimental
+worker files as well as `src/`, refusing changed control code mid-batch.
 
-## Evidence and limits
+The new CPU geometry regressions cover fully contained fingers, contained
+obstacles, surface intersections, transformed obstacles, an intersecting path
+with clear endpoints, conservative concavity rejection and invalid geometry.
+They are synthetic checks, not robot trajectory or GPU performance evidence.
+PR #1 describes earlier upstream GPU/physical diagnostics; those results were
+not independently repeated by this branch's offline validation.
 
-The packaged GPU planner regression was run on an NVIDIA GeForce RTX 4090 D
-with zero model calls and zero robot actuation. Two previously rejected short
-requests passed the conservative finger-mesh check; a normal request remained
-accepted. Intersecting finger obstacles, a fully contained obstacle, non-finger
-collision and an unreachable target remained rejected, and original finger
-proxies were restored after rejection. The old finite-IK failure produced a
-native-path-checked endpoint error of about 0.00220 mm and 0.00382 rad.
+The existing 270° asset diagnostic permitted direct upward pull-off. This
+control profile does not establish a required screw angle or repair that physical
+constraint. Fresh GPU evaluation is still needed to quantify planning latency,
+false rejections, physical tracking and task outcomes.
 
-Earlier physical diagnostics of the same control changes measured empty-hand
-1/2/5 mm lifts as 1.057/2.061/5.061 mm, and a privileged, deterministic native
-robot sequence detached the cap and held it over 30 mm above the neck. These
-are earlier diagnostic evidence, not new physics runs performed by this PR's
-CPU/GPU tests. A corrected-Harness zero-shot run also succeeded once; that is
-not a success-rate estimate or proof of universal asset fidelity.
-
-Millimetre-scale execution residuals, grasp slip and loss of progress on
-release still occur. This profile improves planning and preserves feedback;
-it does not certify precise physical tracking or reliable contact manipulation.
-No weights are trained or changed: the training stage is not applicable.
+After saving local work, switching to `main` restores the released launch path.
+Do not merge this branch or push/deploy it as an approved release until its
+separate evaluation has been reviewed. Preserve all historical runs and scores.

@@ -4,7 +4,8 @@ import argparse
 import json
 from pathlib import Path
 
-from .execution import POLICIES, execute_task
+from .execution import POLICIES
+from .control_revalidation.profile import execute_task
 from .integrationtest.registry import CHECKS
 from .integrationtest.simulation_process import run_check_process
 from .policies.responses import ModelError

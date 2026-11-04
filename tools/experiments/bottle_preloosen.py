@@ -75,7 +75,7 @@ def prepare(value):
     return spec, replace(config, raw=raw, max_wall_time_s=value['max_wall_time_s'])
 
 
-def inspect(value):
+def inspect(value, model_config=None):
     import numpy as np
     from robot_tasks.initial_layout import scene_record
     from robot_tasks.robots.transforms import pose_transform
@@ -95,8 +95,10 @@ def inspect(value):
         scoring = resolve_bench_spec(config.raw['task'], config.robot)
         article = next(a for a in scoring.design.articles if a.name == 'cap')
         np.testing.assert_allclose(article.initial, row['tracked']['cap']['pose'], atol=1e-10)
-        model = load_gpt_settings(ROOT / 'configs/models/gpt.toml')
-        return {**value, 'initial_cap_lift_m': float(relative[2, 3]),
+        model = load_gpt_settings(model_config or ROOT / 'configs/models/gpt.toml')
+        from robot_tasks.control_revalidation.profile import describe
+        return {**value, 'control_profile': describe(spec, config, model_config),
+                'initial_cap_lift_m': float(relative[2, 3]),
                 'scene_and_scoring_initial_pose_match': True,
                 'instruction': prepared.instruction, 'active_arms': prepared.arms,
                 'model': model.model, 'reasoning_effort': model.reasoning_effort,
@@ -120,16 +122,18 @@ def require_idle_gpu(index):
         raise RuntimeError(f'GPU {index} has an active compute process; experiment not started')
 
 
-def main():
+def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['check', 'run'])
     parser.add_argument('--experiment-config', type=Path, required=True)
     parser.add_argument('--output', type=Path)
     parser.add_argument('--report', type=Path)
+    parser.add_argument('--model-config', type=Path)
     parser.add_argument('--max-calls', type=int)
     parser.add_argument('--wall-time-s', type=float)
     parser.add_argument('--worker', action='store_true', help=argparse.SUPPRESS)
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     value = load_experiment(args.experiment_config)
     if args.max_calls is not None:
         if not 1 <= args.max_calls <= 1000:parser.error('--max-calls must be in [1, 1000]')
@@ -145,7 +149,7 @@ def main():
         python = load_runtime().python
         env = dict(os.environ, CUDA_VISIBLE_DEVICES=str(value['gpu_index']))
         args.output.mkdir(parents=True, exist_ok=False)
-        command = [python, str(Path(__file__).resolve()), *sys.argv[1:], '--worker']
+        command = [python, str(Path(__file__).resolve()), *argv, '--worker']
         wall = value['max_wall_time_s']
         if wall:
             # Count simulator startup, model waiting and execution against the
@@ -162,7 +166,7 @@ def main():
         # and cleanup, matching batch_run; the episode deadline remains wall.
         started(process)
         return process['returncode'] if process['cleanup_complete'] else 2
-    report = inspect(value)
+    report = inspect(value, args.model_config)
     if args.action == 'check':
         if args.report:
             args.report.parent.mkdir(parents=True, exist_ok=True)
@@ -173,10 +177,10 @@ def main():
         parser.error('This prepared experiment requires the local Codex SSH bridge')
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output/'experiment.json').write_text(json.dumps(report, indent=2) + '\n')
-    from robot_tasks.execution import execute_task
+    from robot_tasks.control_revalidation.profile import execute_task
     with engagement(value['preloosen_degrees']):
         spec, config = prepare(value)
-        directory, result = execute_task(spec, config, args.output)
+        directory, result = execute_task(spec, config, args.output, model_config=args.model_config)
     print(json.dumps({'output': str(directory), 'experiment_id': value['experiment_id'], **result}, indent=2))
     return 0 if result['status'] == 'finished' else 2
 

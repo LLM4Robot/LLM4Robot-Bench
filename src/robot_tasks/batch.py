@@ -464,6 +464,10 @@ def create_batch(root, args, model, runtime):
     model_copy.write_text(toml_text({"gpt": model_data}), encoding="utf-8")
     shutil.copyfile(PROJECT_ROOT / "configs/workflows/gpt_default.toml", workflow)
     inputs = list((PROJECT_ROOT / "src/robot_tasks").rglob("*.py"))
+    # This branch's worker lives outside src; prevent a resume from silently
+    # changing control algorithms while retaining the old batch identity.
+    inputs += list((PROJECT_ROOT / "tools/control_revalidation").glob("*.py"))
+    inputs.append(PROJECT_ROOT / "tools/control_revalidation/requirements.txt")
     inputs += list((PROJECT_ROOT / "configs/robots").glob("*.toml")) + list((PROJECT_ROOT / "configs/cameras").glob("*.toml"))
     inputs += [model, PROJECT_ROOT / "configs/workflows/gpt_default.toml"]
     inputs.append(PROJECT_ROOT / "assets/tuojing/l1_scoring_geometry.json")
