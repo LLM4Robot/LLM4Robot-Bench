@@ -130,6 +130,23 @@ class BatchTests(unittest.TestCase):
                 self.assertEqual(manifest["options"]["wall_time_s"], wall)
                 self.assertEqual(manifest["options"]["max_calls"], 150)
 
+    def test_runtime_mode_is_preserved_across_resume(self):
+        original = batch.run_job
+        root = self.root / "runtime-mode"
+        with patch.dict(os.environ, {"GPT_BENCHMARK_RUNTIME_MODE": "timing"}), \
+                patch.object(batch, "run_job", wraps=original) as run:
+            self.assertEqual(self.main("--tasks", "L1-01", "--output", str(root),
+                "--model-config", str(self.model), "--dry-run"), 0)
+            self.assertEqual(run.call_args.args[2]["GPT_BENCHMARK_RUNTIME_MODE"], "timing")
+        manifest = json.loads((root / "batch.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["options"]["runtime_mode"], "timing")
+        # A fresh pending-job state exercises the resume execution path. It is
+        # an offline fixture; original result files remain in separate folders.
+        with patch.dict(os.environ, {"GPT_BENCHMARK_RUNTIME_MODE": "optimized"}), \
+                patch.object(batch, "run_job", wraps=original) as run, redirect_stdout(io.StringIO()):
+            self.assertEqual(batch.execute_batch(root, manifest, {}, dict(os.environ)), 0)
+            self.assertEqual(run.call_args.args[2]["GPT_BENCHMARK_RUNTIME_MODE"], "timing")
+
     def test_zero_call_cap_and_five_hours_are_frozen_for_each_task(self):
         root = self.root / "five-hours"
         with patch.object(batch, "run_job", wraps=batch.run_job) as run:

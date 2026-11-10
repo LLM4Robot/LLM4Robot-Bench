@@ -20,6 +20,7 @@ from ..paths import PROJECT_ROOT
 from ..policies.gpt import GPTPolicy
 from ..policies.model_config import load_gpt_settings
 from .arrival import policy_class
+from ..runtime_performance import describe as runtime_description
 
 PROFILE = "r5_precision_arrival_feedback_v2"
 WORKER_ROOT = PROJECT_ROOT / "tools/control_revalidation"
@@ -45,7 +46,8 @@ def describe(spec, config, model_config=None):
         raise ValueError("Control profile changed task instructions or action schema")
     execution = ExecutionSettings.from_config(prepared)
     files = (sorted(WORKER_ROOT.glob("*.py")) + [WORKER_ROOT / "requirements.txt"]
-             + sorted(Path(__file__).parent.glob("*.py")))
+             + sorted(Path(__file__).parent.glob("*.py"))
+             + sorted((Path(__file__).parent.parent / "runtime_performance").glob("*.py")))
     initial = prepared.raw.get("task", {}).get("experimental_initial_state")
     return {
         "profile": PROFILE,
@@ -69,6 +71,7 @@ def describe(spec, config, model_config=None):
         "world_mesh_guard": "solid convex enclosure; concavities may be conservatively rejected",
         "not_a_paper_baseline_run": True,
         "no_successful_grasp_or_task_inferred": True,
+        "runtime_performance": runtime_description(),
     }
 
 
@@ -96,6 +99,7 @@ def activated():
     keys = ("R5_PRECISION_PYTHON", "GPT_BENCHMARK_PLANNER_PYTHON")
     saved = {key: os.environ.get(key) for key in keys}
     old_policy = native.POLICIES["gpt"]
+    old_runner = native.run_episode
 
     def make_policy(config, model_config):
         policy = native._gpt_policy(config, model_config)
@@ -105,9 +109,12 @@ def activated():
         os.environ["R5_PRECISION_PYTHON"] = python
         os.environ["GPT_BENCHMARK_PLANNER_PYTHON"] = str(WORKER_ROOT / "planner_python.py")
         native.POLICIES["gpt"] = make_policy
+        from ..runtime_performance.runner import run_episode
+        native.run_episode = run_episode
         yield
     finally:
         native.POLICIES["gpt"] = old_policy
+        native.run_episode = old_runner
         for key, value in saved.items():
             if value is None:
                 os.environ.pop(key, None)

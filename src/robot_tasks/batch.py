@@ -455,6 +455,8 @@ def create_batch(root, args, model, runtime):
                "startup_grace_s": args.startup_grace_s if args.startup_grace_s is not None else 300.,
                "seed": args.seed if args.seed is not None else 0, "reasoning_effort": args.reasoning_effort or settings.reasoning_effort,
                "dry_run": bool(args.dry_run), "gui": bool(args.gui), "depth": args.depth}
+    from .runtime_performance import mode as runtime_mode
+    options["runtime_mode"] = runtime_mode()
     root.mkdir(parents=True, exist_ok=False)
     configs = root / "configs"
     configs.mkdir()
@@ -532,6 +534,9 @@ def execute_batch(root, manifest, state, environment):
             write_json(root / "state.json", state)
         timeout = options["wall_time_s"] + options["startup_grace_s"] if options["wall_time_s"] > 0 else None
         job_environment = dict(environment)
+        # Preserve the selected runtime mode across resumes, independently of
+        # the caller's shell. Older manifests describe the original runtime.
+        job_environment["GPT_BENCHMARK_RUNTIME_MODE"] = options.get("runtime_mode", "off")
         if options["wall_time_s"] > 0:
             job_environment["GPT_BENCHMARK_WALL_DEADLINE_MONOTONIC"] = str(time.monotonic() + options["wall_time_s"])
             if options["max_calls"] == 0:

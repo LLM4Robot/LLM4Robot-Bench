@@ -49,6 +49,7 @@ class ProfileIntegrationTests(unittest.TestCase):
 
     def test_activation_reuses_runtime_and_restores_on_exception(self):
         old_policy = profile.native.POLICIES['gpt']
+        old_runner = profile.native.run_episode
         with patch.object(profile.sys, 'platform', 'linux'), \
                 patch.dict(os.environ, {'GPT_BENCHMARK_PLANNER_PYTHON': sys.executable}, clear=True):
             with self.assertRaisesRegex(RuntimeError, 'fixture'):
@@ -56,10 +57,12 @@ class ProfileIntegrationTests(unittest.TestCase):
                     self.assertEqual(os.environ['R5_PRECISION_PYTHON'], sys.executable)
                     self.assertTrue(os.environ['GPT_BENCHMARK_PLANNER_PYTHON'].endswith('planner_python.py'))
                     self.assertIsNot(profile.native.POLICIES['gpt'], old_policy)
+                    self.assertIsNot(profile.native.run_episode, old_runner)
                     raise RuntimeError('fixture')
             self.assertEqual(os.environ['GPT_BENCHMARK_PLANNER_PYTHON'], sys.executable)
             self.assertNotIn('R5_PRECISION_PYTHON', os.environ)
             self.assertIs(profile.native.POLICIES['gpt'], old_policy)
+            self.assertIs(profile.native.run_episode, old_runner)
 
     def test_shim_cannot_recursively_select_itself(self):
         with patch.dict(os.environ, {'R5_PRECISION_PYTHON': str(profile.WORKER_ROOT / 'planner_python.py')}):
