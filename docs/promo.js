@@ -17,7 +17,7 @@
   function syncPreview() {
     const allowed = inView && !document.hidden && !dialog.open && !stopped();
     if (!allowed) { preview.pause(); return; }
-    if (!preview.getAttribute('src')) preview.src = 'media/promo/llm4robot-bench-preview.mp4?v=722d5398d1a2';
+    if (!preview.getAttribute('src')) preview.src = 'media/promo/llm4robot-bench-preview.mp4?v=b73f1d1d94a6';
     preview.play().catch(() => shell.classList.add('promo-idle'));
   }
   preview.addEventListener('playing', () => shell.classList.remove('promo-idle'));
