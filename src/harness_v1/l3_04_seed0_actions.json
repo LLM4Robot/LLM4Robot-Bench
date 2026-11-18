@@ -1,0 +1,1361 @@
+{
+  "task_id": "L3-04",
+  "seed": 0,
+  "robot_gravity_compensation": true,
+  "actions": [
+    {
+      "index": 1,
+      "tool": "cap_set_gripper",
+      "arguments": {
+        "position": 1,
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 9
+    },
+    {
+      "index": 2,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.39947,
+            1.19249,
+            1.07187
+          ],
+          "quaternion_wxyz": [
+            0.682065,
+            0.00021,
+            0.05327,
+            -0.729349
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 32
+    },
+    {
+      "index": 3,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.39947,
+            1.19249,
+            1.00187
+          ],
+          "quaternion_wxyz": [
+            0.682065,
+            0.00021,
+            0.05327,
+            -0.729349
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 18
+    },
+    {
+      "index": 4,
+      "tool": "cap_set_gripper",
+      "arguments": {
+        "position": 0,
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 23
+    },
+    {
+      "index": 5,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.39959,
+            1.19201,
+            1.06331
+          ],
+          "quaternion_wxyz": [
+            0.682065,
+            0.00021,
+            0.05327,
+            -0.729349
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 17
+    },
+    {
+      "index": 6,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.39945,
+            1.19202,
+            1.11
+          ],
+          "quaternion_wxyz": [
+            0.681872,
+            0.00042,
+            0.053166,
+            -0.729537
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 12
+    },
+    {
+      "index": 7,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.17542,
+            1.08433,
+            1.09032
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 36
+    },
+    {
+      "index": 8,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.17542,
+            1.08433,
+            1.01932
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 9,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.1115,
+            1.11342,
+            1.01932
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 9
+    },
+    {
+      "index": 10,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.04759,
+            1.1425,
+            1.01932
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 10
+    },
+    {
+      "index": 11,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.04759,
+            1.1425,
+            1.02532
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 5
+    },
+    {
+      "index": 12,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.021,
+            1.17372,
+            1.02532
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 13,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.02052,
+            1.17304,
+            1.103
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 14
+    },
+    {
+      "index": 14,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.10311,
+            1.29382,
+            1.0941
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 30
+    },
+    {
+      "index": 15,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.10311,
+            1.29382,
+            1.028
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 16,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.115,
+            1.239,
+            1.025
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 10
+    },
+    {
+      "index": 17,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.129,
+            1.176,
+            1.025
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 12
+    },
+    {
+      "index": 18,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.145,
+            1.106,
+            1.025
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 17
+    },
+    {
+      "index": 19,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.145,
+            1.106,
+            1.103
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 20,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.146,
+            1.139,
+            1.071
+          ],
+          "quaternion_wxyz": [
+            0.050427,
+            0.346324,
+            0.183479,
+            -0.918614
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 8
+    },
+    {
+      "index": 21,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.17148,
+            1.12849,
+            1.09981
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 31
+    },
+    {
+      "index": 22,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.17148,
+            1.12849,
+            1.02881
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 23,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.106,
+            1.14243,
+            1.02881
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 8
+    },
+    {
+      "index": 24,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.042,
+            1.156,
+            1.02881
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 10
+    },
+    {
+      "index": 25,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.042,
+            1.156,
+            1.03481
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 5
+    },
+    {
+      "index": 26,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.0305,
+            1.17149,
+            1.03481
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 27,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.008,
+            1.1667,
+            1.03481
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 28,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.00736,
+            1.16618,
+            1.102
+          ],
+          "quaternion_wxyz": [
+            0.59272,
+            0.286964,
+            0.229088,
+            -0.716835
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 14
+    },
+    {
+      "index": 29,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.071,
+            1.151,
+            1.103
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 17
+    },
+    {
+      "index": 30,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.071,
+            1.151,
+            1.0385
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 31,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.021,
+            1.181,
+            1.0385
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 12
+    },
+    {
+      "index": 32,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.02068,
+            1.18076,
+            1.108
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 14
+    },
+    {
+      "index": 33,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.24927,
+            1.29794,
+            1.097
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 52
+    },
+    {
+      "index": 34,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.24927,
+            1.29794,
+            1.024
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 35,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.2395,
+            1.234,
+            1.021
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 36,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.2395,
+            1.234,
+            1.026
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 37,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.229,
+            1.163,
+            1.026
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 19
+    },
+    {
+      "index": 38,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.218,
+            1.092,
+            1.026
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 39,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.21,
+            1.132,
+            1.026
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 40,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.225,
+            1.188,
+            1.085
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 8
+    },
+    {
+      "index": 41,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.24889,
+            1.20925,
+            1.101
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 42,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.217,
+            1.203,
+            1.133
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 43,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.216,
+            1.242,
+            1.108
+          ],
+          "quaternion_wxyz": [
+            -0.108581,
+            0.309895,
+            0.13591,
+            -0.934721
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 44,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.216,
+            1.242,
+            1.115
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 58
+    },
+    {
+      "index": 45,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.24889,
+            1.20925,
+            1.109
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 9
+    },
+    {
+      "index": 46,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.24889,
+            1.20925,
+            1.029
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 12
+    },
+    {
+      "index": 47,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.165,
+            1.1988,
+            1.029
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 48,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.09,
+            1.1895,
+            1.029
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 49,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.04,
+            1.1832,
+            1.029
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 50,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.108,
+            1.1895,
+            1.105
+          ],
+          "quaternion_wxyz": [
+            0.718593,
+            0.187675,
+            0.236537,
+            -0.62646
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 10
+    },
+    {
+      "index": 51,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.105,
+            1.145,
+            1.108
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 21
+    },
+    {
+      "index": 52,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.105,
+            1.145,
+            1.0365
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 53,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.043,
+            1.164,
+            1.0365
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 9
+    },
+    {
+      "index": 54,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.043,
+            1.164,
+            1.041
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 4
+    },
+    {
+      "index": 55,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.021,
+            1.182,
+            1.041
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 56,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.02063,
+            1.18141,
+            1.108
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 13
+    },
+    {
+      "index": 57,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.067,
+            1.158,
+            1.108
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 15
+    },
+    {
+      "index": 58,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.067,
+            1.158,
+            1.0375
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "planner_failed",
+      "steps_executed": 0
+    },
+    {
+      "index": 59,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            0.067,
+            1.158,
+            1.044
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 11
+    },
+    {
+      "index": 60,
+      "tool": "cap_move_to_pose",
+      "arguments": {
+        "target_pose": {
+          "position": [
+            -0.026,
+            1.172,
+            1.044
+          ],
+          "quaternion_wxyz": [
+            0.489343,
+            0.342371,
+            0.192148,
+            -0.77872
+          ],
+          "frame": "world"
+        },
+        "arm": "left"
+      },
+      "expected_status": "success",
+      "steps_executed": 17
+    }
+  ]
+}
